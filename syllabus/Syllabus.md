@@ -26,12 +26,12 @@ By the end of the course, students will be able to:
 ## 📅 Tentative Schedule
 | Week | Topic |
 |------|-------------------------------------------|
-| 1    | Introduction to MATLAB Programming |
+| 1    | Introduction to Programming |
 | 2–3  | Computational Fluid Mechanics (CFD) |
 | 4    | Biomedical Signal Processing |
 | 5    | Machine Learning |
 | 6    | Deep Learning |
-| 7    | Sound and Waves |
+| 7    | Engineering Acoustics |
 | 8–9  | Electrical Engineering Applications |
 | 10–11| Computer Science & Communications |
 | 12   | Financial Engineering |
