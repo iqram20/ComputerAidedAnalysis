@@ -29,12 +29,12 @@ By the end of the course, students will be able to:
 | 1    | Introduction to Programming |
 | 2    | Computational Engineering: Fluid Dynamics (CFD) |
 | 3    | Computational Engineering: Numerical Methods |
-| 4    | Biomedical Signal Processing |
-| 5    | Machine Learning |
-| 6    | Deep Learning |
+| 4    | Biomedical Engineering: Signal Processing |
+| 5    | Data Engineering: Machine Learning |
+| 6    | Data Engineering: Deep Learning |
 | 7    | Engineering Acoustics |
 | 8–9  | Electrical Engineering Applications |
-| 10–11| Computer Science & Communications |
+| 10–11| Computer Engineering & Communications |
 | 12   | Financial Engineering |
 | 13–14| Lab Projects & Presentations |
 
@@ -47,13 +47,16 @@ By the end of the course, students will be able to:
 
 ---
 
-## 📝 Grading Policy
-- **Labs/Assignments:** 30%  
+## 📝 Grading Policy***
+- **Assignments:** 5%
+- **Project:** 10%
+- **Quiz:** 10%   
 - **Midterm Exam:** 20%  
 - **Final Exam:** 30%  
-- **Project:** 15%  
-- **Participation:** 5%  
+- **In-person interview:** 15%  
+- **Attendance:** 10%  
 
+*** Less than 50% in class attendenace is not allowed. Final exam must attend to pass. 
 ---
 
 ## 📚 Recommended Textbooks
