@@ -1,5 +1,5 @@
 # ESC 113: Computer Aided Analysis for Engineering
-**Instructor:** Dr. Iqram Hussain  
+**Instructor:** Iqram Hussain, PhD  
 **Email:** ihussain@bmcc.cuny.edu  
 **Semester:** Fall 2025, Borough of Manhattan Community College (CUNY)  
 **Lecture Venue:** Main Building, Room N672 — 199 Chambers Street, NYC  
