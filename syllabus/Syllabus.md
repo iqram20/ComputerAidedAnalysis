@@ -27,7 +27,8 @@ By the end of the course, students will be able to:
 | Week | Topic |
 |------|-------------------------------------------|
 | 1    | Introduction to Programming |
-| 2–3  | Computational Fluid Mechanics (CFD) |
+| 2    | Computational Engineering: Fluid Dynamics (CFD) |
+| 3    | Computational Engineering: Numerical Methods |
 | 4    | Biomedical Signal Processing |
 | 5    | Machine Learning |
 | 6    | Deep Learning |
