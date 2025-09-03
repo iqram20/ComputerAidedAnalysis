@@ -56,8 +56,8 @@ By the end of the course, students will be able to:
 - **In-person interview:** 15%  
 - **Attendance:** 10%  
 
-*** Less than 50% in class attendenace is not allowed. Final exam must attend to pass. 
----
+*** Less than 50% in class attendenace is not allowed. Final exam must attend to pass. This policy may be updated during the semester. Keep eye on it. 
+
 
 ## 📚 Recommended Textbooks
 1. Holly Moore, *MATLAB for Engineers (5th Edition)*, Pearson.  
