@@ -27,7 +27,7 @@ By the end of the course, students will be able to:
 |------|-------------------------------------------|
 | 1    | Introduction to Programming |
 | 2    | Computational Engineering: Fluid Dynamics (Introduction of CFD, 1-D Linear Convection)  |
-| 3    | Computational Engineering: Cavity Flow, Channel Flow, Lattice Boltzmann Method, Phase-field Method |
+| 3    | Computational Engineering: CFD (Cavity Flow, Channel Flow, Lattice Boltzmann Method, Phase-field Method) |
 | 4    | Biomedical Engineering: Signal Processing |
 | 5    | Data Engineering: Machine Learning |
 | 6    | Data Engineering: Deep Learning |
