@@ -26,8 +26,8 @@ By the end of the course, students will be able to:
 | Week | Topic |
 |------|-------------------------------------------|
 | 1    | Introduction to Programming |
-| 2    | Computational Engineering: Fluid Dynamics (CFD) |
-| 3    | Computational Engineering: Numerical Methods |
+| 2    | Computational Engineering: Fluid Dynamics (Introduction of CFD, 1-D Linear Convection)  |
+| 3    | Computational Engineering: Cavity Flow, Channel Flow, Lattice Boltzmann Method, Phase-field Method |
 | 4    | Biomedical Engineering: Signal Processing |
 | 5    | Data Engineering: Machine Learning |
 | 6    | Data Engineering: Deep Learning |
