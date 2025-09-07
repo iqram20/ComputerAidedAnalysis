@@ -9,13 +9,13 @@ This week introduces **intermediate fluid dynamics solvers** using Python and nu
    - Learn how pressure–velocity coupling works through the Pressure Poisson equation.  
    - Visualize vortices inside a lid-driven cavity.  
 
-3. **Poiseuille Channel Flow**
+3. **Poiseuille Channel Flow**  
    https://drzgan.github.io/Python_CFD/16.%20Poiseuille%20channel%20flow.html  
    - Simulate fully developed laminar flow in a channel.  
    - Use finite-difference Navier–Stokes solver with periodic boundary conditions.  
    - Compare numerical results with the analytical Poiseuille parabolic profile.  
 
-5. **Lattice Boltzmann Method (LBM) for Poiseuille Flow**
+5. **Lattice Boltzmann Method (LBM) for Poiseuille Flow**  
    https://drzgan.github.io/Python_CFD/26.LBM/26.%20LBM%20Poiseuille%20flow-2.html  
    - Implement the D2Q9 LBM scheme with Guo forcing.  
    - Apply bounce-back boundary conditions for no-slip walls.  
@@ -30,6 +30,7 @@ This week introduces **intermediate fluid dynamics solvers** using Python and nu
 ---
 
 ✍️ *These notes summarize the theoretical and computational learning goals for Week 3.*
+
 
 
 
