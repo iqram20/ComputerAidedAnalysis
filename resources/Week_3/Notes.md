@@ -1,5 +1,5 @@
-# Week 3 Notes – Computational Fluid Dynamics (CFD)
-
+# Week 3 Notes – Computational Fluid Dynamics (CFD)  
+https://github.com/iqram20/ComputerAidedAnalysis/tree/main/resources  
 This week introduces **intermediate fluid dynamics solvers** using Python and numerical methods:
 
 ## 📘 Contents
@@ -30,6 +30,7 @@ This week introduces **intermediate fluid dynamics solvers** using Python and nu
 ---
 
 ✍️ *These notes summarize the theoretical and computational learning goals for Week 3. Example codes are avaiable in Weekly Resource Page.*
+
 
 
 
