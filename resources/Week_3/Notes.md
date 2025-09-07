@@ -3,7 +3,7 @@
 This week introduces **intermediate fluid dynamics solvers** using Python and numerical methods:
 
 ## 📘 Contents
-1. **Cavity Flow with Navier–Stokes (Step 15)**
+1. **Cavity Flow with Navier–Stokes**  
    https://drzgan.github.io/Python_CFD/15.%20Cavity%20flow%20with%20Naiver-Stokes%20equation.html#  
    - Solve 2D incompressible Navier–Stokes equations.  
    - Learn how pressure–velocity coupling works through the Pressure Poisson equation.  
@@ -28,4 +28,5 @@ This week introduces **intermediate fluid dynamics solvers** using Python and nu
 ---
 
 ✍️ *These notes summarize the theoretical and computational learning goals for Week 3.*
+
 
