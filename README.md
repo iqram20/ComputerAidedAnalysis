@@ -1,5 +1,5 @@
 # ESC 113: Computer Aided Analysis for Engineering
-**Professor:** Iqram Hussain, PhD
+**Professor:** Iqram Hussain, PhD  
 https://scholar.google.com/citations?user=26ocwocAAAAJ&hl=en  
 
 **Semester:** Fall 2025, Borough of Manhattan Community College (BMCC), CUNY  
