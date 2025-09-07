@@ -36,7 +36,9 @@ Resources: https://github.com/iqram20/ComputerAidedAnalysis/tree/main/resources
 
 ---
 
-✍️ *These notes summarize the theoretical and computational learning goals for Week 3. Example codes are avaiable in Weekly Resource Page.*
+✍️ *These notes summarize the theoretical and computational learning goals for Week 3. Example codes are avaiable in Weekly Resource Page.  
+Note: Although the example codes are provided as Jupyter Notebook files, you may use any platform that supports .ipynb files.*
+
 
 
 
