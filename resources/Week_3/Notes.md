@@ -29,7 +29,8 @@ This week introduces **intermediate fluid dynamics solvers** using Python and nu
 
 ---
 
-✍️ *These notes summarize the theoretical and computational learning goals for Week 3.*
+✍️ *These notes summarize the theoretical and computational learning goals for Week 3. Example codes are avaiable in Weekly Resource Page.*
+
 
 
 
