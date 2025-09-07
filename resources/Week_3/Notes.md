@@ -1,3 +1,8 @@
+# ComputerAidedAnalysis (ESC 113)  
+Course Page: https://github.com/iqram20/ComputerAidedAnalysis  
+Syllabus: https://github.com/iqram20/ComputerAidedAnalysis/blob/main/syllabus/Syllabus.md   
+Resources: https://github.com/iqram20/ComputerAidedAnalysis/tree/main/resources  
+
 # Week 3 Notes – Computational Fluid Dynamics (CFD)  
 This week introduces **intermediate fluid dynamics solvers** using Python and numerical methods:  
 Course Page: https://github.com/iqram20/ComputerAidedAnalysis  
@@ -32,6 +37,7 @@ Resources: https://github.com/iqram20/ComputerAidedAnalysis/tree/main/resources
 ---
 
 ✍️ *These notes summarize the theoretical and computational learning goals for Week 3. Example codes are avaiable in Weekly Resource Page.*
+
 
 
 
