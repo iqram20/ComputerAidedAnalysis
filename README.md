@@ -7,8 +7,7 @@ https://scholar.google.com/citations?user=26ocwocAAAAJ&hl=en
 **Lecture Time:** Wednesday, 5:00 PM – 7:45 PM  
 **Office Hour:** Wednesday, 4:00 PM – 5:00 PM (Room N687, or by appointment)  
 
----
-# ComputerAidedAnalysis (ESC 113)  
+---  
 Course Page: https://github.com/iqram20/ComputerAidedAnalysis  
 Syllabus: https://github.com/iqram20/ComputerAidedAnalysis/blob/main/syllabus/Syllabus.md   
 Resources: https://github.com/iqram20/ComputerAidedAnalysis/tree/main/resources  
