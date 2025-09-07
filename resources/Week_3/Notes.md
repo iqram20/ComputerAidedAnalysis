@@ -24,7 +24,7 @@ Resources: https://github.com/iqram20/ComputerAidedAnalysis/tree/main/resources
 
 5. **Lattice Boltzmann Method (LBM) for Poiseuille Flow**  
    https://drzgan.github.io/Python_CFD/26.LBM/26.%20LBM%20Poiseuille%20flow-2.html  
-   - Implement the D2Q9 LBM scheme with Guo forcing.  
+   - Implement the D2Q9 LBM scheme.  
    - Apply bounce-back boundary conditions for no-slip walls.  
    - Compare LBM velocity profile with analytical solution.  
 
@@ -38,6 +38,7 @@ Resources: https://github.com/iqram20/ComputerAidedAnalysis/tree/main/resources
 
 ✍️ *These notes summarize the theoretical and computational learning goals for Week 3. Example codes are avaiable in Weekly Resource Page.  
 Note: Although the example codes are provided as Jupyter Notebook files, you may use any platform that supports .ipynb files.*
+
 
 
 
