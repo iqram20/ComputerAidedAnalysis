@@ -5,9 +5,6 @@ Resources: https://github.com/iqram20/ComputerAidedAnalysis/tree/main/resources
 
 # Week 4 Notes – Machine Learning (ML)  
 This week introduces **introductory machine learning** using Python and scikit-learn:  
-Course Page: https://github.com/iqram20/ComputerAidedAnalysis  
-Syllabus: https://github.com/iqram20/ComputerAidedAnalysis/blob/main/syllabus/Syllabus.md   
-Resources: https://github.com/iqram20/ComputerAidedAnalysis/tree/main/resources  
 
 ## 📘 Contents
 1. **Linear Regression**  
