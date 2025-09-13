@@ -52,7 +52,7 @@ By the end of the course, students will be able to:
 - **Quiz:** 10%   
 - **Midterm Exam:** 20%  
 - **Final Exam:** 30%  
-- **In-person interview:** 15%  
+- **In person Interview and Class performance:** 15%  
 - **Attendance:** 10%  
 
 *** Less than 50% in class attendenace is not allowed. Final exam must attend to pass. This policy may be updated during the semester. Keep eye on it. 
