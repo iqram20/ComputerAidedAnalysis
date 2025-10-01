@@ -2,7 +2,7 @@
 Course Page: https://github.com/iqram20/ComputerAidedAnalysis  
 
 # Week 5 Notes – Data-Aided Engineering: Machine Learning (ML)  
-This week practice a few examples using Python and scikit-learn:  
+This week practice a few examples using Matlab:  
 
 ## 📘 Contents
 1.0 **Regression Model** 
