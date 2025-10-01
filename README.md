@@ -9,7 +9,8 @@ https://scholar.google.com/citations?user=26ocwocAAAAJ&hl=en
 
 ---  
 Course Page: https://github.com/iqram20/ComputerAidedAnalysis  
-Syllabus: https://github.com/iqram20/ComputerAidedAnalysis/blob/main/syllabus/Syllabus.md   
+Syllabus (Official): https://www.bmcc.cuny.edu/academics/departments/science/course-listings/engineering-courses/  
+Syllabus (Detailed): https://github.com/iqram20/ComputerAidedAnalysis/blob/main/syllabus/Syllabus.md   
 Resources: https://github.com/iqram20/ComputerAidedAnalysis/tree/main/resources  
 
 
