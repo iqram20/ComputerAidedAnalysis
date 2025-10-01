@@ -6,6 +6,9 @@ This week practice a few examples using Matlab:
 
 ## 📘 Contents
 
+0.0 **MATLAB Basics**  
+   https://www.mathworks.com/help/matlab/getting-started-with-matlab.html  
+
 1.0 **Regression Model**  
    https://www.mathworks.com/help/stats/what-is-linear-regression.html  
    https://www.mathworks.com/help/stats/multivariate-regression-2.html  
