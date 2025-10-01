@@ -29,7 +29,7 @@ By the end of the course, students will be able to:
 | 2    | Computational Engineering: Fluid Dynamics (Introduction of CFD, 1-D Linear Convection)  |
 | 3    | Computational Engineering: CFD (Cavity Flow, Channel Flow, Lattice Boltzmann Method, Phase-field Method) |
 | 4    | Data-Aided Engineering: Machine Learning |
-| 5    | Data-Aided Engineering: Deep Learning |
+| 5    | Data-Aided Engineering: Machine Learning and Deep Learning |
 | 6    | Biomedical Engineering: Signal Processing |
 | 7    | Engineering Acoustics |
 | 8–9  | Electrical Engineering Applications |
