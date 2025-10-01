@@ -7,9 +7,9 @@ This week practice a few examples using Matlab:
 ## 📘 Contents
 
 1.0 **Regression Model** 
-https://www.mathworks.com/help/stats/what-is-linear-regression.html
-https://www.mathworks.com/help/stats/multivariate-regression-2.html
-https://www.mathworks.com/help/stats/linear-regression-model-workflow.html
+   https://www.mathworks.com/help/stats/what-is-linear-regression.html
+   https://www.mathworks.com/help/stats/multivariate-regression-2.html
+   https://www.mathworks.com/help/stats/linear-regression-model-workflow.html
 
 1.1 **Application: Human Activity Recognition Using Sensor Data**  
    https://www.mathworks.com/solutions/machine-learning/tutorials-examples.html
