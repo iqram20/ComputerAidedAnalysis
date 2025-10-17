@@ -35,8 +35,3 @@ Resources: https://github.com/iqram20/ComputerAidedAnalysis/tree/main/resources
 
 ---
 
-## 🚀 Usage
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/iqram20/ComputerAidedAnalysis.git
-   cd ComputerAidedAnalysis
