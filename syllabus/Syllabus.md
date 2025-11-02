@@ -61,7 +61,10 @@ By the end of the course, students will be able to:
 ## 📚 Recommended Textbooks
 1. Holly Moore, *MATLAB for Engineers (5th Edition)*, Pearson.  
 2. Stormy Attaway, *MATLAB: A Practical Introduction to Programming and Problem Solving (6th Edition)*, Butterworth-Heinemann, 2022.  
-3. Qingkai Kong, Timmy Siauw, Alexandre Bayen, *Python Programming and Numerical Methods: A Guide for Engineers and Scientists (1st Edition)*, Academic Press, 2020. �� [Online version](https://pythonnumericalmethods.berkeley.edu)  
+3. Qingkai Kong, Timmy Siauw, Alexandre Bayen, *Python Programming and Numerical Methods: A Guide for Engineers and Scientists (1st Edition)*, Academic Press, 2020. �� [Online version](https://pythonnumericalmethods.berkeley.edu)
+4. Machine Learning Systems, Principles and Practices of Engineering Artificially Intelligent Systems;
+https://www.mlsysbook.ai/; Vijay Janapa Reddi   
+   
 
 ---
 
