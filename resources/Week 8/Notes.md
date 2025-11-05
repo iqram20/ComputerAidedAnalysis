@@ -1,7 +1,7 @@
 # ESC 113: Computer Aided Analysis for Engineering
 Course Page: https://github.com/iqram20/ComputerAidedAnalysis  
 
-# Week 8 Notes – Data-Aided Engineering: Data processing
+# Week 8 Notes – Data Engineering: Data processing
 
 ## 📘 Contents
 
