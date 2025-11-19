@@ -8,7 +8,7 @@ Course Page: https://github.com/iqram20/ComputerAidedAnalysis
 1.0 **Deep Learning_CNN**  
    https://developers.google.com/codelabs/tensorflow-4-cnns      
    
-
+Slides are taken from "deeplearning.ai" community. 
 ---
 
 
