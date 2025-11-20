@@ -29,12 +29,12 @@ By the end of the course, students will be able to:
 | 2    | Computational Engineering: Numerical methods and Fluid Dynamics |
 | 3    | Computational Engineering: Applications  |
 | 4    | Data-Aided Engineering: Concepts in Machine Learning |
-| 5    | Data-Aided Engineering: Machine Learning and Deep Learning |
-| 6    | Biomedical Engineering: Signal Processing |
-| 7    | Engineering Acoustics |
-| 8–9  | Electrical Engineering Applications |
-| 10–11| Computer Engineering & Communications |
-| 12   | Financial Engineering |
+| 5    | Machine Learning: Regression |
+| 6    | Machine Learning: Classification |
+| 7    | Machine Learning and Data preprocessing |
+| 8–9  | Python Programming |
+| 10–11| Deep Learning |
+| 12   | Large Language Model (LLM) |
 | 13–14| Lab Projects & Presentations |
 
 ---
