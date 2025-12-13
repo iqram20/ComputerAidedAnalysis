@@ -31,8 +31,8 @@ By the end of the course, students will be able to:
 | 4    | Data-Aided Engineering: Concepts in Machine Learning |
 | 5    | Machine Learning: Regression |
 | 6    | Machine Learning: Classification |
-| 7    | Machine Learning and Data preprocessing |
-| 8–9  | Python Programming |
+| 7-8  | Machine Learning and Data preprocessing |
+| 9    | Basics of Python Programming |
 | 10   | Deep Learning |
 | 11   | Large Language Model (LLM) |
 | 12   | Lab Projects & Presentations |
