@@ -1,6 +1,6 @@
 # ESC 113: Computer Aided Analysis for Engineering
 **Instructor:** Iqram Hussain, PhD  
-**Semester:** Fall 2025, Borough of Manhattan Community College (CUNY)  
+**Semester:** Fall 2025, CUNY   
 **Lecture Venue:** Main Building, Room N672 — 199 Chambers Street, NYC  
 **Lecture Time:** Wednesday, 5:00 PM – 7:45 PM  
 **Office Hour:** Wednesday, 4:00 PM – 5:00 PM (Room N687, or by appointment)  
@@ -26,16 +26,16 @@ By the end of the course, students will be able to:
 | Week | Topic |
 |------|-------------------------------------------|
 | 1    | Introduction to Programming |
-| 2    | Computational Engineering: Fluid Dynamics (Introduction of CFD, 1-D Linear Convection)  |
-| 3    | Computational Engineering: CFD (Cavity Flow, Channel Flow, Lattice Boltzmann Method, Phase-field Method) |
-| 4    | Biomedical Engineering: Signal Processing |
-| 5    | Data Engineering: Machine Learning |
-| 6    | Data Engineering: Deep Learning |
-| 7    | Engineering Acoustics |
-| 8–9  | Electrical Engineering Applications |
-| 10–11| Computer Engineering & Communications |
-| 12   | Financial Engineering |
-| 13–14| Lab Projects & Presentations |
+| 2    | Computational Engineering: Numerical methods and Fluid Dynamics |
+| 3    | Computational Engineering: Applications  |
+| 4    | Data-Aided Engineering: Concepts in Machine Learning |
+| 5    | Machine Learning: Regression |
+| 6    | Machine Learning: Classification |
+| 7    | Machine Learning and Data preprocessing |
+| 8–9  | Python Programming |
+| 10   | Deep Learning |
+| 11   | Large Language Model (LLM) |
+| 12   | Lab Projects & Presentations |
 
 ---
 
@@ -47,12 +47,11 @@ By the end of the course, students will be able to:
 ---
 
 ## 📝 Grading Policy***
-- **Assignments:** 5%
-- **Project:** 10%
+- **Project:** 15%
 - **Quiz:** 10%   
 - **Midterm Exam:** 20%  
-- **Final Exam:** 30%  
-- **In-person interview:** 15%  
+- **Final Exam:** 35%  
+- **Class performance:** 10%  
 - **Attendance:** 10%  
 
 *** Less than 50% in class attendenace is not allowed. Final exam must attend to pass. This policy may be updated during the semester. Keep eye on it. 
@@ -61,7 +60,10 @@ By the end of the course, students will be able to:
 ## 📚 Recommended Textbooks
 1. Holly Moore, *MATLAB for Engineers (5th Edition)*, Pearson.  
 2. Stormy Attaway, *MATLAB: A Practical Introduction to Programming and Problem Solving (6th Edition)*, Butterworth-Heinemann, 2022.  
-3. Qingkai Kong, Timmy Siauw, Alexandre Bayen, *Python Programming and Numerical Methods: A Guide for Engineers and Scientists (1st Edition)*, Academic Press, 2020. �� [Online version](https://pythonnumericalmethods.berkeley.edu)  
+3. Qingkai Kong, Timmy Siauw, Alexandre Bayen, *Python Programming and Numerical Methods: A Guide for Engineers and Scientists (1st Edition)*, Academic Press, 2020. �� [Online version](https://pythonnumericalmethods.berkeley.edu)
+4. Machine Learning Systems, Principles and Practices of Engineering Artificially Intelligent Systems;
+https://www.mlsysbook.ai/; Vijay Janapa Reddi   
+   
 
 ---
 

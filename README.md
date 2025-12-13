@@ -1,11 +1,18 @@
 # ESC 113: Computer Aided Analysis for Engineering
-**Professor:** Iqram Hussain, PhD, Fellow, Cornell University, New York, NY    
+**Professor:** Iqram Hussain, PhD  
 https://scholar.google.com/citations?user=26ocwocAAAAJ&hl=en  
 
-**Semester:** Fall 2025, Borough of Manhattan Community College (BMCC), CUNY  
+**Semester:** Fall 2025
 **Lecture Venue:** Main Building, Room N672 — 199 Chambers Street, NYC  
 **Lecture Time:** Wednesday, 5:00 PM – 7:45 PM  
 **Office Hour:** Wednesday, 4:00 PM – 5:00 PM (Room N687, or by appointment)  
+
+---  
+Course Page: https://github.com/iqram20/ComputerAidedAnalysis  
+Syllabus (Official): https://www.bmcc.cuny.edu/academics/departments/science/course-listings/engineering-courses/  
+Syllabus (Detailed): https://github.com/iqram20/ComputerAidedAnalysis/blob/main/syllabus/Syllabus.md   
+Resources: https://github.com/iqram20/ComputerAidedAnalysis/tree/main/resources  
+
 
 ---
 
@@ -28,8 +35,3 @@ https://scholar.google.com/citations?user=26ocwocAAAAJ&hl=en
 
 ---
 
-## 🚀 Usage
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/iqram20/ComputerAidedAnalysis.git
-   cd ComputerAidedAnalysis
