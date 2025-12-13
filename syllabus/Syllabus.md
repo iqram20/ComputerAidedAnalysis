@@ -33,9 +33,9 @@ By the end of the course, students will be able to:
 | 6    | Machine Learning: Classification |
 | 7    | Machine Learning and Data preprocessing |
 | 8–9  | Python Programming |
-| 10–11| Deep Learning |
-| 12   | Large Language Model (LLM) |
-| 13–14| Lab Projects & Presentations |
+| 10   | Deep Learning |
+| 11   | Large Language Model (LLM) |
+| 12   | Lab Projects & Presentations |
 
 ---
 
@@ -47,12 +47,11 @@ By the end of the course, students will be able to:
 ---
 
 ## 📝 Grading Policy***
-- **Assignments:** 5%
-- **Project:** 10%
+- **Project:** 15%
 - **Quiz:** 10%   
 - **Midterm Exam:** 20%  
-- **Final Exam:** 30%  
-- **In person Interview and Class performance:** 15%  
+- **Final Exam:** 35%  
+- **Class performance:** 10%  
 - **Attendance:** 10%  
 
 *** Less than 50% in class attendenace is not allowed. Final exam must attend to pass. This policy may be updated during the semester. Keep eye on it. 
