@@ -2,10 +2,10 @@
 **Professor:** Iqram Hussain, PhD  
 https://scholar.google.com/citations?user=26ocwocAAAAJ&hl=en  
 
-**Semester:** Fall 2025
+**Semester:** -------
 **Lecture Venue:** Main Building, Room N672 — 199 Chambers Street, NYC  
-**Lecture Time:** Wednesday, 5:00 PM – 7:45 PM  
-**Office Hour:** Wednesday, 4:00 PM – 5:00 PM (Room N687, or by appointment)  
+**Lecture Time:** ----day, 5:00 PM – 7:45 PM  
+**Office Hour:** ------day, 4:00 PM – 5:00 PM (Room N687, or by appointment)  
 
 ---  
 Course Page: https://github.com/iqram20/ComputerAidedAnalysis  
