@@ -27,3 +27,10 @@ Build a pump-monitoring program that uses a function, a loop, and branching to c
 
 ## Learning outcomes
 Students should be able to automate repeated calculations and write simple iterative engineering simulations.
+
+
+## Class Notebook
+
+- [Open the 3-hour teaching notebook](Week_05_Iteration.ipynb)
+
+The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
