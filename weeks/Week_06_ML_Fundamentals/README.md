@@ -29,3 +29,10 @@ Use a real engineering dataset and identify:
 
 ## Learning outcomes
 Students should understand the complete supervised-learning workflow before fitting a model.
+
+
+## Class Notebook
+
+- [Open the 3-hour teaching notebook](Week_06_ML_Fundamentals.ipynb)
+
+The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
