@@ -28,3 +28,10 @@ pred = model.predict(X_test)
 
 ## Learning outcomes
 Students should be able to train a regression model, generate predictions, and explain model errors in engineering units.
+
+
+## Class Notebook
+
+- [Open the 3-hour teaching notebook](Week_07_Regression.ipynb)
+
+The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
