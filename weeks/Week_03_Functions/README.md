@@ -41,3 +41,10 @@ Students should be able to break an engineering program into reusable functions 
 - [Open the 3-hour teaching notebook](Week_03_Functions.ipynb)
 
 The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
+
+
+## Assignment
+
+- [Open the weekly assignment](Assignment_Week_03.md)
+
+The assignment includes Berkeley-aligned practice plus additional engineering coding problems.
