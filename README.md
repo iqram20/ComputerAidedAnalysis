@@ -5,10 +5,23 @@ Course repository: https://github.com/iqram20/ComputerAidedAnalysis
 
 This repository contains the current course materials for **ESC 113: Computer Aided Analysis for Engineering**.
 
-The current course sequence is organized into two parts:
+## Course Description
+
+ESC 113 introduces students to modern computational tools for solving engineering problems through programming, data analysis, machine learning, numerical methods, and simulation. The course begins with **Python programming fundamentals for engineers**, including variables, data structures, NumPy, functions, branching, iteration, visualization, and analysis of real open engineering datasets.
+
+Students then progress to **machine learning for engineering applications**, including data preparation, regression, classification, decision trees, random forests, model evaluation, feature importance, and reproducible project workflows using real datasets. The course also introduces **MATLAB** for engineering calculations, matrix operations, data analysis, curve fitting, numerical differentiation, integration, nonlinear equations, and linear systems.
+
+Advanced topics include **deep learning, natural language processing, transformers, and large language models (LLMs)** with emphasis on engineering use cases such as predictive maintenance, technical-document analysis, troubleshooting support, and retrieval-augmented generation. The course concludes with **engineering simulation and computational modeling**, where students translate physical laws into numerical models, perform parameter and sensitivity studies, and evaluate model assumptions, stability, verification, validation, and limitations.
+
+Throughout the course, students work with open engineering/scientific datasets, Jupyter/Google Colab, MATLAB, GitHub, and reproducible computational workflows. Emphasis is placed not only on writing code, but also on **engineering interpretation, model validation, responsible AI use, and clear technical communication**.
+
+### Course Structure
 
 - **Weeks 1–5:** Python programming fundamentals for engineering
 - **Weeks 6–10:** Machine learning for engineering applications
+- **Weeks 11–12:** MATLAB and numerical engineering analysis
+- **Week 13:** Deep learning, NLP, transformers, and LLM engineering applications
+- **Week 14:** Engineering simulation and computational modeling
 
 The Python portion follows the open textbook **Python Programming and Numerical Methods: A Guide for Engineers and Scientists** from Berkeley:
 
@@ -16,7 +29,7 @@ https://pythonnumericalmethods.studentorg.berkeley.edu/
 
 ---
 
-## Current 10-Week Course Sequence
+## Current 14-Week Course Sequence
 
 ### Part I — Python for Engineering
 
@@ -86,12 +99,17 @@ Expected components:
 ---
 
 
-### Part III — MATLAB for Engineering
+### Part III — MATLAB and Numerical Engineering Analysis
 
 | Week | Topic |
 |---|---|
 | 11 | [MATLAB Basics and Engineering Examples](weeks/Week_11_MATLAB_Basics/README.md) |
 | 12 | [MATLAB Data Analysis and Numerical Methods](weeks/Week_12_MATLAB_Data_Analysis_Numerical_Methods/README.md) |
+
+### Part IV — Advanced AI and Engineering Simulation
+
+| Week | Topic |
+|---|---|
 | 13 | [Deep Learning, NLP, and LLMs for Engineering Applications](weeks/Week_13_Deep_Learning_NLP_LLM/README.md) |
 | 14 | [Engineering Simulation and Computational Modeling](weeks/Week_14_Engineering_Simulation/README.md) |
 
