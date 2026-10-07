@@ -23,3 +23,10 @@ Accuracy alone may be misleading. In an engineering safety problem, discuss whet
 
 ## Learning outcomes
 Students should be able to train a classifier and interpret a confusion matrix and major classification metrics.
+
+
+## Class Notebook
+
+- [Open the 3-hour teaching notebook](Week_08_Classification.ipynb)
+
+The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
