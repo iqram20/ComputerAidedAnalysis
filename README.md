@@ -92,6 +92,7 @@ Expected components:
 |---|---|
 | 11 | [MATLAB Basics and Engineering Examples](weeks/Week_11_MATLAB_Basics/README.md) |
 | 12 | [MATLAB Data Analysis and Numerical Methods](weeks/Week_12_MATLAB_Data_Analysis_Numerical_Methods/README.md) |
+| 13 | [Deep Learning, NLP, and LLMs for Engineering Applications](weeks/Week_13_Deep_Learning_NLP_LLM/README.md) |
 
 ## Repository Structure
 
