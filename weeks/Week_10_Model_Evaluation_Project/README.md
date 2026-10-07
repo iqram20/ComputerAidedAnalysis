@@ -33,3 +33,10 @@ Students should build a complete machine-learning analysis using a real engineer
 
 ## Suggested Project 2
 **Machine Learning Prediction of Concrete Compressive Strength** using the UCI Concrete Compressive Strength dataset.
+
+
+## Class Notebook
+
+- [Open the 3-hour teaching notebook](Week_10_Model_Evaluation_Project.ipynb)
+
+The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
