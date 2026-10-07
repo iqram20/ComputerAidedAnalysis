@@ -6,6 +6,7 @@ This folder contains the current 10-week Python and machine-learning sequence fo
 ### Part III — MATLAB for Engineering
 - [Week 11 — MATLAB Basics and Engineering Examples](Week_11_MATLAB_Basics/README.md)
 - [Week 12 — MATLAB Data Analysis and Numerical Methods](Week_12_MATLAB_Data_Analysis_Numerical_Methods/README.md)
+- [Week 13 — Deep Learning, NLP, and LLMs for Engineering Applications](Week_13_Deep_Learning_NLP_LLM/README.md)
 ## Course sequence
 
 ### Part I — Python for Engineering
