@@ -91,6 +91,7 @@ Expected components:
 | Week | Topic |
 |---|---|
 | 11 | [MATLAB Basics and Engineering Examples](weeks/Week_11_MATLAB_Basics/README.md) |
+| 12 | [MATLAB Data Analysis and Numerical Methods](weeks/Week_12_MATLAB_Data_Analysis_Numerical_Methods/README.md) |
 
 ## Repository Structure
 
