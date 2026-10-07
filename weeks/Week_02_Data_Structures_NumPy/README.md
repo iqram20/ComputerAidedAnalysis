@@ -31,3 +31,10 @@ Students should be able to select an appropriate Python data structure and use N
 - [Open the 3-hour teaching notebook](Week_02_Data_Structures_NumPy.ipynb)
 
 The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
+
+
+## Assignment
+
+- [Open the weekly assignment](Assignment_Week_02.md)
+
+The assignment includes Berkeley-aligned practice plus additional engineering coding problems.
