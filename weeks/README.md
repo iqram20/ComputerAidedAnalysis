@@ -2,6 +2,9 @@
 
 This folder contains the current 10-week Python and machine-learning sequence for **ESC 113: Computer Aided Analysis for Engineering**.
 
+
+### Part III — MATLAB for Engineering
+- [Week 11 — MATLAB Basics and Engineering Examples](Week_11_MATLAB_Basics/README.md)
 ## Course sequence
 
 ### Part I — Python for Engineering
