@@ -35,6 +35,10 @@ By the end of this week, students should be able to:
 - generate labeled engineering plots;
 - solve basic engineering problems using MATLAB scripts.
 
+## MATLAB Usage Guide
+
+- [How to Run and Use MATLAB for This Course](MATLAB_Usage_Guide.md)
+
 ## MATLAB Files
 
 - [MATLAB Basics and Engineering Examples](MATLAB_Basics_Engineering_Examples.m)
