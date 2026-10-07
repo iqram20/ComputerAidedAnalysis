@@ -85,6 +85,13 @@ Expected components:
 
 ---
 
+
+### Part III — MATLAB for Engineering
+
+| Week | Topic |
+|---|---|
+| 11 | [MATLAB Basics and Engineering Examples](weeks/Week_11_MATLAB_Basics/README.md) |
+
 ## Repository Structure
 
 - `weeks/` — current weekly Python and machine-learning course sequence
