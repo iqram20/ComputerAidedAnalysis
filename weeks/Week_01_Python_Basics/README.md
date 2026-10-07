@@ -32,3 +32,10 @@ Write short programs for unit conversion, pressure, energy, flow rate, and basic
 - [Open the 3-hour teaching notebook](Week_01_Python_Basics.ipynb)
 
 The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
+
+
+## Assignment
+
+- [Open the weekly assignment](Assignment_Week_01.md)
+
+The assignment includes Berkeley-aligned practice plus additional engineering coding problems.
