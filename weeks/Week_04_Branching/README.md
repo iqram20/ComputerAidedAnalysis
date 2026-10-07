@@ -29,3 +29,10 @@ Students should be able to translate engineering decision rules into correct Pyt
 - [Open the 3-hour teaching notebook](Week_04_Branching.ipynb)
 
 The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
+
+
+## Assignment
+
+- [Open the weekly assignment](Assignment_Week_04.md)
+
+The assignment includes Berkeley-aligned practice plus additional engineering coding problems.
