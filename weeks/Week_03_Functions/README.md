@@ -34,3 +34,10 @@ print(sigma)
 
 ## Learning outcomes
 Students should be able to break an engineering program into reusable functions and distinguish between inputs, returned results, and printed output.
+
+
+## Class Notebook
+
+- [Open the 3-hour teaching notebook](Week_03_Functions.ipynb)
+
+The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
