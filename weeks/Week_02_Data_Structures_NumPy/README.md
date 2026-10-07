@@ -24,3 +24,10 @@
 
 ## Learning outcomes
 Students should be able to select an appropriate Python data structure and use NumPy arrays for numerical engineering data.
+
+
+## Class Notebook
+
+- [Open the 3-hour teaching notebook](Week_02_Data_Structures_NumPy.ipynb)
+
+The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
