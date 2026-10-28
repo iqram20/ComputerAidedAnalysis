@@ -3,8 +3,6 @@
 
 **ESC 113: Computer Aided Analysis for Engineering**
 
-This page presents the Week 8 classification material in lecture-ready order.
-
 ---
 
 
