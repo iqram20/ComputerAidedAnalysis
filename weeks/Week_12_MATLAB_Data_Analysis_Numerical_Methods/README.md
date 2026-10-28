@@ -41,3 +41,10 @@ By the end of this week, students should be able to:
 
 - [MATLAB Data Analysis and Numerical Methods](MATLAB_Data_Analysis_Numerical_Methods.m)
 - [Week 12 Assignment](Assignment_Week_12.md)
+
+
+## MATLAB Materials
+
+[MATLAB Data Analysis and Numerical Methods](MATLAB_Data_Analysis_Numerical_Methods.m) — tables, plots, curve fitting, differentiation, integration, nonlinear equations, and linear systems.
+
+MATLAB Online: https://matlab.mathworks.com/
