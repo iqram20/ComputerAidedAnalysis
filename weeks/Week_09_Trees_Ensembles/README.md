@@ -29,3 +29,10 @@ Students should be able to compare tree-based models, recognize overfitting, and
 - [Open the 3-hour teaching notebook](Week_09_Trees_Ensembles.ipynb)
 
 The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
+
+
+## MATLAB Materials
+
+[MATLAB Companion](MATLAB_Companion.md) — regression trees, ensembles, model comparison, and feature importance.
+
+MATLAB Online: https://matlab.mathworks.com/
