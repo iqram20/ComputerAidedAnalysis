@@ -73,3 +73,12 @@ Students should be able to:
 - [Week 8 — Detailed Classification Lecture Notebook](Week_08_Classification.ipynb)
 
 The notebook is intentionally detailed and includes **dataset context, feature explanations, student-question sections, code explanations, metrics, engineering interpretations, common mistakes, guided practice, independent exercises, and a 20-question review quiz**.
+
+
+## MATLAB Equivalent
+
+- [Week 8 — MATLAB Classification Code](Week_08_Classification_MATLAB.m)
+
+The MATLAB script mirrors the Python lecture workflow using the same UCI Steel Plates Faults dataset. It includes dataset download, target conversion, class-balance analysis, stratified train/test splitting, training-data standardization, multiclass linear logistic classification with ECOC, confusion matrix analysis, precision, recall, F1, macro/weighted metrics, misclassification review, and uncertainty analysis.
+
+> **MATLAB requirement:** Statistics and Machine Learning Toolbox.
