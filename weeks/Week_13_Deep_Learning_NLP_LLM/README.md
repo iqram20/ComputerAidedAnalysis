@@ -44,3 +44,10 @@ By the end of this week, students should be able to:
 
 - [Deep Learning, NLP, and LLM Engineering Examples](Deep_Learning_NLP_LLM_Engineering_Examples.ipynb)
 - [Week 13 Assignment](Assignment_Week_13.md)
+
+
+## MATLAB Materials
+
+[MATLAB Companion](MATLAB_Companion.md) — neural-network regression, deep-learning workflow, text analytics, and LLM context.
+
+MATLAB Online: https://matlab.mathworks.com/
