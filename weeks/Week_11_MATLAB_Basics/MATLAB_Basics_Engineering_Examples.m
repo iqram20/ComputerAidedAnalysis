@@ -1,4 +1,7 @@
 %% Week 11 - Programming Review and Matrix-Based Engineering Computation
+% Treat each %% section like a notebook code cell.
+% Read the explanation, run one section, inspect the output, then continue.
+% In MATLAB Live Editor, each %% section can be run independently.
 % ESC 113: Computer Aided Analysis for Engineering
 % MATLAB implementation of the Week 11 engineering programming examples.
 %
