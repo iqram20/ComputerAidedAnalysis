@@ -1,50 +1,269 @@
-# Week 2 MATLAB Companion — Arrays, Vectors, and Matrices
+# Week 2 — Variables, Data Structures, Arrays, and Matrices
 
-MATLAB is designed around vectors and matrices, so many NumPy ideas have direct MATLAB equivalents.
+**MATLAB implementation**
 
-## Vectors
+Engineering data often contain many measurements rather than one number. MATLAB is built around vectors, matrices, and tables, making it especially useful for numerical engineering data.
+
+## Scalar, Vector, and Matrix
+
+A **scalar** contains one value:
+
 ```matlab
-temperature = [20 22 24 27 30];   % Row vector
-temperature(1)                     % First value
-temperature(2:4)                   % Values 2 through 4
+temperature = 25;
 ```
 
-MATLAB indexing starts at **1**, not 0.
+A **vector** contains a sequence of values:
 
-## Column vector
 ```matlab
-force = [10; 20; 30; 40];          % Column vector
+temperature = [20 22 24 27 30];
 ```
 
-## Matrix
+A **matrix** contains rows and columns:
+
 ```matlab
-A = [1 2 3; 4 5 6; 7 8 9];        % 3-by-3 matrix
-A(2,3)                              % Row 2, column 3
-A(:,2)                              % Entire column 2
-A(1,:)                              % Entire row 1
+A = [1 2 3;
+     4 5 6;
+     7 8 9];
 ```
 
-## Element-by-element calculations
+---
+
+## Row and Column Vectors
+
+Row vector:
+
 ```matlab
-x = [1 2 3 4];
-y = x.^2;                           % Square every element
-z = x.*5;                           % Multiply every element by 5
+force = [10 20 30 40];
 ```
 
-## Useful commands
+Column vector:
+
 ```matlab
-length(x)
-size(A)
-mean(temperature)
-max(temperature)
-min(temperature)
+force = [10; 20; 30; 40];
 ```
 
-## NumPy → MATLAB
-| NumPy/Python | MATLAB |
-|---|---|
-| `np.array([1,2,3])` | `[1 2 3]` |
-| `A.shape` | `size(A)` |
-| `A[0]` | `A(1)` |
-| `A[:,1]` | `A(:,2)` |
-| `A**2` | `A.^2` |
+Transpose a row vector into a column vector:
+
+```matlab
+force_column = force';
+```
+
+---
+
+## MATLAB Indexing Starts at 1
+
+```matlab
+temperature = [20 22 24 27 30];
+
+temperature(1)          % First value
+temperature(3)          % Third value
+temperature(end)        % Last value
+```
+
+This differs from Python, where indexing begins at 0.
+
+---
+
+## Slicing
+
+```matlab
+temperature(2:4)        % Values 2 through 4
+```
+
+For a matrix:
+
+```matlab
+A(2,3)                  % Row 2, column 3
+A(:,2)                  % Every row, column 2
+A(1,:)                  % Row 1, every column
+```
+
+The colon `:` means “all values in this dimension.”
+
+---
+
+## Creating Numerical Sequences
+
+Using the colon operator:
+
+```matlab
+time = 0:1:10;          % 0,1,2,...,10
+```
+
+Using `linspace`:
+
+```matlab
+time = linspace(0,10,6);
+```
+
+Result:
+
+```text
+0  2  4  6  8  10
+```
+
+---
+
+## Element-by-Element Operations
+
+Consider:
+
+```matlab
+velocity = [2 4 6 8 10];
+```
+
+Square every value:
+
+```matlab
+velocity_squared = velocity.^2;
+```
+
+Multiply each element:
+
+```matlab
+momentum = 5.*velocity;
+```
+
+Divide each element:
+
+```matlab
+half_velocity = velocity./2;
+```
+
+The dot is important for element-wise operations:
+
+| Operation | Matrix form | Element-wise form |
+|---|---|---|
+| Multiply | `*` | `.*` |
+| Divide | `/` | `./` |
+| Power | `^` | `.^` |
+
+---
+
+## Engineering Example — Kinetic Energy at Several Speeds
+
+```matlab
+mass = 5;                        % kg
+velocity = [2 4 6 8 10];         % m/s
+
+KE = 0.5*mass.*velocity.^2;      % J
+
+disp(KE)
+```
+
+The code evaluates the same equation for every velocity:
+
+```text
+KE = 1/2 mv²
+```
+
+---
+
+## Descriptive Statistics
+
+```matlab
+measurements = [12.5 15.8 14.2 18.6 16.1];
+
+mean_value = mean(measurements);
+median_value = median(measurements);
+minimum_value = min(measurements);
+maximum_value = max(measurements);
+std_value = std(measurements);
+```
+
+These commands summarize measured engineering data.
+
+---
+
+## Logical Indexing
+
+```matlab
+pressure = [220 310 450 510 490 540 300];
+
+unsafe = pressure > 500;
+unsafe_pressure = pressure(unsafe);
+
+disp(unsafe_pressure)
+```
+
+Output:
+
+```text
+510   540
+```
+
+Logical indexing is useful for filtering measurements that exceed an engineering limit.
+
+---
+
+## Tables
+
+A table can store several named engineering variables.
+
+```matlab
+Time_s = [0;1;2;3];
+Temperature_C = [22;25;29;34];
+Pressure_kPa = [101;105;111;118];
+
+T = table(Time_s,Temperature_C,Pressure_kPa);
+
+disp(T)
+```
+
+Access one column:
+
+```matlab
+T.Temperature_C
+```
+
+---
+
+## Python and MATLAB Comparison
+
+| Concept | Python / NumPy | MATLAB |
+|---|---|---|
+| Vector | `np.array([1,2,3])` | `[1 2 3]` |
+| First element | `A[0]` | `A(1)` |
+| Matrix shape | `A.shape` | `size(A)` |
+| Column | `A[:,1]` | `A(:,2)` |
+| Element power | `A**2` | `A.^2` |
+| Mean | `np.mean(A)` | `mean(A)` |
+
+---
+
+## Common Errors
+
+A frequent MATLAB error is using matrix multiplication when element-wise multiplication is intended.
+
+For vectors:
+
+```matlab
+x*y
+```
+
+and
+
+```matlab
+x.*y
+```
+
+do not mean the same thing.
+
+Another common mistake is forgetting that MATLAB indexing starts at **1**.
+
+---
+
+## Practice
+
+1. Create a vector of temperatures from 20°C to 100°C in increments of 10°C.
+2. Convert all temperatures to Fahrenheit using a vectorized expression.
+3. Create a 3 × 3 matrix and extract its second row.
+4. Given pressure measurements, extract only values above 400 kPa.
+5. Create a table containing time, voltage, and current.
+6. Add a calculated power column using `P = VI`.
+
+---
+
+## Key Idea
+
+Vectors and matrices allow one engineering equation to be applied to many measurements efficiently.
