@@ -1,8 +1,8 @@
-%% Week 12 - MATLAB for Engineering Data Analysis and Numerical Methods
+%% Week 12 - Engineering Data Analysis and Numerical Methods
 % ESC 113: Computer Aided Analysis for Engineering
 %
 % Run one section at a time.
-% This lesson builds on Week 11 MATLAB basics.
+% MATLAB implementation of the Week 12 engineering data-analysis and numerical-method examples.
 
 clear
 clc
