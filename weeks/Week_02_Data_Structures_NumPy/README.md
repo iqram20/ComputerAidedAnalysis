@@ -1,4 +1,4 @@
-# Week 2 — Variables, Data Structures, and NumPy
+# Week 2 — Variables, Data Structures, Arrays, and Matrices
 
 ## Topics
 - Strings
@@ -23,7 +23,7 @@
 - Perform calculations on an entire NumPy array without manually processing each value.
 
 ## Learning outcomes
-Students should be able to select an appropriate Python data structure and use NumPy arrays for numerical engineering data.
+Students should be able to select an appropriate data representation and work with numerical arrays in Python and MATLAB for numerical engineering data.
 
 
 ## Class Notebook
@@ -40,8 +40,12 @@ The notebook includes explanations, worked examples, engineering applications, g
 The assignment includes Berkeley-aligned practice plus additional engineering coding problems.
 
 
-## MATLAB Materials
 
-[MATLAB Companion](MATLAB_Companion.md) — vectors, matrices, indexing, and element-wise operations.
 
-MATLAB Online: https://matlab.mathworks.com/
+## Programming Code — Python and MATLAB
+
+Every coding concept in this chapter should be studied in **both Python and MATLAB**. The engineering equations, variables, and expected interpretation are equivalent; only the programming syntax changes.
+
+- [Python lecture/code](Week_02_Data_Structures_NumPy.ipynb)
+- [MATLAB equivalent examples](MATLAB_Companion.md)
+- MATLAB Online: https://matlab.mathworks.com/
