@@ -24,11 +24,34 @@ This folder contains the current 10-week Python and machine-learning sequence fo
 - [Week 9 — Trees, Ensembles, and Feature Importance](Week_09_Trees_Ensembles/README.md)
 - [Week 10 — Model Evaluation, Tuning, and Engineering ML Project](Week_10_Model_Evaluation_Project/README.md)
 
-## Primary Python reference
 
-Weeks 1–5 follow the structure and examples of the open textbook:
+
+## Primary Programming Textbooks and Learning Resources
+
+### Python
 
 **Python Programming and Numerical Methods: A Guide for Engineers and Scientists**  
-Berkeley online text: https://pythonnumericalmethods.studentorg.berkeley.edu/
+Berkeley open textbook:  
+https://pythonnumericalmethods.studentorg.berkeley.edu/
 
-Students should use Google Colab or Jupyter Notebook for weekly coding exercises.
+This is the primary open Python reference for programming fundamentals and numerical methods.
+
+### MATLAB
+
+**Numerical Computing with MATLAB — Cleve Moler**  
+Official MathWorks electronic textbook:  
+https://www.mathworks.com/moler/index_ncm.html
+
+This is the primary MATLAB textbook/reference for ESC 113. It includes MATLAB programming, matrix computation, numerical methods, interpolation, equation solving, differential equations, and technical computing.
+
+**Optional programming-focused MATLAB textbook:**  
+**MATLAB Programming for Engineers, 7th Edition — Stephen J. Chapman**  
+https://www.mathworks.com/academia/books/matlab-programming-for-engineers-chapman.html
+
+### Interactive MATLAB Practice
+
+**MATLAB Onramp**  
+https://www.mathworks.com/learn/tutorials/matlab-onramp.html
+
+MATLAB Onramp provides free interactive practice with variables, vectors, matrices, indexing, calculations, plotting, and scripts.
+
