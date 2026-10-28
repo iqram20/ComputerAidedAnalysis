@@ -659,6 +659,32 @@ Bumps
 Other_Faults
 ~~~
 
+
+### Meaning of the Seven Fault Classes
+
+| Class | Description |
+|---|---|
+| `Pastry` | A named steel-surface fault category in the dataset. UCI does not provide a detailed physical definition for this label. |
+| `Z_Scratch` | A scratch-type surface defect classified as the Z-scratch category. |
+| `K_Scatch` | Another scratch-type defect category. The dataset uses the spelling `K_Scatch`. |
+| `Stains` | Surface regions with stain-like marks or discoloration. |
+| `Dirtiness` | Surface regions showing contamination, dirt, or dirty-looking appearance. |
+| `Bumps` | Raised or bump-like surface irregularities. |
+| `Other_Faults` | Faults that do not belong to the six named categories above. |
+
+These are the **target classes** that the machine-learning model is trying to predict.
+
+For one steel-surface fault observation:
+
+~~~text
+Input  = 27 measured features
+Output = one of the 7 fault classes
+~~~
+
+The goal of the classifier is therefore to learn how combinations of location, size, shape, brightness, orientation, and plate-related features are associated with these fault categories.
+
+
+
 The output is categorical rather than continuous.
 
 Therefore this is a **multiclass classification problem**.
