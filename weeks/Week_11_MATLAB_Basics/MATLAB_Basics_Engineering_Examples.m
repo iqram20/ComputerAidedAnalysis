@@ -1,6 +1,6 @@
-%% Week 11 - MATLAB Basics and Engineering Examples
+%% Week 11 - Programming Review and Matrix-Based Engineering Computation
 % ESC 113: Computer Aided Analysis for Engineering
-% This script introduces MATLAB syntax through engineering examples.
+% MATLAB implementation of the Week 11 engineering programming examples.
 %
 % Run one section at a time using "Run Section".
 
