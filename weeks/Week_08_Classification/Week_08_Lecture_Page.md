@@ -270,6 +270,18 @@ Writing one fixed rule for every possible combination can become difficult.
 
 ## Complex Engineering Dependency — Why One Threshold May Not Be Enough
 
+
+### Reference picture — condition monitoring on a motor
+
+<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Wi-care_sensor_on_reciprocating_motor.png?width=700" width="520">
+
+*Wireless vibration sensor mounted on a reciprocating motor. Source: Wikimedia Commons, CC BY-SA 4.0.* citeturn668176search1
+
+[Open image source and license](https://commons.wikimedia.org/wiki/File:Wi-care_sensor_on_reciprocating_motor.png)
+
+This picture shows how a real engineering system can be instrumented with sensors. In practice, multiple measurements such as vibration, temperature, current, speed, load, and pressure can be combined to estimate the machine condition.
+
+
 A real machine condition may depend on several measurements **at the same time**.
 
 ~~~mermaid
