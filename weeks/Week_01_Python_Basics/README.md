@@ -39,3 +39,10 @@ The notebook includes explanations, worked examples, engineering applications, g
 - [Open the weekly assignment](Assignment_Week_01.md)
 
 The assignment includes Berkeley-aligned practice plus additional engineering coding problems.
+
+
+## MATLAB Materials
+
+[MATLAB Companion](MATLAB_Companion.md) — arithmetic, variables, and engineering calculations.
+
+MATLAB Online: https://matlab.mathworks.com/
