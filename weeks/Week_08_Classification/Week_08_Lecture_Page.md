@@ -7,6 +7,285 @@ This page is designed to be used directly during lecture.
 
 ---
 
+
+## Background — Why Surface Defect Classification Matters
+
+Steel is used in automobiles, buildings, machinery, transportation systems, appliances, and many other engineered products.
+
+During manufacturing, the steel surface can develop different kinds of defects such as:
+
+- scratches;
+- stains;
+- dirt or contamination;
+- bumps;
+- cracks or irregular marks;
+- other surface abnormalities.
+
+These defects may affect:
+
+- appearance;
+- corrosion resistance;
+- fatigue strength;
+- product quality;
+- downstream manufacturing;
+- customer acceptance.
+
+### Reference visual — examples of steel surface defects
+
+A useful visual reference showing examples such as seams, roll cracks, overfill, scratches, and heat cracks is available from the U.S. Department of Energy:
+
+[View steel surface-defect examples — U.S. DOE](https://www1.eere.energy.gov/manufacturing/industries_technologies/sensors_automation/pdfs/meetings/0605/chang_0605.pdf)
+
+Another useful background reference:
+
+[Review of steel surface defect detection using machine vision](https://onlinelibrary.wiley.com/doi/full/10.1049/ipr2.12647)
+
+### Ask students
+
+> If a steel production line produces thousands of parts, can a person inspect every surface perfectly and consistently?
+
+This motivates **automated inspection**.
+
+---
+
+## Why Use Machine Learning Classification in Engineering?
+
+Traditional engineering rules are very useful when the decision boundary is simple.
+
+Example:
+
+> If temperature > 100°C → Warning
+
+But many real engineering problems depend on several measurements at the same time.
+
+For a surface fault, the decision may depend on:
+
+- size;
+- location;
+- shape;
+- perimeter;
+- luminosity;
+- orientation;
+- plate thickness;
+- combinations of several variables.
+
+It may be difficult to write one simple rule that separates seven different fault types.
+
+Machine learning can learn patterns from previously labeled examples.
+
+### Engineering idea
+
+Instead of writing:
+
+> “If X > this AND Y < that AND luminosity > something…”
+
+we give the model many examples of known faults and let it learn a classification rule.
+
+### Reference visual — automated manufacturing inspection
+
+MathWorks provides examples of automated visual inspection and defect detection in manufacturing:
+
+[Automated Visual Inspection with AI — MathWorks](https://www.mathworks.com/campaigns/offers/next/automated-visual-inspection-with-deep-learning.html)
+
+[Manufacturing Analytics and Defect Detection — MathWorks](https://www.mathworks.com/discovery/manufacturing-analytics.html)
+
+---
+
+## From Physical Defect to Machine-Learning Decision
+
+~~~mermaid
+flowchart LR
+    A[Steel surface] --> B[Sensor / camera measurement]
+    B --> C[Extract measurable features]
+    C --> D[Machine-learning classifier]
+    D --> E[Predicted fault class]
+    E --> F[Engineer / quality-control decision]
+~~~
+
+### Examples of measured features
+
+A defect itself is physical.
+
+The computer cannot directly understand the word “scratch.”
+
+We first represent the defect using numbers such as:
+
+- position;
+- width;
+- height;
+- pixel area;
+- perimeter;
+- brightness;
+- orientation.
+
+These numerical measurements become the **features** used by the classifier.
+
+---
+
+## Classification Is Not the Final Engineering Decision
+
+A machine-learning model predicts a class.
+
+For example:
+
+> Predicted class = Z_Scratch
+
+But an engineer may still need to decide:
+
+- Is the defect acceptable?
+- Should the part be rejected?
+- Should the production line stop?
+- Should the part receive additional inspection?
+- Is maintenance required?
+
+~~~mermaid
+flowchart LR
+    A[Measured data] --> B[ML classification]
+    B --> C[Predicted fault type]
+    C --> D[Engineering standards + context]
+    D --> E[Accept / inspect / reject / repair]
+~~~
+
+### Important distinction
+
+**Classification:** What type of pattern does the model think this is?
+
+**Engineering disposition:** What action should be taken?
+
+These are not always the same question.
+
+---
+
+## Why Not Just Use Human Inspection?
+
+Human inspection is still important, but automated classification can help when:
+
+- production volume is very large;
+- inspection must happen quickly;
+- faults are subtle;
+- consistent decisions are required;
+- many measurements must be considered simultaneously;
+- continuous monitoring is needed.
+
+Machine learning does **not** eliminate the engineer.
+
+It can provide a fast decision-support tool.
+
+---
+
+## Why Classification Instead of Regression Here?
+
+Our target is not:
+
+> “How many millimeters?”
+
+or
+
+> “How many MPa?”
+
+Instead, our target is a category:
+
+~~~text
+Pastry
+Z_Scratch
+K_Scatch
+Stains
+Dirtiness
+Bumps
+Other_Faults
+~~~
+
+Therefore:
+
+> **categorical target → classification**
+
+---
+
+## Visual Summary — Regression vs Classification
+
+~~~mermaid
+flowchart TD
+    A[What do we want to predict?] --> B{Target type}
+    B -->|Continuous number| C[Regression]
+    B -->|Category / label| D[Classification]
+    C --> E[Example: power output = 452.8 MW]
+    D --> F[Example: fault type = Z_Scratch]
+~~~
+
+---
+
+## Classification Workflow for This Lecture
+
+~~~mermaid
+flowchart LR
+    A[Steel fault data] --> B[Inspect features and classes]
+    B --> C[Train / test split]
+    C --> D[Scale features]
+    D --> E[Train classifier]
+    E --> F[Predict test classes]
+    F --> G[Confusion matrix]
+    G --> H[Precision / Recall / F1]
+    H --> I[Engineering interpretation]
+~~~
+
+This is the roadmap for the rest of the lecture.
+
+---
+
+## Visual Guide — Confusion Matrix Idea
+
+Before seeing the seven-class confusion matrix, understand the basic idea with a two-class example.
+
+|  | Predicted Fault | Predicted Normal |
+|---|---:|---:|
+| **Actual Fault** | True Positive | False Negative |
+| **Actual Normal** | False Positive | True Negative |
+
+~~~mermaid
+flowchart TD
+    A[Actual Fault] --> B{Model prediction}
+    B -->|Fault| C[True Positive: detected correctly]
+    B -->|Normal| D[False Negative: real fault missed]
+    E[Actual Normal] --> F{Model prediction}
+    F -->|Fault| G[False Positive: false alarm]
+    F -->|Normal| H[True Negative: correct normal decision]
+~~~
+
+### Engineering interpretation
+
+For manufacturing:
+
+- **False negative:** a real defect is missed.
+- **False positive:** a good part is flagged as defective.
+
+Both can be costly, but in different ways.
+
+---
+
+## Visual Guide — Precision vs Recall
+
+~~~mermaid
+flowchart LR
+    A[PRECISION] --> B[Look at everything predicted as Fault]
+    B --> C[How many predictions were correct?]
+
+    D[RECALL] --> E[Look at every real Fault]
+    E --> F[How many did the model find?]
+~~~
+
+### Memory trick
+
+**Precision**
+
+> “When the model says FAULT, how often is it right?”
+
+**Recall**
+
+> “Of all the real FAULTS, how many did it find?”
+
+---
+
+
 ## 1. Main Engineering Question
 
 > Can we classify the type of surface fault on a steel plate using measured geometric and image-based features?
