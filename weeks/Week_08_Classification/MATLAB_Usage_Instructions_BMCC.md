@@ -6,6 +6,164 @@ This page is written for students who are new to MATLAB. It explains where to ru
 
 ---
 
+
+## MATLAB Login and Getting Started
+
+### Step 1 — Open the Official MathWorks Website
+
+Go to:
+
+https://www.mathworks.com/
+
+Click **Sign In** in the upper-right corner.
+
+If you do not already have a MathWorks account, create one.
+
+Use your **BMCC/CUNY school email address** when possible so MathWorks can check whether your school account is eligible for institutional access.
+
+MathWorks notes that students may already have access through their university or organization.
+
+### Step 2 — Open MATLAB Online
+
+Official MATLAB Online:
+
+https://matlab.mathworks.com/
+
+After signing in, MATLAB Online opens directly in your browser.
+
+You do not need to install MATLAB on your computer to use MATLAB Online.
+
+### Step 3 — If MATLAB Online Does Not Open
+
+Check:
+
+1. You are signed in to the correct MathWorks account.
+2. Your MathWorks account is linked to your school MATLAB access if required.
+3. You are using your BMCC/CUNY email address.
+4. Try signing out and signing back in.
+5. If access still fails, use the MathWorks student access page below.
+
+### Official Student MATLAB Resources
+
+MathWorks student resources:
+
+https://www.mathworks.com/academia/students/resources.html
+
+This page includes:
+- MATLAB access information;
+- interactive tutorials;
+- documentation;
+- examples;
+- videos;
+- student learning resources.
+
+### Free MATLAB Onramp
+
+Start here if you have never used MATLAB before:
+
+https://www.mathworks.com/learn/tutorials/matlab-onramp.html
+
+MATLAB Onramp is a free, self-paced introductory course.
+
+It teaches:
+- commands;
+- variables;
+- vectors and matrices;
+- indexing;
+- calculations;
+- plots;
+- scripts;
+- basic programming.
+
+It is strongly recommended for students who are using MATLAB for the first time.
+
+---
+
+## Short Guided Videos for First-Time MATLAB Users
+
+Watch these only as needed.
+
+### 1. What Is MATLAB? — 1:37
+
+Official MathWorks introduction:
+
+https://www.mathworks.com/videos/what-is-matlab-1481309651850.html
+
+Use this if you want a very short overview of what MATLAB is.
+
+### 2. First Steps in MATLAB — about 1:39
+
+Official MathWorks videos page:
+
+https://www.mathworks.com/videos.html
+
+Look for:
+
+**First Steps in MATLAB**
+
+This is a very short introduction to the MATLAB environment.
+
+### 3. Getting Started with MATLAB — about 10 minutes
+
+Official MathWorks video:
+
+https://www.mathworks.com/videos/getting-started-with-matlab-68985.html
+
+This video demonstrates:
+- Command Window;
+- Workspace;
+- variables;
+- calculations;
+- plotting;
+- documentation;
+- Live Editor.
+
+### 4. How to Write a MATLAB Program — about 14 minutes
+
+Official MathWorks videos page:
+
+https://www.mathworks.com/videos.html
+
+Look for:
+
+**How to Write a MATLAB Program**
+
+Recommended before students begin writing longer scripts.
+
+### 5. MATLAB Tutorials Page
+
+Official tutorials and videos:
+
+https://www.mathworks.com/support/learn-with-matlab-tutorials.html
+
+This page includes:
+- MATLAB Onramp;
+- getting-started documentation;
+- introductory videos;
+- additional interactive learning resources.
+
+---
+
+## Recommended First-Time Student Sequence
+
+If this is your first time using MATLAB, follow this order:
+
+1. Create or sign in to your MathWorks account.
+2. Open MATLAB Online.
+3. Watch **What Is MATLAB?**
+4. Watch **First Steps in MATLAB**.
+5. Complete the beginning of **MATLAB Onramp**.
+6. Open the ESC 113 MATLAB file.
+7. Run one `%%` section at a time.
+8. Read the comments on each line.
+9. Check the Workspace and Command Window after each section.
+
+You do **not** need to finish all MATLAB Onramp lessons before class.
+
+Even the first few sections can make MATLAB much easier to understand.
+
+---
+
 ## 1. Where Can I Use MATLAB?
 
 BMCC students can use MATLAB in two main ways.
