@@ -1,4 +1,7 @@
 %% Week 12 - Engineering Data Analysis and Numerical Methods
+% Treat each %% section like a notebook code cell.
+% Read the explanation, run one section, inspect the output, then continue.
+% In MATLAB Live Editor, each %% section can be run independently.
 % ESC 113: Computer Aided Analysis for Engineering
 %
 % Run one section at a time.
