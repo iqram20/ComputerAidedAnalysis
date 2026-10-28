@@ -53,3 +53,12 @@ Students may use:
 - MATLAB Live Scripts
 
 MATLAB Online is useful when MATLAB is not installed locally.
+
+
+## MATLAB Materials
+
+[MATLAB Basics Engineering Examples](MATLAB_Basics_Engineering_Examples.m) — the main Week 11 MATLAB script.
+
+[MATLAB Usage Guide](MATLAB_Usage_Guide.md) — MATLAB interface, scripts, sections, plotting, debugging, and file organization.
+
+MATLAB Online: https://matlab.mathworks.com/
