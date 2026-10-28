@@ -110,18 +110,7 @@ Use this page directly while teaching. It contains the lecture sequence, explana
 
 ## MATLAB Usage Instructions
 
-Students can run the Week 8 MATLAB code in **MATLAB Desktop** or **MATLAB Online**.
+- [MATLAB Usage Instructions for BMCC Students](MATLAB_Usage_Instructions_BMCC.md)
 
-Recommended workflow:
+This separate page explains MATLAB Online/Desktop, scripts, sections, Workspace, Current Folder, common errors, toolbox checks, saving files, submission, and MATLAB-vs-Python differences for beginning BMCC students.
 
-1. Open `Week_08_Classification_MATLAB.m`.
-2. Run one `%%` section at a time using **Run Section**.
-3. Read the right-side code comments.
-4. Inspect variables in the Workspace.
-5. Interpret each output before continuing.
-
-Week 8 requires the **Statistics and Machine Learning Toolbox** because it uses `cvpartition`, `templateLinear`, `fitcecoc`, and `confusionchart`.
-
-A more detailed usage section is included in the [Week 8 Lecture Page](Week_08_Lecture_Page.md).
-
-For general MATLAB help, see the course [MATLAB Usage Guide](../Week_11_MATLAB_Basics/MATLAB_Usage_Guide.md).
