@@ -82,3 +82,20 @@ The notebook is intentionally detailed and includes **dataset context, feature e
 The MATLAB script mirrors the Python lecture workflow using the same UCI Steel Plates Faults dataset. It includes dataset download, target conversion, class-balance analysis, stratified train/test splitting, training-data standardization, multiclass linear logistic classification with ECOC, confusion matrix analysis, precision, recall, F1, macro/weighted metrics, misclassification review, and uncertainty analysis.
 
 > **MATLAB requirement:** Statistics and Machine Learning Toolbox.
+
+
+## Short Videos
+
+Recommended short videos for students who want an additional explanation:
+
+| Topic | Resource | Length |
+|---|---|---:|
+| Classification basics | [An Introduction to Classification — MathWorks](https://www.mathworks.com/videos/an-introduction-to-classification-68891.html) | 9:00 |
+| Logistic regression | [StatQuest: Logistic Regression](https://www.youtube.com/watch?v=yIYKR4sgzI8) | ~8 min |
+| Confusion matrix | [StatQuest: The Confusion Matrix](https://www.youtube.com/watch?v=Kdsp6soqA7o) | ~7 min |
+| Precision, recall, F1 | [Logistic Regression Evaluation Metrics](https://www.youtube.com/watch?v=eQjtZ0qpOVg) | ~10 min |
+| MATLAB classification | [Classify Data Using the Classification Learner App — MathWorks](https://www.mathworks.com/videos/classify-data-using-the-classification-learner-app-106171.html) | 4:34 |
+
+### Recommended use
+
+Students should first read the notebook section and run the example code. Watch the corresponding video only when additional explanation is helpful, then return to the notebook exercises.
