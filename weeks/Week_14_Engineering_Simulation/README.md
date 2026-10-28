@@ -45,6 +45,10 @@ By the end of this week, students should be able to:
 - [Week 14 Assignment](Assignment_Week_14.md)
 
 
+## MATLAB Notebook-Style Lecture
+
+- [Week 14 MATLAB Lecture Page](Week_14_MATLAB_Lecture_Page.md) — simulation concepts taught as small sequential MATLAB cells with text and interpretation between them.
+
 ## MATLAB Materials
 
 [MATLAB Engineering Simulation](Engineering_Simulation_MATLAB.m) — time stepping, physical models, parameter studies, verification, and simulation.
