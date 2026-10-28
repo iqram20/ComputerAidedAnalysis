@@ -101,38 +101,8 @@ Recommended short videos for students who want an additional explanation:
 Students should first read the notebook section and run the example code. Watch the corresponding video only when additional explanation is helpful, then return to the notebook exercises.
 
 
-## Faculty Observation Notes
+## Lecture Page
 
-For an observed class session, the Week 8 notebook is organized around a clear instructional sequence:
+- [Week 8 — Classification Lecture Page](Week_08_Lecture_Page.md)
 
-**prior knowledge → engineering question → concept explanation → worked code → prediction/check for understanding → model evaluation → engineering interpretation → guided practice → exit ticket**
-
-### Visible Teaching Elements
-
-- explicit learning objectives at the beginning;
-- connection to Week 7 regression;
-- opening engineering question;
-- prediction questions before code execution;
-- think–pair–share prompts;
-- checks for understanding before major topics;
-- line-by-line code comments;
-- short supporting videos;
-- guided exercises with clues;
-- engineering interpretation after each metric;
-- discussion of false positives and false negatives;
-- exit-ticket questions aligned with the learning objectives.
-
-### Suggested Classroom Emphasis
-
-During the observed lesson, avoid spending most of the class simply running code. Pause after each major output and ask students to interpret what it means.
-
-Useful questions include:
-
-- “What does one row represent?”
-- “Why are we stratifying?”
-- “What does this off-diagonal confusion-matrix cell mean?”
-- “Which class has the lowest recall?”
-- “What would a false negative mean in a real manufacturing setting?”
-- “Would accuracy alone convince you to deploy this model?”
-
-The instructional goal is for students to connect **code → metric → engineering meaning**.
+Use this page directly while teaching. It contains the lecture sequence, explanations, code, questions to ask students, clues, engineering interpretation, MATLAB equivalents, short videos, and exit questions.
