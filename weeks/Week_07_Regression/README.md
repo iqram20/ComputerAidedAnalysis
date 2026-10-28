@@ -71,8 +71,12 @@ Students should be able to:
 The notebook is intentionally detailed and includes **concept explanations, student-question sections, code, engineering interpretations, common mistakes, guided exercises, independent exercises, and a review quiz**.
 
 
-## MATLAB Materials
 
-[MATLAB Companion](MATLAB_Companion.md) — linear regression, MAE, RMSE, R², residuals, and prediction plots.
 
-MATLAB Online: https://matlab.mathworks.com/
+## Programming Code — Python and MATLAB
+
+Every coding concept in this chapter should be studied in **both Python and MATLAB**. The engineering equations, variables, and expected interpretation are equivalent; only the programming syntax changes.
+
+- [Python lecture/code](Week_07_Regression.ipynb)
+- [MATLAB equivalent examples](MATLAB_Companion.md)
+- MATLAB Online: https://matlab.mathworks.com/
