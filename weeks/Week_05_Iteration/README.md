@@ -34,3 +34,10 @@ Students should be able to automate repeated calculations and write simple itera
 - [Open the 3-hour teaching notebook](Week_05_Iteration.ipynb)
 
 The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
+
+
+## MATLAB Materials
+
+[MATLAB Companion](MATLAB_Companion.md) — `for` loops, `while` loops, and repeated calculations.
+
+MATLAB Online: https://matlab.mathworks.com/
