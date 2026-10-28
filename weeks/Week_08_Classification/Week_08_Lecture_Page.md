@@ -5,6 +5,200 @@
 
 ---
 
+
+## Machine Learning Background
+
+### What Is Machine Learning?
+
+Machine learning is a method that allows a computer to learn patterns from data and use those patterns to make predictions or decisions.
+
+Instead of writing every decision rule manually, we provide:
+
+- input data;
+- known examples;
+- a learning algorithm.
+
+The algorithm learns a model that can then be applied to new data.
+
+~~~mermaid
+flowchart LR
+    A[Engineering data] --> B[Machine-learning algorithm]
+    B --> C[Learned model]
+    C --> D[Prediction on new data]
+~~~
+
+### Machine Learning in Engineering
+
+Machine learning is used in many engineering areas, including:
+
+- predictive maintenance;
+- manufacturing quality control;
+- energy prediction;
+- structural monitoring;
+- biomedical signals;
+- transportation systems;
+- battery health;
+- fault diagnosis;
+- sensor analysis;
+- process optimization.
+
+The purpose is not to replace engineering principles. Machine learning is used to support engineering analysis when patterns are difficult to describe using simple rules alone.
+
+---
+
+## Supervised Learning
+
+In **supervised learning**, the training data contain both:
+
+- input features;
+- known target values.
+
+The model learns the relationship between the inputs and the target.
+
+Examples:
+
+| Inputs | Target |
+|---|---|
+| Temperature, pressure, humidity | Power output |
+| Cement, water, age | Concrete strength |
+| Vibration, temperature, current | Machine condition |
+| Image-based fault features | Fault type |
+
+Supervised learning is commonly divided into two major types:
+
+1. **Regression**
+2. **Classification**
+
+---
+
+## Regression
+
+Regression is used when the target is a **continuous numerical value**.
+
+Examples:
+
+- power output in MW;
+- concrete strength in MPa;
+- temperature in °C;
+- battery capacity;
+- energy consumption;
+- displacement or stress.
+
+Example:
+
+~~~text
+Inputs:
+Ambient Temperature
+Pressure
+Humidity
+
+Target:
+Electrical Power Output = 452.8 MW
+~~~
+
+In Week 7, regression was used to predict the electrical output of a combined-cycle power plant.
+
+### Regression workflow
+
+~~~mermaid
+flowchart LR
+    A[Input features] --> B[Regression model]
+    B --> C[Continuous numerical prediction]
+    C --> D[Example: 452.8 MW]
+~~~
+
+---
+
+## Classification
+
+Classification is used when the target is a **category or class label**.
+
+Examples:
+
+- Healthy / Faulty;
+- Pass / Fail;
+- Safe / Unsafe;
+- Normal / Warning / Critical;
+- defect type;
+- equipment state.
+
+Example:
+
+~~~text
+Inputs:
+Vibration
+Temperature
+Current
+
+Target:
+Machine Condition = Faulty
+~~~
+
+### Classification workflow
+
+~~~mermaid
+flowchart LR
+    A[Input features] --> B[Classification model]
+    B --> C[Class prediction]
+    C --> D[Example: Faulty]
+~~~
+
+---
+
+## Regression vs Classification
+
+| Question | Regression | Classification |
+|---|---|---|
+| What is predicted? | Numerical value | Category |
+| Example target | 452.8 MW | Faulty |
+| Output type | Continuous | Discrete class |
+| Week in this course | Week 7 | Week 8 |
+
+### Simple rule
+
+> **Number → Regression**
+
+> **Category → Classification**
+
+---
+
+## Connection Between Week 7 and Week 8
+
+Week 7 and Week 8 use the same basic supervised-learning workflow:
+
+~~~mermaid
+flowchart LR
+    A[Define engineering problem] --> B[Load data]
+    B --> C[Select X and y]
+    C --> D[Train / test split]
+    D --> E[Train model]
+    E --> F[Make predictions]
+    F --> G[Evaluate performance]
+    G --> H[Engineering interpretation]
+~~~
+
+The main difference is the type of target.
+
+### Week 7
+
+~~~text
+Target = Net Electrical Output
+Example = 452.8 MW
+→ Regression
+~~~
+
+### Week 8
+
+~~~text
+Target = Fault Type
+Example = Z_Scratch
+→ Classification
+~~~
+
+This distinction is one of the most important ideas in introductory machine learning.
+
+---
+
 ## Why Classification Is Important in Engineering
 
 Many engineering problems are not asking for a numerical value.
