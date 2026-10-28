@@ -37,6 +37,10 @@ By the end of this week, students should be able to:
 - solve systems of linear equations;
 - interpret numerical results in an engineering context.
 
+## Lecture Page
+
+[Detailed Week 12 Lecture Page](Week_12_Lecture_Page.md) — data analysis, curve fitting, numerical differentiation/integration, nonlinear equations, linear systems, and guided practice.
+
 ## Files
 
 - [MATLAB Data Analysis and Numerical Methods](MATLAB_Data_Analysis_Numerical_Methods.m)
