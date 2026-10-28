@@ -15,6 +15,36 @@ Advanced topics include **deep learning, natural language processing, transforme
 
 Throughout the course, students work with open engineering/scientific datasets, Jupyter/Google Colab, MATLAB, GitHub, and reproducible computational workflows. Emphasis is placed not only on writing code, but also on **engineering interpretation, model validation, responsible AI use, and clear technical communication**.
 
+## Primary Programming Textbooks and Learning Resources
+
+### Python
+
+**Python Programming and Numerical Methods: A Guide for Engineers and Scientists**  
+Berkeley open textbook:  
+https://pythonnumericalmethods.studentorg.berkeley.edu/
+
+This is the primary open Python reference for programming fundamentals and numerical methods.
+
+### MATLAB
+
+**Numerical Computing with MATLAB — Cleve Moler**  
+Official MathWorks electronic textbook:  
+https://www.mathworks.com/moler/index_ncm.html
+
+This is the primary MATLAB textbook/reference for ESC 113. It includes MATLAB programming, matrix computation, numerical methods, interpolation, equation solving, differential equations, and technical computing.
+
+**Optional programming-focused MATLAB textbook:**  
+**MATLAB Programming for Engineers, 7th Edition — Stephen J. Chapman**  
+https://www.mathworks.com/academia/books/matlab-programming-for-engineers-chapman.html
+
+### Interactive MATLAB Practice
+
+**MATLAB Onramp**  
+https://www.mathworks.com/learn/tutorials/matlab-onramp.html
+
+MATLAB Onramp provides free interactive practice with variables, vectors, matrices, indexing, calculations, plotting, and scripts.
+
+
 ### Course Structure
 
 - **Weeks 1–5:** Python programming fundamentals for engineering
