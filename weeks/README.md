@@ -1,18 +1,18 @@
 # ESC 113 Weekly Course Materials
 
-This folder contains the current 10-week Python and machine-learning sequence for **ESC 113: Computer Aided Analysis for Engineering**.
+This folder contains the 14-week ESC 113 sequence. Programming topics are taught using **Python and MATLAB equivalents**, with engineering concepts as the primary focus.
 
 
-### Part III — MATLAB for Engineering
-- [Week 11 — MATLAB Basics and Engineering Examples](Week_11_MATLAB_Basics/README.md)
-- [Week 12 — MATLAB Data Analysis and Numerical Methods](Week_12_MATLAB_Data_Analysis_Numerical_Methods/README.md)
+### Part III — Engineering Data Analysis and Numerical Methods
+- [Week 11 — Programming Review and Matrix-Based Engineering Computation](Week_11_MATLAB_Basics/README.md)
+- [Week 12 — Engineering Data Analysis and Numerical Methods](Week_12_MATLAB_Data_Analysis_Numerical_Methods/README.md)
 - [Week 13 — Deep Learning, NLP, and LLMs for Engineering Applications](Week_13_Deep_Learning_NLP_LLM/README.md)
 - [Week 14 — Engineering Simulation and Computational Modeling](Week_14_Engineering_Simulation/README.md)
 ## Course sequence
 
-### Part I — Python for Engineering
-- [Week 1 — Python Basics and Engineering Calculations](Week_01_Python_Basics/README.md)
-- [Week 2 — Variables, Data Structures, and NumPy](Week_02_Data_Structures_NumPy/README.md)
+### Part I — Programming Foundations for Engineering
+- [Week 1 — Programming Basics and Engineering Calculations](Week_01_Python_Basics/README.md)
+- [Week 2 — Variables, Data Structures, Arrays, and Matrices](Week_02_Data_Structures_NumPy/README.md)
 - [Week 3 — Functions for Engineering Computation](Week_03_Functions/README.md)
 - [Week 4 — Branching and Engineering Decision Logic](Week_04_Branching/README.md)
 - [Week 5 — Iteration and Engineering Simulations](Week_05_Iteration/README.md)
