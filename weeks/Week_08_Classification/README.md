@@ -75,6 +75,13 @@ Students should be able to:
 The notebook is intentionally detailed and includes **dataset context, feature explanations, student-question sections, code explanations, metrics, engineering interpretations, common mistakes, guided practice, independent exercises, and a 20-question review quiz**.
 
 
+
+## MATLAB Notebook-Style Lecture
+
+- [Week 8 MATLAB Lecture Page](Week_08_MATLAB_Lecture_Page.md) — short explanation → small MATLAB code block → output/interpretation → next step.
+
+Use this page first for learning. The full `.m` script is provided as the complete runnable version.
+
 ## MATLAB Equivalent
 
 - [Week 8 — MATLAB Classification Code](Week_08_Classification_MATLAB.m)
