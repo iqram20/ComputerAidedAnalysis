@@ -12,7 +12,7 @@
 - Data leakage
 - Reproducibility with `random_state`
 
-## Python libraries
+## Python setup
 ```python
 import numpy as np
 import pandas as pd
@@ -38,8 +38,12 @@ Students should understand the complete supervised-learning workflow before fitt
 The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
 
 
-## MATLAB Materials
 
-[MATLAB Companion](MATLAB_Companion.md) — features, targets, train/test split, and introductory supervised learning.
 
-MATLAB Online: https://matlab.mathworks.com/
+## Programming Code — Python and MATLAB
+
+Every coding concept in this chapter should be studied in **both Python and MATLAB**. The engineering equations, variables, and expected interpretation are equivalent; only the programming syntax changes.
+
+- [Python lecture/code](Week_06_ML_Fundamentals.ipynb)
+- [MATLAB equivalent examples](MATLAB_Companion.md)
+- MATLAB Online: https://matlab.mathworks.com/
