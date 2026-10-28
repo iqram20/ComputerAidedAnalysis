@@ -733,39 +733,253 @@ One row represents one detected fault instance, not an entire steel plate.
 
 ---
 
-## 5. What Are the Features?
+## 5. Understanding the 27 Input Features
 
-The 27 input variables describe the fault's:
-- location;
-- size;
-- shape;
-- perimeter;
-- pixel area;
-- luminosity;
-- plate thickness;
-- orientation;
-- other image-derived characteristics.
+The model receives **27 numerical input features** for each detected steel-surface fault.
 
-Examples:
+These features describe:
 
-| Feature | Meaning |
+- where the defect is located;
+- how large it is;
+- its shape;
+- its perimeter and edges;
+- how bright or dark it appears;
+- the steel type and plate thickness;
+- several image-derived indices.
+
+> **Important:** The UCI repository provides the official feature names, but it does not provide detailed physical definitions or units for most variables. The explanations below are practical interpretations of the variable names so that the features are easier to understand.
+
+### A. Defect Location
+
+| Feature | Student-friendly meaning |
 |---|---|
-| X_Minimum | Minimum horizontal fault position |
-| X_Maximum | Maximum horizontal fault position |
-| Y_Minimum | Minimum vertical fault position |
-| Y_Maximum | Maximum vertical fault position |
-| Pixels_Areas | Fault pixel area |
-| X_Perimeter | Horizontal perimeter measure |
-| Y_Perimeter | Vertical perimeter measure |
-| Minimum_of_Luminosity | Minimum grayscale intensity |
-| Maximum_of_Luminosity | Maximum grayscale intensity |
-| Steel_Plate_Thickness | Plate thickness |
-| Orientation_Index | Fault orientation descriptor |
-| Luminosity_Index | Normalized luminosity descriptor |
+| `X_Minimum` | Leftmost horizontal position of the detected defect |
+| `X_Maximum` | Rightmost horizontal position of the detected defect |
+| `Y_Minimum` | Lowest/start vertical position of the detected defect |
+| `Y_Maximum` | Highest/end vertical position of the detected defect |
 
-Teaching point:
+These four values describe the **bounding box** around the fault.
 
-Not every machine-learning feature has a simple physical interpretation. In image-based engineering datasets, many variables are computed descriptors.
+~~~text
+Y_Maximum
+    ┌───────────────┐
+    │    DEFECT     │
+    └───────────────┘
+Y_Minimum
+
+X_Minimum         X_Maximum
+~~~
+
+From these values, the defect width and height can be related to:
+
+~~~text
+Width  ≈ X_Maximum - X_Minimum
+Height ≈ Y_Maximum - Y_Minimum
+~~~
+
+---
+
+### B. Defect Size and Boundary
+
+| Feature | Student-friendly meaning |
+|---|---|
+| `Pixels_Areas` | Number of image pixels belonging to the defect; a measure of defect area |
+| `X_Perimeter` | Horizontal contribution to the defect boundary |
+| `Y_Perimeter` | Vertical contribution to the defect boundary |
+
+A larger `Pixels_Areas` value generally corresponds to a larger detected region in the image.
+
+The perimeter variables help describe whether a defect is:
+
+- compact;
+- long and narrow;
+- irregular;
+- stretched mostly horizontally or vertically.
+
+---
+
+### C. Brightness / Luminosity
+
+| Feature | Student-friendly meaning |
+|---|---|
+| `Sum_of_Luminosity` | Total brightness intensity across the defect region |
+| `Minimum_of_Luminosity` | Darkest pixel intensity in the defect |
+| `Maximum_of_Luminosity` | Brightest pixel intensity in the defect |
+| `Luminosity_Index` | Derived index describing overall brightness characteristics |
+
+In a grayscale image:
+
+~~~text
+darker pixel  → lower intensity
+brighter pixel → higher intensity
+~~~
+
+Brightness can help distinguish defects because scratches, stains, bumps, and other surface irregularities may reflect light differently.
+
+---
+
+### D. Production / Steel Information
+
+| Feature | Student-friendly meaning |
+|---|---|
+| `Length_of_Conveyer` | Conveyor-system length or related production-line dimension recorded with the observation |
+| `TypeOfSteel_A300` | Indicator showing whether the steel belongs to the A300 category |
+| `TypeOfSteel_A400` | Indicator showing whether the steel belongs to the A400 category |
+| `Steel_Plate_Thickness` | Thickness of the steel plate |
+
+The two steel-type variables act like **yes/no indicator variables**.
+
+For example:
+
+~~~text
+TypeOfSteel_A300 = 1 → A300 category
+TypeOfSteel_A300 = 0 → not A300
+~~~
+
+Steel type and thickness can influence how surface defects appear and how they should be interpreted.
+
+---
+
+### E. Shape Indices
+
+| Feature | Student-friendly meaning |
+|---|---|
+| `Edges_Index` | Derived measure related to the defect's position or edge characteristics |
+| `Empty_Index` | Measure of how much empty space exists inside the defect's bounding region |
+| `Square_Index` | Measure of how square-like the defect shape is |
+| `Outside_X_Index` | Derived horizontal size/position measure |
+| `Outside_Global_Index` | Derived indicator describing the defect's overall outside orientation or extent |
+
+These are **engineered features** calculated from the original image geometry.
+
+They are not direct measurements such as temperature or pressure.
+
+Instead, they summarize the **shape of the defect** in a way a machine-learning model can use.
+
+---
+
+### F. Edge Direction Features
+
+| Feature | Student-friendly meaning |
+|---|---|
+| `Edges_X_Index` | Measure of how strongly the defect extends or changes in the horizontal direction |
+| `Edges_Y_Index` | Measure of how strongly the defect extends or changes in the vertical direction |
+| `Orientation_Index` | Derived measure describing the overall orientation of the defect |
+
+These features can help distinguish shapes such as:
+
+~~~text
+Horizontal defect:  ─────────
+
+Vertical defect:       │
+                       │
+                       │
+
+Compact defect:       ●
+~~~
+
+A long scratch may have a very different orientation pattern from a compact stain or bump.
+
+---
+
+### G. Log-Transformed Size Features
+
+| Feature | Student-friendly meaning |
+|---|---|
+| `LogOfAreas` | Logarithmic transformation of defect area |
+| `Log_X_Index` | Log-transformed horizontal size/index |
+| `Log_Y_Index` | Log-transformed vertical size/index |
+
+Why use a logarithm?
+
+Defect sizes may vary greatly.
+
+For example:
+
+~~~text
+Area = 10
+Area = 100
+Area = 1000
+Area = 10000
+~~~
+
+A logarithmic transformation compresses a large numerical range:
+
+~~~text
+log10(10)    = 1
+log10(100)   = 2
+log10(1000)  = 3
+log10(10000) = 4
+~~~
+
+This can make large differences easier for a statistical model to handle.
+
+---
+
+### H. Sigmoid-Based Area Feature
+
+| Feature | Student-friendly meaning |
+|---|---|
+| `SigmoidOfAreas` | Area-related feature transformed using a sigmoid-type mathematical function |
+
+A sigmoid transformation converts a wide numerical range into a more compressed nonlinear scale.
+
+Conceptually:
+
+~~~text
+very small values  → near one end
+medium values      → transition region
+very large values  → near the other end
+~~~
+
+The important idea is that this is **not a new physical measurement**. It is a transformed version of geometric information.
+
+---
+
+## Feature Groups at a Glance
+
+| Group | Example features | What they describe |
+|---|---|---|
+| Location | X_Minimum, X_Maximum, Y_Minimum, Y_Maximum | Where the fault is |
+| Size | Pixels_Areas | How large the fault is |
+| Boundary | X_Perimeter, Y_Perimeter | Shape boundary |
+| Brightness | Minimum/Maximum/Sum of Luminosity | How dark or bright it is |
+| Material | TypeOfSteel_A300, TypeOfSteel_A400 | Steel category |
+| Plate property | Steel_Plate_Thickness | Plate thickness |
+| Shape | Square_Index, Empty_Index | Geometry |
+| Direction | Edges_X_Index, Edges_Y_Index, Orientation_Index | Direction/orientation |
+| Transformed size | LogOfAreas, Log_X_Index, Log_Y_Index | Compressed size information |
+| Nonlinear transformed feature | SigmoidOfAreas | Nonlinear area representation |
+
+---
+
+## Why So Many Features?
+
+Two defects can have the same area but still look very different.
+
+For example:
+
+~~~text
+Defect A:
+Large area
+Horizontal
+Dark
+Long and narrow
+
+Defect B:
+Large area
+Compact
+Bright
+Nearly square
+~~~
+
+If we used only `Pixels_Areas`, these defects might look similar to the model.
+
+By combining location, size, shape, orientation, brightness, and material information, the classifier receives a much richer description of each fault.
+
+This is the main idea behind **multivariable machine learning**:
+
+> one feature gives part of the story; several features together provide a better description of the engineering condition.
 
 ---
 
