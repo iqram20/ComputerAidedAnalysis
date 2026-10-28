@@ -43,3 +43,10 @@ By the end of this week, students should be able to:
 - [Engineering Simulation — Python Notebook](Engineering_Simulation_Python.ipynb)
 - [Engineering Simulation — MATLAB Script](Engineering_Simulation_MATLAB.m)
 - [Week 14 Assignment](Assignment_Week_14.md)
+
+
+## MATLAB Materials
+
+[MATLAB Engineering Simulation](Engineering_Simulation_MATLAB.m) — time stepping, physical models, parameter studies, verification, and simulation.
+
+MATLAB Online: https://matlab.mathworks.com/
