@@ -106,3 +106,22 @@ Students should first read the notebook section and run the example code. Watch 
 - [Week 8 — Classification Lecture Page](Week_08_Lecture_Page.md)
 
 Use this page directly while teaching. It contains the lecture sequence, explanations, code, questions to ask students, clues, engineering interpretation, MATLAB equivalents, short videos, and exit questions.
+
+
+## MATLAB Usage Instructions
+
+Students can run the Week 8 MATLAB code in **MATLAB Desktop** or **MATLAB Online**.
+
+Recommended workflow:
+
+1. Open `Week_08_Classification_MATLAB.m`.
+2. Run one `%%` section at a time using **Run Section**.
+3. Read the right-side code comments.
+4. Inspect variables in the Workspace.
+5. Interpret each output before continuing.
+
+Week 8 requires the **Statistics and Machine Learning Toolbox** because it uses `cvpartition`, `templateLinear`, `fitcecoc`, and `confusionchart`.
+
+A more detailed usage section is included in the [Week 8 Lecture Page](Week_08_Lecture_Page.md).
+
+For general MATLAB help, see the course [MATLAB Usage Guide](../Week_11_MATLAB_Basics/MATLAB_Usage_Guide.md).
