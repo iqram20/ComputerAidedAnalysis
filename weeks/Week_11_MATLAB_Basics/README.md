@@ -70,3 +70,9 @@ MATLAB Online: https://matlab.mathworks.com/
 - [MATLAB equivalent examples](MATLAB_Basics_Engineering_Examples.m)
 
 The engineering problems and calculations are equivalent in both languages; the syntax differs.
+
+
+## Lecture Page
+
+[Detailed Week 11 Lecture Page](Week_11_Lecture_Page.md) — explanations, MATLAB examples, Python comparison, common errors, and guided practice.
+
