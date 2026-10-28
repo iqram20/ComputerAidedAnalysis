@@ -7,13 +7,45 @@ This repository contains the current course materials for **ESC 113: Computer Ai
 
 ## Course Description
 
-ESC 113 introduces students to modern computational tools for solving engineering problems through programming, data analysis, machine learning, numerical methods, and simulation. The course begins with **Python programming fundamentals for engineers**, including variables, data structures, NumPy, functions, branching, iteration, visualization, and analysis of real open engineering datasets.
+ESC 113 introduces programming and computational analysis for engineering using **Python and MATLAB in parallel**.
 
-Students then progress to **machine learning for engineering applications**, including data preparation, regression, classification, decision trees, random forests, model evaluation, feature importance, and reproducible project workflows using real datasets. The course also introduces **MATLAB** for engineering calculations, matrix operations, data analysis, curve fitting, numerical differentiation, integration, nonlinear equations, and linear systems.
+The course is organized around engineering concepts rather than a single programming language. For each programming topic, students study the same engineering problem in both Python and MATLAB and compare the syntax, workflow, numerical output, and interpretation.
 
-Advanced topics include **deep learning, natural language processing, transformers, and large language models (LLMs)** with emphasis on engineering use cases such as predictive maintenance, technical-document analysis, troubleshooting support, and retrieval-augmented generation. The course concludes with **engineering simulation and computational modeling**, where students translate physical laws into numerical models, perform parameter and sensitivity studies, and evaluate model assumptions, stability, verification, validation, and limitations.
+Topics include programming fundamentals, variables, arrays and matrices, functions, branching, iteration, data analysis, visualization, machine learning, numerical methods, deep learning, artificial intelligence, and engineering simulation.
 
-Throughout the course, students work with open engineering/scientific datasets, Jupyter/Google Colab, MATLAB, GitHub, and reproducible computational workflows. Emphasis is placed not only on writing code, but also on **engineering interpretation, model validation, responsible AI use, and clear technical communication**.
+Real engineering and scientific datasets are used throughout the course. Emphasis is placed on understanding the engineering problem, selecting appropriate computational methods, checking results, interpreting outputs, and communicating conclusions.
+
+## Programming Policy
+
+Every major coding topic should include:
+
+1. the engineering concept;
+2. the governing equation or computational goal;
+3. a Python implementation;
+4. an equivalent MATLAB implementation;
+5. comparison of the two implementations;
+6. interpretation of the engineering result.
+
+Students are not expected to memorize every command in either language. The goal is to understand how the same engineering problem can be solved using different computational tools.
+
+## Programming Environments
+
+### Python
+Students may use:
+- Google Colab
+- Jupyter Notebook
+- Python 3
+
+Common libraries include NumPy, pandas, Matplotlib, SciPy, and scikit-learn.
+
+### MATLAB
+Students may use:
+- MATLAB Online
+- MATLAB Desktop
+- MATLAB Live Editor
+
+MATLAB Online:  
+https://matlab.mathworks.com/
 
 ## Primary Programming Textbooks and Learning Resources
 
@@ -23,15 +55,11 @@ Throughout the course, students work with open engineering/scientific datasets, 
 Berkeley open textbook:  
 https://pythonnumericalmethods.studentorg.berkeley.edu/
 
-This is the primary open Python reference for programming fundamentals and numerical methods.
-
 ### MATLAB
 
 **Numerical Computing with MATLAB — Cleve Moler**  
 Official MathWorks electronic textbook:  
 https://www.mathworks.com/moler/index_ncm.html
-
-This is the primary MATLAB textbook/reference for ESC 113. It includes MATLAB programming, matrix computation, numerical methods, interpolation, equation solving, differential equations, and technical computing.
 
 **Optional programming-focused MATLAB textbook:**  
 **MATLAB Programming for Engineers, 7th Edition — Stephen J. Chapman**  
@@ -42,31 +70,24 @@ https://www.mathworks.com/academia/books/matlab-programming-for-engineers-chapma
 **MATLAB Onramp**  
 https://www.mathworks.com/learn/tutorials/matlab-onramp.html
 
-MATLAB Onramp provides free interactive practice with variables, vectors, matrices, indexing, calculations, plotting, and scripts.
+## Course Structure
 
-
-### Course Structure
-
-- **Weeks 1–5:** Python programming fundamentals for engineering
-- **Weeks 6–10:** Machine learning for engineering applications
-- **Weeks 11–12:** MATLAB and numerical engineering analysis
+- **Weeks 1–5:** Programming foundations for engineering using Python and MATLAB
+- **Weeks 6–10:** Machine learning for engineering using Python and MATLAB
+- **Weeks 11–12:** Engineering data analysis and numerical methods using Python and MATLAB
 - **Week 13:** Deep learning, NLP, transformers, and LLM engineering applications
-- **Week 14:** Engineering simulation and computational modeling
-
-The Python portion follows the open textbook **Python Programming and Numerical Methods: A Guide for Engineers and Scientists** from Berkeley:
-
-https://pythonnumericalmethods.studentorg.berkeley.edu/
+- **Week 14:** Engineering simulation and computational modeling using Python and MATLAB
 
 ---
 
 ## Current 14-Week Course Sequence
 
-### Part I — Python for Engineering
+### Part I — Programming Foundations for Engineering
 
 | Week | Topic |
 |---|---|
-| 1 | [Python Basics and Engineering Calculations](weeks/Week_01_Python_Basics/README.md) |
-| 2 | [Variables, Data Structures, and NumPy](weeks/Week_02_Data_Structures_NumPy/README.md) |
+| 1 | [Programming Basics and Engineering Calculations](weeks/Week_01_Python_Basics/README.md) |
+| 2 | [Variables, Data Structures, Arrays, and Matrices](weeks/Week_02_Data_Structures_NumPy/README.md) |
 | 3 | [Functions for Engineering Computation](weeks/Week_03_Functions/README.md) |
 | 4 | [Branching and Engineering Decision Logic](weeks/Week_04_Branching/README.md) |
 | 5 | [Iteration and Engineering Simulations](weeks/Week_05_Iteration/README.md) |
@@ -81,60 +102,12 @@ https://pythonnumericalmethods.studentorg.berkeley.edu/
 | 9 | [Decision Trees, Random Forests, and Feature Importance](weeks/Week_09_Trees_Ensembles/README.md) |
 | 10 | [Model Evaluation, Tuning, and Engineering ML Project](weeks/Week_10_Model_Evaluation_Project/README.md) |
 
-Full weekly overview: [weeks/README.md](weeks/README.md)
-
----
-
-## Course Projects
-
-### Project 1 — Engineering Data Analysis
-Use Python to analyze a real open engineering/scientific dataset, such as earthquake data from the USGS Comprehensive Earthquake Catalog.
-
-Expected components:
-- data loading and organization
-- functions, branching, and loops
-- numerical analysis
-- visualization
-- engineering interpretation
-- GitHub submission with code and report
-
-### Project 2 — Machine Learning for Engineering
-Use a real engineering dataset to train, compare, and evaluate machine-learning models.
-
-Suggested project:
-**Prediction of Concrete Compressive Strength** using the UCI Concrete Compressive Strength dataset.
-
-Expected components:
-- exploratory data analysis
-- train/test split
-- multiple regression models
-- MAE, RMSE, and R²
-- predicted-vs-actual visualization
-- feature importance
-- engineering interpretation
-- GitHub submission with code, report, and README
-
----
-
-## Recommended Tools
-
-- **Python 3**
-- **Google Colab** or **Jupyter Notebook**
-- **NumPy**
-- **pandas**
-- **Matplotlib**
-- **scikit-learn**
-- **GitHub**
-
----
-
-
-### Part III — MATLAB and Numerical Engineering Analysis
+### Part III — Engineering Data Analysis and Numerical Methods
 
 | Week | Topic |
 |---|---|
-| 11 | [MATLAB Basics and Engineering Examples](weeks/Week_11_MATLAB_Basics/README.md) |
-| 12 | [MATLAB Data Analysis and Numerical Methods](weeks/Week_12_MATLAB_Data_Analysis_Numerical_Methods/README.md) |
+| 11 | [Programming Review and Matrix-Based Engineering Computation](weeks/Week_11_MATLAB_Basics/README.md) |
+| 12 | [Engineering Data Analysis and Numerical Methods](weeks/Week_12_MATLAB_Data_Analysis_Numerical_Methods/README.md) |
 
 ### Part IV — Advanced AI and Engineering Simulation
 
@@ -143,14 +116,58 @@ Expected components:
 | 13 | [Deep Learning, NLP, and LLMs for Engineering Applications](weeks/Week_13_Deep_Learning_NLP_LLM/README.md) |
 | 14 | [Engineering Simulation and Computational Modeling](weeks/Week_14_Engineering_Simulation/README.md) |
 
+Full weekly overview: [weeks/README.md](weeks/README.md)
+
+---
+
+## Course Projects
+
+### Project 1 — Engineering Data Analysis
+
+Analyze a real open engineering or scientific dataset using computational methods.
+
+Expected components:
+- data loading and organization;
+- functions, branching, and iteration;
+- numerical analysis;
+- visualization;
+- engineering interpretation;
+- Python and MATLAB implementations where assigned;
+- GitHub submission with code and report.
+
+### Project 2 — Machine Learning for Engineering
+
+Use a real engineering dataset to train, compare, and evaluate machine-learning models.
+
+Expected components:
+- exploratory data analysis;
+- train/test split;
+- model training;
+- appropriate evaluation metrics;
+- visualization;
+- engineering interpretation;
+- reproducible code and documentation.
+
+---
+
+## Recommended Tools
+
+- Python 3
+- Google Colab or Jupyter Notebook
+- MATLAB Online or MATLAB Desktop
+- NumPy
+- pandas
+- Matplotlib
+- SciPy
+- scikit-learn
+- GitHub
+
 ## Repository Structure
 
-- `weeks/` — current weekly Python and machine-learning course sequence
+- `weeks/` — weekly course materials with Python and MATLAB equivalents
 - `syllabus/` — course syllabus
-- `resources/` — previous and supplemental course materials
+- `resources/` — supplemental course materials
 - `LICENSE` — repository license
-
-The older MATLAB, CFD, deep-learning, and other supplemental materials in `resources/` are preserved for reference and are not the primary current weekly sequence unless assigned separately.
 
 ---
 
