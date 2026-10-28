@@ -431,6 +431,10 @@ disp(head(uncertaintyTable,10))                 % display a variable or table
 % - class with lowest precision
 % - class with lowest recall
 % - class with lowest F1
+%
+% CLUE:
+% Use classSummary for class counts.
+% Use min(precision), min(recall), and min(f1).
 
 %% 27. Guided Exercise 2
 % Remove feature scaling and train the classifier again.
@@ -438,38 +442,84 @@ disp(head(uncertaintyTable,10))                 % display a variable or table
 % - accuracy
 % - macro F1
 %
+% CLUE:
+% Train fitcecoc using Xtrain and Xtest instead of the scaled arrays.
+%
 % Explain why scaling can affect optimization.
 
 %% 28. Guided Exercise 3
 % Change the holdout fraction from 20% to 30%.
 % Retrain and compare performance.
+%
+% CLUE:
+% Change "HoldOut", 0.20 to "HoldOut", 0.30.
 
 %% 29. Guided Exercise 4
 % Examine the confusion matrix.
 % Identify two fault classes that are often confused.
 % Suggest one possible reason.
+%
+% CLUE:
+% Look for a large off-diagonal value in C.
 
 %% 30. Guided Exercise 5
 % Find the 10 smallest score margins.
 % Determine how many are misclassified.
 %
+% CLUE:
+% sortrows(uncertaintyTable,"Top_Score_Margin","ascend")
+% then compare Actual_Class and Predicted_Class.
+%
 % Does low model confidence appear related to classification error?
 
 %% 31. Review Questions
 %
+% Try each question first. Use the clue only if needed.
+%
 % 1. What is classification?
+%    CLUE: predicting categories.
+%
 % 2. What is multiclass classification?
+%    CLUE: more than two classes.
+%
 % 3. What does one row in this dataset represent?
+%    CLUE: one detected surface-fault instance.
+%
 % 4. Why is the original target stored in seven columns?
+%    CLUE: one-hot / indicator representation.
+%
 % 5. Why do we use a stratified split?
+%    CLUE: preserve class proportions.
+%
 % 6. Why do we standardize features?
+%    CLUE: different numerical scales.
+%
 % 7. Why must scaling parameters come only from training data?
+%    CLUE: avoid data leakage.
+%
 % 8. What is accuracy?
+%    CLUE: correct predictions / total predictions.
+%
 % 9. What is precision?
+%    CLUE: among predicted positives, how many are correct?
+%
 % 10. What is recall?
+%     CLUE: among actual positives, how many are detected?
+%
 % 11. What is F1 score?
+%     CLUE: combines precision and recall.
+%
 % 12. What is a false negative?
+%     CLUE: a real fault that the model misses.
+%
 % 13. Why can accuracy be misleading?
+%     CLUE: imbalanced classes.
+%
 % 14. What does support mean?
+%     CLUE: number of true observations in a class.
+%
 % 15. Why examine a confusion matrix?
+%     CLUE: see which classes are confused.
+%
 % 16. Why must engineering error costs be considered?
+%     CLUE: different mistakes can have different real-world consequences.
