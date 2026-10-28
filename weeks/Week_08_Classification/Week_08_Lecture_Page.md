@@ -48,6 +48,74 @@ This motivates **automated inspection**.
 
 ---
 
+
+## Reference Pictures — What Do Real Surface Defects Look Like?
+
+### Example 1 — Scratched steel surface
+
+<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Dark_grey_stainless_steel_heavily_scratched_worn_seamless_metal_surface_texture.jpg?width=700" width="520">
+
+*Reference image: heavily scratched stainless-steel surface. Source: Wikimedia Commons.*
+
+[Open image source and license](https://commons.wikimedia.org/wiki/File:Dark_grey_stainless_steel_heavily_scratched_worn_seamless_metal_surface_texture.jpg)
+
+### What should students notice?
+
+- scratches create visible directional patterns;
+- surface appearance contains useful geometric information;
+- a computer can describe these patterns numerically using features such as orientation, area, perimeter, and luminosity.
+
+---
+
+### Example 2 — Real steel defect: blowhole
+
+<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Foundry_defect_blowhole.jpg?width=700" width="520">
+
+*Reference image: a blowhole casting defect exposed in a steel lathe face plate. Source: Wikimedia Commons, public domain.*
+
+[Open image source and description](https://commons.wikimedia.org/wiki/File:Foundry_defect_blowhole.jpg)
+
+### Teaching point
+
+Not every steel defect looks like a scratch.
+
+Different manufacturing defects can have very different:
+
+- shapes;
+- textures;
+- sizes;
+- locations;
+- brightness patterns.
+
+This is one reason why classification based on multiple features can be useful.
+
+---
+
+### Example 3 — Normal steel surface reference
+
+<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Metal_steel_surface.jpg?width=700" width="520">
+
+*Reference image: general steel surface texture. Source: Wikimedia Commons, public domain.*
+
+[Open image source and license](https://commons.wikimedia.org/wiki/File:Metal_steel_surface.jpg)
+
+### Ask students
+
+> What visual differences do you notice between a relatively uniform steel surface and a scratched or defective surface?
+
+Possible answers:
+
+- texture;
+- directionality;
+- roughness;
+- contrast;
+- local dark or bright areas;
+- irregular geometry.
+
+These visual differences can become numerical **features** for a machine-learning classifier.
+
+---
+
 ## Why Use Machine Learning Classification in Engineering?
 
 Traditional engineering rules are very useful when the decision boundary is simple.
@@ -232,6 +300,23 @@ This is the roadmap for the rest of the lecture.
 
 ---
 
+
+## Reference Picture — Confusion Matrix
+
+<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Multi_Category_Confusion_Matrix.png?width=520" width="430">
+
+*Reference image: multicategory confusion matrix showing true positives, false positives, false negatives, and true negatives. Source: Wikimedia Commons, CC0.*
+
+[Open image source and license](https://commons.wikimedia.org/wiki/File:Multi_Category_Confusion_Matrix.png)
+
+### What students should look for
+
+- diagonal cells represent correct classifications;
+- off-diagonal cells represent classification errors;
+- false positives and false negatives depend on which class is being treated as the class of interest.
+
+---
+
 ## Visual Guide — Confusion Matrix Idea
 
 Before seeing the seven-class confusion matrix, understand the basic idea with a two-class example.
@@ -259,6 +344,19 @@ For manufacturing:
 - **False positive:** a good part is flagged as defective.
 
 Both can be costly, but in different ways.
+
+---
+
+
+## Reference Picture — Accuracy, Precision, Recall, and Specificity
+
+<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Confusion_Matrix_Metrics.png?width=560" width="450">
+
+*Reference image: confusion-matrix metrics including accuracy, precision, sensitivity/recall, and specificity. Source: Wikimedia Commons.*
+
+[Open image source and license](https://commons.wikimedia.org/wiki/File:Confusion_Matrix_Metrics.png)
+
+Use this picture as a visual summary after students learn the individual formulas.
 
 ---
 
