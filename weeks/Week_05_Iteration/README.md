@@ -36,8 +36,12 @@ Students should be able to automate repeated calculations and write simple itera
 The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
 
 
-## MATLAB Materials
 
-[MATLAB Companion](MATLAB_Companion.md) — `for` loops, `while` loops, and repeated calculations.
 
-MATLAB Online: https://matlab.mathworks.com/
+## Programming Code — Python and MATLAB
+
+Every coding concept in this chapter should be studied in **both Python and MATLAB**. The engineering equations, variables, and expected interpretation are equivalent; only the programming syntax changes.
+
+- [Python lecture/code](Week_05_Iteration.ipynb)
+- [MATLAB equivalent examples](MATLAB_Companion.md)
+- MATLAB Online: https://matlab.mathworks.com/
