@@ -3,7 +3,7 @@
 
 **ESC 113: Computer Aided Analysis for Engineering**
 
-This page is designed to be used directly during lecture.
+This page presents the Week 8 classification material in lecture-ready order.
 
 ---
 
@@ -40,11 +40,7 @@ Another useful background reference:
 
 [Review of steel surface defect detection using machine vision](https://onlinelibrary.wiley.com/doi/full/10.1049/ipr2.12647)
 
-### Ask students
-
-> If a steel production line produces thousands of parts, can a person inspect every surface perfectly and consistently?
-
-This motivates **automated inspection**.
+Large-scale steel production can involve thousands of parts and repeated surface inspections. Manual inspection may be slow, inconsistent, and difficult to scale, which motivates **automated inspection**.
 
 ---
 
@@ -59,7 +55,7 @@ This motivates **automated inspection**.
 
 [Open image source and license](https://commons.wikimedia.org/wiki/File:Dark_grey_stainless_steel_heavily_scratched_worn_seamless_metal_surface_texture.jpg)
 
-### What should students notice?
+### Key visual features
 
 - scratches create visible directional patterns;
 - surface appearance contains useful geometric information;
@@ -74,8 +70,6 @@ This motivates **automated inspection**.
 *Reference image: a blowhole casting defect exposed in a steel lathe face plate. Source: Wikimedia Commons, public domain.*
 
 [Open image source and description](https://commons.wikimedia.org/wiki/File:Foundry_defect_blowhole.jpg)
-
-### Teaching point
 
 Not every steel defect looks like a scratch.
 
@@ -98,8 +92,6 @@ This is one reason why classification based on multiple features can be useful.
 *Reference image: general steel surface texture. Source: Wikimedia Commons, public domain.*
 
 [Open image source and license](https://commons.wikimedia.org/wiki/File:Metal_steel_surface.jpg)
-
-### Ask students
 
 > What visual differences do you notice between a relatively uniform steel surface and a scratched or defective surface?
 
@@ -309,7 +301,7 @@ This is the roadmap for the rest of the lecture.
 
 [Open image source and license](https://commons.wikimedia.org/wiki/File:Multi_Category_Confusion_Matrix.png)
 
-### What students should look for
+### How to interpret the image
 
 - diagonal cells represent correct classifications;
 - off-diagonal cells represent classification errors;
@@ -388,7 +380,6 @@ flowchart LR
 
 > Can we classify the type of surface fault on a steel plate using measured geometric and image-based features?
 
-Ask students:
 - Is this regression or classification?
 - What is the target?
 - What does one row represent?
@@ -414,7 +405,6 @@ Examples:
 | Predict machine state | Healthy | Classification |
 | Predict steel defect | Z_Scratch | Classification |
 
-Ask students:
 
 > If the classes are stored as 0, 1, and 2, is it automatically regression?
 
@@ -456,7 +446,6 @@ Target classes:
 - Bumps
 - Other_Faults
 
-Ask students:
 
 > Is one row one complete steel plate?
 
@@ -549,7 +538,6 @@ print(y.head())                         # Show first few labels
 print(y.value_counts())                 # Count samples in each class
 ~~~
 
-Ask students:
 
 > What does idxmax(axis=1) do?
 
@@ -581,11 +569,7 @@ plt.title("Steel Fault Class Distribution")  # Add title
 plt.show()                              # Display plot
 ~~~
 
-Ask students before showing the figure:
-
-> Do you expect all seven fault classes to occur equally often?
-
-Key idea: **class imbalance**.
+The seven fault classes do not necessarily occur equally often. This introduces the concept of **class imbalance**.
 
 Some fault classes occur more frequently than others.
 
@@ -607,13 +591,8 @@ But it detects:
 
 0% of the faulty samples.
 
-Ask students:
 
-> Is 90% accuracy good here?
-
-No.
-
-This is why classification needs more than one metric.
+A 90% accuracy value can still hide complete failure on a minority fault class. This is why classification needs more than one metric.
 
 ---
 
@@ -637,11 +616,8 @@ Explain:
 - y_train = training labels
 - y_test = correct test labels
 
-Ask students:
 
-> Why should we not train and test on the same rows?
-
-Because we want to measure performance on unseen data.
+Training and testing should use separate observations so performance is measured on unseen data.
 
 ---
 
@@ -649,11 +625,8 @@ Because we want to measure performance on unseen data.
 
 stratify=y keeps approximately the same class proportions in training and test sets.
 
-Ask students:
 
-> Why is this useful when some fault classes are rare?
-
-Clue: without stratification, a rare class may be poorly represented in one split.
+Stratification is especially useful when some classes are rare because it helps preserve class proportions across training and test sets.
 
 ---
 
@@ -744,11 +717,8 @@ accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 ~~~
 
-Ask students:
 
-> If accuracy = 0.78, what does it mean?
-
-About 78% of test observations were classified correctly.
+If accuracy = 0.78, about 78% of test observations were classified correctly.
 
 But accuracy does not tell us **which fault classes were missed**.
 
@@ -776,7 +746,6 @@ How to read it:
 - diagonal = correct predictions;
 - off-diagonal = errors.
 
-Ask students:
 - Which class appears easiest to classify?
 - Which two classes are commonly confused?
 
@@ -842,7 +811,6 @@ Recall = 15 / 20 = 0.75
 
 ## 21. Precision vs Recall
 
-Ask students:
 
 Case A: Missing a dangerous defect may cause failure.
 
@@ -917,7 +885,6 @@ Macro average:
 Weighted average:
 - common classes receive more influence.
 
-Ask students:
 
 > Which one better reveals weak performance on rare classes?
 
@@ -941,7 +908,6 @@ errors = results[
 print(errors.head())
 ~~~
 
-Ask students:
 
 > Why should engineers inspect individual errors instead of only averages?
 
@@ -1055,25 +1021,19 @@ results["Actual"] != results["Predicted"]
 
 ---
 
-## 34. Quick Concept Check
+## 34. Quick Concept Review
 
-### Question 1
+### Scenario 1
 
-If a model detects nearly every true fault but produces many false alarms, which metric is likely high?
+If a model detects nearly every true fault but produces many false alarms, **recall** is likely high while precision may be lower.
 
-Clue: think about finding actual positives.
+### Scenario 2
 
-### Question 2
+If nearly every predicted fault is correct but many real faults are missed, **precision** is likely high while recall may be lower.
 
-If nearly every predicted fault is correct but many real faults are missed, which metric is likely high?
+### Scenario 3
 
-Clue: think about reliability of positive predictions.
-
-### Question 3
-
-Why might macro F1 be useful here?
-
-Clue: think about rare classes.
+Macro F1 is useful when rare classes matter because it gives each class equal weight.
 
 ---
 
@@ -1150,22 +1110,13 @@ https://www.mathworks.com/videos/classify-data-using-the-classification-learner-
 
 ---
 
-## 37. Exit Questions
+## 37. Summary Questions
 
-1. Why can accuracy be misleading?  
-   Clue: class imbalance.
-
-2. What is the difference between precision and recall?  
-   Clue: predicted positives vs actual positives.
-
-3. What is a false negative?  
-   Clue: a real fault exists but the model misses it.
-
-4. Why use stratification?  
-   Clue: preserve class proportions.
-
-5. Why scale input features?  
-   Clue: features have different numerical ranges.
+1. Why can accuracy be misleading in an imbalanced dataset?
+2. What is the difference between precision and recall?
+3. What is a false negative?
+4. Why is stratification useful?
+5. Why are input features scaled before logistic regression?
 
 ---
 
