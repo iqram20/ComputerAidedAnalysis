@@ -69,3 +69,10 @@ Students should be able to:
 - [Week 7 — Detailed Regression Lecture Notebook](Week_07_Regression.ipynb)
 
 The notebook is intentionally detailed and includes **concept explanations, student-question sections, code, engineering interpretations, common mistakes, guided exercises, independent exercises, and a review quiz**.
+
+
+## MATLAB Materials
+
+[MATLAB Companion](MATLAB_Companion.md) — linear regression, MAE, RMSE, R², residuals, and prediction plots.
+
+MATLAB Online: https://matlab.mathworks.com/
