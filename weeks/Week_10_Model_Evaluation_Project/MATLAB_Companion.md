@@ -1,4 +1,17 @@
 # Week 10 — Model Evaluation, Tuning, and Engineering ML Project
+## How to Use This Lecture Page
+
+Work through the material the same way you would use a Colab notebook:
+
+1. Read the short explanation.
+2. Run the small MATLAB code block.
+3. Inspect the output or figure.
+4. Read the interpretation before moving to the next step.
+
+Keep each code step small. In MATLAB Live Editor, these blocks can be placed in separate sections so they can be run one at a time.
+
+---
+
 
 **MATLAB implementation**
 
