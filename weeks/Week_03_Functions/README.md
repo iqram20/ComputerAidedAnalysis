@@ -50,8 +50,12 @@ The notebook includes explanations, worked examples, engineering applications, g
 The assignment includes Berkeley-aligned practice plus additional engineering coding problems.
 
 
-## MATLAB Materials
 
-[MATLAB Companion](MATLAB_Companion.md) — MATLAB functions and reusable engineering calculations.
 
-MATLAB Online: https://matlab.mathworks.com/
+## Programming Code — Python and MATLAB
+
+Every coding concept in this chapter should be studied in **both Python and MATLAB**. The engineering equations, variables, and expected interpretation are equivalent; only the programming syntax changes.
+
+- [Python lecture/code](Week_03_Functions.ipynb)
+- [MATLAB equivalent examples](MATLAB_Companion.md)
+- MATLAB Online: https://matlab.mathworks.com/
