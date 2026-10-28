@@ -1,9 +1,9 @@
-# Week 12 — MATLAB for Engineering Data Analysis and Numerical Methods
+# Week 12 — Engineering Data Analysis and Numerical Methods
 
 ## Table of Contents
 
 1. Importing Engineering Data
-2. MATLAB Tables
+2. Data Tables
 3. Inspecting and Cleaning Data
 4. Descriptive Statistics
 5. Logical Filtering
@@ -25,8 +25,8 @@
 
 By the end of this week, students should be able to:
 
-- import CSV and Excel data into MATLAB;
-- work with MATLAB tables;
+- import CSV and Excel data for computational analysis;
+- work with tabular engineering data;
 - calculate descriptive statistics;
 - filter engineering data using logical conditions;
 - create clear engineering plots;
@@ -48,3 +48,11 @@ By the end of this week, students should be able to:
 [MATLAB Data Analysis and Numerical Methods](MATLAB_Data_Analysis_Numerical_Methods.m) — tables, plots, curve fitting, differentiation, integration, nonlinear equations, and linear systems.
 
 MATLAB Online: https://matlab.mathworks.com/
+
+
+## Programming Code — Python and MATLAB
+
+- [Python equivalent examples](Engineering_Data_Analysis_Numerical_Methods_Python.py)
+- [MATLAB equivalent examples](MATLAB_Data_Analysis_Numerical_Methods.m)
+
+Both implementations cover the same engineering data-analysis and numerical-method concepts.
