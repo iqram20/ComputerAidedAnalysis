@@ -1,8 +1,8 @@
-# Week 11 — MATLAB Basics and Engineering Examples
+# Week 11 — Programming Review and Matrix-Based Engineering Computation
 
 ## Table of Contents
 
-1. MATLAB Interface and Script Files
+1. Programming Environments and Script Files
 2. Variables and Basic Arithmetic
 3. Vectors and Matrices
 4. Indexing and Slicing
@@ -31,9 +31,9 @@ By the end of this week, students should be able to:
 - distinguish matrix operations from element-by-element operations;
 - use indexing and logical indexing;
 - write `if`, `for`, and `while` statements;
-- create simple MATLAB functions;
+- create simple functions in Python and MATLAB;
 - generate labeled engineering plots;
-- solve basic engineering problems using MATLAB scripts.
+- solve basic engineering problems using Python and MATLAB programs.
 
 ## MATLAB Usage Guide
 
@@ -62,3 +62,11 @@ MATLAB Online is useful when MATLAB is not installed locally.
 [MATLAB Usage Guide](MATLAB_Usage_Guide.md) — MATLAB interface, scripts, sections, plotting, debugging, and file organization.
 
 MATLAB Online: https://matlab.mathworks.com/
+
+
+## Programming Code — Python and MATLAB
+
+- [Python equivalent examples](Programming_Examples_Python.py)
+- [MATLAB equivalent examples](MATLAB_Basics_Engineering_Examples.m)
+
+The engineering problems and calculations are equivalent in both languages; the syntax differs.
