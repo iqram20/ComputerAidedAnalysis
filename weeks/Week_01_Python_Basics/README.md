@@ -1,13 +1,13 @@
-# Week 1 — Python Basics and Engineering Calculations
+# Week 1 — Programming Basics and Engineering Calculations
 
 ## Topics
-- Python and Jupyter/Google Colab
+- Programming environments: Jupyter/Google Colab and MATLAB
 - Numbers and arithmetic
 - Variables and assignment
 - Basic mathematical operators
 - `print()`
-- Using Python as an engineering calculator
-- Introduction to NumPy mathematical functions
+- Using programming tools as an engineering calculator
+- Built-in numerical and mathematical functions
 
 ## Berkeley reference
 - Chapter 1: Python Basics
@@ -21,7 +21,7 @@
 5. Cylinder volume: `V = np.pi * r**2 * h`
 
 ## Learning outcomes
-By the end of the week, students should be able to write and run simple Python programs, store engineering quantities in variables, and evaluate engineering equations correctly.
+By the end of the week, students should be able to write and run simple programs in Python and MATLAB, store engineering quantities in variables, and evaluate engineering equations correctly.
 
 ## Practice
 Write short programs for unit conversion, pressure, energy, flow rate, and basic electrical calculations.
@@ -41,8 +41,12 @@ The notebook includes explanations, worked examples, engineering applications, g
 The assignment includes Berkeley-aligned practice plus additional engineering coding problems.
 
 
-## MATLAB Materials
 
-[MATLAB Companion](MATLAB_Companion.md) — arithmetic, variables, and engineering calculations.
 
-MATLAB Online: https://matlab.mathworks.com/
+## Programming Code — Python and MATLAB
+
+Every coding concept in this chapter should be studied in **both Python and MATLAB**. The engineering equations, variables, and expected interpretation are equivalent; only the programming syntax changes.
+
+- [Python lecture/code](Week_01_Python_Basics.ipynb)
+- [MATLAB equivalent examples](MATLAB_Companion.md)
+- MATLAB Online: https://matlab.mathworks.com/
