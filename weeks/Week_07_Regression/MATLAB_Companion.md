@@ -1,57 +1,293 @@
-# Week 7 MATLAB Companion — Engineering Regression
+# Week 7 — Regression for Engineering Prediction
 
-This companion mirrors the Python regression workflow.
+**MATLAB implementation**
 
-## Regression model
-Assume a table `T` contains:
+Regression predicts a continuous numerical engineering quantity.
 
-- Ambient_Temperature_C
-- Exhaust_Vacuum_cmHg
-- Ambient_Pressure_mbar
-- Relative_Humidity_percent
-- Net_Electrical_Output_MW
+The Week 7 case study predicts **net electrical output (MW)** from power-plant operating conditions.
+
+## Variables
+
+| Variable | Meaning |
+|---|---|
+| Ambient_Temperature_C | Ambient temperature |
+| Exhaust_Vacuum_cmHg | Exhaust vacuum |
+| Ambient_Pressure_mbar | Ambient pressure |
+| Relative_Humidity_percent | Relative humidity |
+| Net_Electrical_Output_MW | Target power output |
+
+---
+
+## Select Features and Target
+
+Assume the data are stored in table `T`.
 
 ```matlab
-X = T{:,1:4};                    % Four predictor columns
-y = T.Net_Electrical_Output_MW; % Regression target
+featureNames = {
+    'Ambient_Temperature_C'
+    'Exhaust_Vacuum_cmHg'
+    'Ambient_Pressure_mbar'
+    'Relative_Humidity_percent'
+};
+
+X = T{:,featureNames};
+y = T.Net_Electrical_Output_MW;
 ```
 
-## Train/test split
+Check dimensions:
+
 ```matlab
-cv = cvpartition(length(y),'HoldOut',0.20);
-Xtrain = X(training(cv),:);
-ytrain = y(training(cv));
-Xtest = X(test(cv),:);
-ytest = y(test(cv));
+size(X)
+size(y)
 ```
 
-## Fit linear regression
-```matlab
-model = fitlm(Xtrain,ytrain);
-ypred = predict(model,Xtest);
-```
+---
 
-## Evaluate
-```matlab
-MAE = mean(abs(ytest-ypred));
-RMSE = sqrt(mean((ytest-ypred).^2));
-R2 = 1 - sum((ytest-ypred).^2)/sum((ytest-mean(ytest)).^2);
-```
+## Explore Feature–Target Relationships
 
-## Actual vs predicted
 ```matlab
-scatter(ytest,ypred)
-xlabel('Actual Power Output (MW)')
-ylabel('Predicted Power Output (MW)')
+scatter(T.Ambient_Temperature_C,y)
+xlabel('Ambient Temperature (°C)')
+ylabel('Net Electrical Output (MW)')
 grid on
 ```
 
+A scatter plot helps reveal whether a feature and target have an approximately linear, nonlinear, weak, or unusual relationship.
+
+---
+
+## Train/Test Split
+
+```matlab
+rng(42)
+
+cv = cvpartition(length(y),'HoldOut',0.20);
+
+trainIdx = training(cv);
+testIdx = test(cv);
+
+Xtrain = X(trainIdx,:);
+Xtest = X(testIdx,:);
+ytrain = y(trainIdx);
+ytest = y(testIdx);
+```
+
+The model learns from `Xtrain` and `ytrain`.
+
+Final evaluation uses `Xtest` and `ytest`.
+
+---
+
+## Fit Multiple Linear Regression
+
+```matlab
+model = fitlm(Xtrain,ytrain);
+```
+
+View the fitted model:
+
+```matlab
+disp(model)
+```
+
+Make predictions:
+
+```matlab
+ypred = predict(model,Xtest);
+```
+
+---
+
+## MAE
+
+```matlab
+MAE = mean(abs(ytest-ypred));
+```
+
+MAE is the average absolute prediction error.
+
+If:
+
+```text
+MAE = 3.2 MW
+```
+
+the model is wrong by about 3.2 MW on average, ignoring direction.
+
+---
+
+## RMSE
+
+```matlab
+RMSE = sqrt(mean((ytest-ypred).^2));
+```
+
+RMSE gives more weight to large errors.
+
+A large gap between RMSE and MAE can indicate some relatively large prediction errors.
+
+---
+
+## R²
+
+```matlab
+SS_res = sum((ytest-ypred).^2);
+SS_tot = sum((ytest-mean(ytest)).^2);
+
+R2 = 1 - SS_res/SS_tot;
+```
+
+R² is not “percent accuracy.”
+
+It describes how much variation in the target is explained relative to a mean-based reference.
+
+---
+
+## Actual vs Predicted Plot
+
+```matlab
+scatter(ytest,ypred)
+hold on
+
+limits = [min(ytest) max(ytest)];
+plot(limits,limits,'--')
+
+hold off
+xlabel('Actual Power Output (MW)')
+ylabel('Predicted Power Output (MW)')
+title('Actual vs Predicted')
+grid on
+```
+
+Predictions close to the diagonal line are close to the measured values.
+
+---
+
 ## Residuals
+
+Define:
+
+```text
+Residual = Actual - Predicted
+```
+
 ```matlab
 residuals = ytest-ypred;
+
 histogram(residuals)
 xlabel('Residual (MW)')
 ylabel('Count')
+title('Residual Distribution')
+grid on
 ```
 
-The same engineering interpretation used in Python applies in MATLAB: evaluate prediction error, inspect residuals, and decide whether performance is useful for the engineering task.
+Positive residual:
+
+```text
+Actual > Predicted
+```
+
+The model underpredicted.
+
+Negative residual:
+
+```text
+Actual < Predicted
+```
+
+The model overpredicted.
+
+---
+
+## Largest Errors
+
+```matlab
+absoluteError = abs(residuals);
+
+[sortedError,idx] = sort(absoluteError,'descend');
+
+largestErrors = table( ...
+    ytest(idx(1:10)), ...
+    ypred(idx(1:10)), ...
+    residuals(idx(1:10)), ...
+    sortedError(1:10), ...
+    'VariableNames',{'Actual','Predicted','Residual','AbsoluteError'});
+
+disp(largestErrors)
+```
+
+Inspecting individual errors is important because average metrics can hide unusual operating conditions.
+
+---
+
+## Coefficients
+
+```matlab
+model.Coefficients
+```
+
+A regression coefficient describes the model's estimated change in output when that predictor changes while other predictors are held fixed.
+
+A coefficient does not automatically prove causation.
+
+---
+
+## Single-Feature Model
+
+Temperature-only model:
+
+```matlab
+temperatureModel = fitlm( ...
+    T.Ambient_Temperature_C(trainIdx), ...
+    ytrain);
+
+tempPred = predict( ...
+    temperatureModel, ...
+    T.Ambient_Temperature_C(testIdx));
+```
+
+Compare its performance with the four-feature model.
+
+This demonstrates whether additional operating variables improve prediction.
+
+---
+
+## Python and MATLAB Comparison
+
+| Task | Python/scikit-learn | MATLAB |
+|---|---|---|
+| Linear model | `LinearRegression()` | `fitlm` |
+| Fit | `model.fit(X,y)` | included in `fitlm(X,y)` |
+| Predict | `model.predict(X)` | `predict(model,X)` |
+| Coefficients | `model.coef_` | `model.Coefficients` |
+| Scatter | `plt.scatter` | `scatter` |
+| Histogram | `plt.hist` | `histogram` |
+
+---
+
+## Common Errors
+
+- calling R² “accuracy”;
+- reporting MAE without units;
+- interpreting coefficients as causal effects;
+- evaluating only training performance;
+- ignoring residual patterns;
+- using a model outside the operating range represented by training data.
+
+---
+
+## Practice
+
+1. Fit a temperature-only linear model.
+2. Fit a four-feature linear model.
+3. Calculate MAE, RMSE, and R² for both.
+4. Plot actual vs predicted values.
+5. Plot residuals.
+6. Identify the ten largest errors.
+7. Explain which model would be more useful for engineering prediction and why.
+
+---
+
+## Required Toolbox
+
+Statistics and Machine Learning Toolbox.
