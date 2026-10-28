@@ -267,6 +267,82 @@ A manufacturing defect may depend on:
 
 Writing one fixed rule for every possible combination can become difficult.
 
+
+## Complex Engineering Dependency — Why One Threshold May Not Be Enough
+
+A real machine condition may depend on several measurements **at the same time**.
+
+~~~mermaid
+flowchart LR
+
+    A1[Vibration level] --> M[Machine condition]
+    A2[Bearing temperature] --> M
+    A3[Motor current] --> M
+    A4[Rotational speed] --> M
+    A5[Mechanical load] --> M
+    A6[Pressure] --> M
+    A7[Acoustic signal] --> M
+    A8[Operating time] --> M
+
+    M --> C1[Healthy]
+    M --> C2[Warning]
+    M --> C3[Fault]
+
+    A5 --> A1
+    A4 --> A1
+    A5 --> A3
+    A4 --> A3
+    A6 --> A2
+    A8 --> A2
+~~~
+
+The relationships are not necessarily independent.
+
+For example:
+
+- increasing **mechanical load** can increase vibration;
+- rotational speed can change both vibration and motor current;
+- higher pressure can increase temperature;
+- long operating time can change bearing temperature;
+- the same vibration level may be normal at one speed but abnormal at another speed.
+
+Therefore, a simple rule such as:
+
+~~~text
+IF vibration > threshold → Fault
+~~~
+
+may be insufficient.
+
+A more realistic decision may depend on a combination such as:
+
+~~~text
+Vibration + Temperature + Current + Speed + Load + Pressure
+                          ↓
+                 Machine Condition
+~~~
+
+Machine-learning classification can learn these **multivariable relationships** from labeled operating data.
+
+### Example
+
+Consider two operating conditions:
+
+| Measurement | Machine A | Machine B |
+|---|---:|---:|
+| Vibration | 6.0 mm/s | 6.0 mm/s |
+| Temperature | 55°C | 92°C |
+| Motor current | 12 A | 19 A |
+| Load | 45% | 95% |
+| Speed | 1200 rpm | 1800 rpm |
+| Possible condition | Normal/Warning | Fault |
+
+Both machines have the **same vibration value**, but the complete operating conditions are very different.
+
+This illustrates why engineering classification often requires several features instead of a single threshold.
+
+---
+
 Machine learning classification learns patterns from **previously labeled examples**.
 
 ---
