@@ -36,3 +36,10 @@ Students should understand the complete supervised-learning workflow before fitt
 - [Open the 3-hour teaching notebook](Week_06_ML_Fundamentals.ipynb)
 
 The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
+
+
+## MATLAB Materials
+
+[MATLAB Companion](MATLAB_Companion.md) — features, targets, train/test split, and introductory supervised learning.
+
+MATLAB Online: https://matlab.mathworks.com/
