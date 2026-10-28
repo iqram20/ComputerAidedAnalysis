@@ -751,7 +751,7 @@ These features describe:
 
 ### A. Defect Location
 
-| Feature | Student-friendly meaning |
+| Feature | Meaning |
 |---|---|
 | `X_Minimum` | Leftmost horizontal position of the detected defect |
 | `X_Maximum` | Rightmost horizontal position of the detected defect |
@@ -781,7 +781,7 @@ Height ≈ Y_Maximum - Y_Minimum
 
 ### B. Defect Size and Boundary
 
-| Feature | Student-friendly meaning |
+| Feature | Meaning |
 |---|---|
 | `Pixels_Areas` | Number of image pixels belonging to the defect; a measure of defect area |
 | `X_Perimeter` | Horizontal contribution to the defect boundary |
@@ -800,7 +800,7 @@ The perimeter variables help describe whether a defect is:
 
 ### C. Brightness / Luminosity
 
-| Feature | Student-friendly meaning |
+| Feature | Meaning |
 |---|---|
 | `Sum_of_Luminosity` | Total brightness intensity across the defect region |
 | `Minimum_of_Luminosity` | Darkest pixel intensity in the defect |
@@ -820,7 +820,7 @@ Brightness can help distinguish defects because scratches, stains, bumps, and ot
 
 ### D. Production / Steel Information
 
-| Feature | Student-friendly meaning |
+| Feature | Meaning |
 |---|---|
 | `Length_of_Conveyer` | Conveyor-system length or related production-line dimension recorded with the observation |
 | `TypeOfSteel_A300` | Indicator showing whether the steel belongs to the A300 category |
@@ -842,7 +842,7 @@ Steel type and thickness can influence how surface defects appear and how they s
 
 ### E. Shape Indices
 
-| Feature | Student-friendly meaning |
+| Feature | Meaning |
 |---|---|
 | `Edges_Index` | Derived measure related to the defect's position or edge characteristics |
 | `Empty_Index` | Measure of how much empty space exists inside the defect's bounding region |
@@ -860,7 +860,7 @@ Instead, they summarize the **shape of the defect** in a way a machine-learning 
 
 ### F. Edge Direction Features
 
-| Feature | Student-friendly meaning |
+| Feature | Meaning |
 |---|---|
 | `Edges_X_Index` | Measure of how strongly the defect extends or changes in the horizontal direction |
 | `Edges_Y_Index` | Measure of how strongly the defect extends or changes in the vertical direction |
@@ -884,7 +884,7 @@ A long scratch may have a very different orientation pattern from a compact stai
 
 ### G. Log-Transformed Size Features
 
-| Feature | Student-friendly meaning |
+| Feature | Meaning |
 |---|---|
 | `LogOfAreas` | Logarithmic transformation of defect area |
 | `Log_X_Index` | Log-transformed horizontal size/index |
@@ -918,7 +918,7 @@ This can make large differences easier for a statistical model to handle.
 
 ### H. Sigmoid-Based Area Feature
 
-| Feature | Student-friendly meaning |
+| Feature | Meaning |
 |---|---|
 | `SigmoidOfAreas` | Area-related feature transformed using a sigmoid-type mathematical function |
 
