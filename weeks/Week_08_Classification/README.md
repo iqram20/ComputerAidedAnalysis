@@ -114,3 +114,12 @@ Use this page directly while teaching. It contains the lecture sequence, explana
 
 This separate page explains MATLAB Online/Desktop, scripts, sections, Workspace, Current Folder, common errors, toolbox checks, saving files, submission, and MATLAB-vs-Python differences for beginning BMCC students.
 
+
+
+## MATLAB Materials
+
+[Week 8 MATLAB Classification Script](Week_08_Classification_MATLAB.m) — multiclass classification, scaling, confusion matrix, precision, recall, and F1.
+
+[MATLAB Usage Instructions for BMCC Students](MATLAB_Usage_Instructions_BMCC.md) — MATLAB Online/Desktop, running sections, Workspace, common errors, and toolbox checks.
+
+MATLAB Online: https://matlab.mathworks.com/
