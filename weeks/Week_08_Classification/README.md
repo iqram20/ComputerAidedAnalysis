@@ -23,6 +23,85 @@ https://archive.ics.uci.edu/dataset/198/steel+plates+faults
 - Bumps
 - Other_Faults
 
+## Python and MATLAB in This Chapter
+
+The classification concepts are the same in both programming environments. Students should understand the **engineering workflow first**, then see how Python and MATLAB implement the same steps.
+
+### Python
+
+Python is used through **Google Colab/Jupyter Notebook** with libraries such as:
+
+- `pandas` for tabular data;
+- `NumPy` for numerical arrays;
+- `scikit-learn` for train/test splitting, scaling, classification, and evaluation;
+- `Matplotlib` for plots.
+
+In Python, the Week 8 workflow uses tools such as:
+
+```python
+train_test_split(...)
+StandardScaler()
+LogisticRegression(...)
+confusion_matrix(...)
+classification_report(...)
+```
+
+The Python lecture is organized as small notebook cells with text, code, output, and interpretation.
+
+### MATLAB
+
+MATLAB is used through **MATLAB Online/Desktop and the Live Editor**. The equivalent workflow uses functions from the Statistics and Machine Learning Toolbox.
+
+Important Week 8 MATLAB functions include:
+
+```matlab
+cvpartition(...)
+mean(...)
+std(...)
+templateLinear(...)
+fitcecoc(...)
+predict(...)
+confusionchart(...)
+confusionmat(...)
+```
+
+The MATLAB lecture is also organized as small notebook-style steps so students can read an explanation, run a short code section, inspect the result, and continue.
+
+### Same Engineering Workflow
+
+| Engineering step | Python | MATLAB |
+|---|---|---|
+| Store numerical data | NumPy / pandas | arrays / tables |
+| Train/test split | `train_test_split` | `cvpartition` |
+| Standardization | `StandardScaler` | training mean and standard deviation |
+| Multiclass classifier | `LogisticRegression` | `templateLinear` + `fitcecoc` |
+| Prediction | `model.predict(...)` | `predict(model,...)` |
+| Confusion matrix | `confusion_matrix` | `confusionmat` |
+| Confusion-matrix display | Matplotlib / display tools | `confusionchart` |
+| Precision, recall, F1 | `classification_report` | calculated from confusion matrix |
+
+The code syntax is different, but the reasoning is the same:
+
+```text
+engineering problem
+        ↓
+features and target
+        ↓
+train/test split
+        ↓
+preprocessing
+        ↓
+train classifier
+        ↓
+predict
+        ↓
+evaluate
+        ↓
+engineering interpretation
+```
+
+---
+
 ## Main Topics
 
 - classification vs regression
