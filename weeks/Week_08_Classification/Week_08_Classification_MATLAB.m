@@ -13,9 +13,9 @@
 % First 27 columns = numerical fault descriptors.
 % Last 7 columns  = one-hot class indicators.
 
-clear
-clc
-close all
+clear                                           % remove variables from the workspace
+clc                                             % clear the Command Window
+close all                                       % close open figure windows
 
 %% 1. Download the UCI dataset
 
@@ -24,16 +24,16 @@ zipFile = "steel_plates_faults.zip";
 dataFolder = "steel_plates_faults_data";
 
 if ~isfile(zipFile)
-    websave(zipFile, zipURL);
+    websave(zipFile, zipURL);                   % download the dataset ZIP file
 end
 
 if ~isfolder(dataFolder)
-    unzip(zipFile, dataFolder);
+    unzip(zipFile, dataFolder);                 % extract the downloaded dataset
 end
 
 %% 2. Locate the numeric data file
 
-files = dir(fullfile(dataFolder, "**", "*"));
+files = dir(fullfile(dataFolder, "**", "*"));   % list files in the data folder
 fileNames = string({files.name});
 filePaths = string(fullfile({files.folder}, {files.name}));
 
@@ -50,7 +50,7 @@ fprintf("Using data file: %s\n", dataFile);
 
 %% 3. Read the raw numeric matrix
 
-M = readmatrix(dataFile, "FileType", "text");
+M = readmatrix(dataFile, "FileType", "text");   % read numeric data from the text file
 
 % Remove completely empty rows/columns if any were created during import.
 M = M(~all(isnan(M),2), :);
@@ -110,18 +110,18 @@ X = M(:,1:27);
 Yindicator = M(:,28:34);
 
 % Convert one-hot indicator rows into one categorical class label.
-[~, classIndex] = max(Yindicator, [], 2);
-y = categorical(classNames(classIndex));
+[~, classIndex] = max(Yindicator, [], 2);       % find the active target indicator in each row
+y = categorical(classNames(classIndex));        % convert class names into categorical labels
 
 fprintf("Feature matrix size: %d x %d\n", size(X,1), size(X,2));
 fprintf("Number of classes: %d\n", numel(categories(y)));
 
 %% 6. Create a table with self-descriptive feature names
 
-T = array2table(X, "VariableNames", cellstr(featureNames));
+T = array2table(X, "VariableNames", cellstr(featureNames));  % convert numeric data into a MATLAB table
 T.Fault_Class = y;
 
-disp(head(T))
+disp(head(T))                                   % display a variable or table
 
 %% 7. Check missing values
 
@@ -133,11 +133,11 @@ missingTable = table(
     "VariableNames", ["Feature","Missing_Count"]
 );
 
-disp(missingTable)
+disp(missingTable)                              % display a variable or table
 
 %% 8. Examine class balance
 
-classSummary = countcats(y);
+classSummary = countcats(y);                    % count observations in each class
 classCategories = categories(y);
 
 classTable = table(
@@ -146,27 +146,27 @@ classTable = table(
     "VariableNames", ["Fault_Class","Count"]
 );
 
-disp(classTable)
+disp(classTable)                                % display a variable or table
 
-figure
-bar(classSummary)
+figure                                          % open a new figure
+bar(classSummary)                               % draw a bar chart
 xticks(1:numel(classCategories))
 xticklabels(classCategories)
 xtickangle(45)
-ylabel("Number of Fault Instances")
-xlabel("Fault Class")
-title("Steel Fault Class Distribution")
-grid on
+ylabel("Number of Fault Instances")             % label the y-axis
+xlabel("Fault Class")                           % label the x-axis
+title("Steel Fault Class Distribution")         % add a plot title
+grid on                                         % show grid lines
 
 %% 9. Stratified train/test split
 
 % cvpartition uses the class labels to preserve class proportions
 % approximately across the training and test partitions.
 
-cv = cvpartition(y, "HoldOut", 0.20);
+cv = cvpartition(y, "HoldOut", 0.20);           % create a stratified train/test partition
 
-trainIdx = training(cv);
-testIdx = test(cv);
+trainIdx = training(cv);                        % identify training rows
+testIdx = test(cv);                             % identify test rows
 
 Xtrain = X(trainIdx,:);
 Xtest = X(testIdx,:);
@@ -178,8 +178,8 @@ fprintf("Test observations: %d\n", numel(ytest));
 
 %% 10. Compare class proportions
 
-trainCounts = countcats(ytrain);
-testCounts = countcats(ytest);
+trainCounts = countcats(ytrain);                % count observations in each class
+testCounts = countcats(ytest);                  % count observations in each class
 
 splitTable = table(
     string(categories(ytrain)),
@@ -196,18 +196,18 @@ splitTable = table(
     ]
 );
 
-disp(splitTable)
+disp(splitTable)                                % display a variable or table
 
 %% 11. Standardize features using TRAINING data only
 
-mu = mean(Xtrain,1);
-sigma = std(Xtrain,0,1);
+mu = mean(Xtrain,1);                            % calculate training-set feature means
+sigma = std(Xtrain,0,1);                        % calculate training-set feature standard deviations
 
 % Avoid division by zero for any constant feature.
 sigma(sigma == 0) = 1;
 
-XtrainScaled = (Xtrain - mu) ./ sigma;
-XtestScaled = (Xtest - mu) ./ sigma;
+XtrainScaled = (Xtrain - mu) ./ sigma;          % standardize the training features
+XtestScaled = (Xtest - mu) ./ sigma;            % standardize test data using training statistics
 
 %% 12. Why scaling?
 %
@@ -235,11 +235,11 @@ model = fitcecoc( ...
     ytrain, ...
     "Learners", learner, ...
     "Coding", "onevsall", ...
-    "ClassNames", categorical(classNames));
+    "ClassNames", categorical(classNames));     % convert class names into categorical labels
 
 %% 14. Make predictions
 
-[ypred, scores] = predict(model, XtestScaled);
+[ypred, scores] = predict(model, XtestScaled);  % standardize test data using training statistics
 
 comparison = table(
     ytest,
@@ -247,28 +247,28 @@ comparison = table(
     "VariableNames", ["Actual_Class","Predicted_Class"]
 );
 
-disp(head(comparison,15))
+disp(head(comparison,15))                       % display a variable or table
 
 %% 15. Accuracy
 
-accuracy = mean(ypred == ytest);
+accuracy = mean(ypred == ytest);                % calculate overall classification accuracy
 
 fprintf("Accuracy = %.3f\n", accuracy);
 
 %% 16. Confusion matrix
 
-figure
-confusionchart(ytest, ypred)
-title("Steel Fault Classification - Confusion Matrix")
+figure                                          % open a new figure
+confusionchart(ytest, ypred)                    % display the confusion matrix
+title("Steel Fault Classification - Confusion Matrix")  % add a plot title
 
 %% 17. Obtain numeric confusion matrix
 
-order = categorical(classNames);
+order = categorical(classNames);                % convert class names into categorical labels
 
-C = confusionmat(ytest, ypred, "Order", order);
+C = confusionmat(ytest, ypred, "Order", order);  % calculate the numeric confusion matrix
 
-disp("Confusion matrix:")
-disp(C)
+disp("Confusion matrix:")                       % display a variable or table
+disp(C)                                         % display a variable or table
 
 %% 18. Calculate per-class precision, recall, and F1
 
@@ -322,7 +322,7 @@ metricsTable = table(
     ]
 );
 
-disp(metricsTable)
+disp(metricsTable)                              % display a variable or table
 
 %% 19. Macro-average metrics
 
@@ -368,7 +368,7 @@ errorRows = errorRows(errorMask,:);
 
 fprintf("Number of misclassified test samples: %d\n", height(errorRows));
 
-disp(head(errorRows,10))
+disp(head(errorRows,10))                        % display a variable or table
 
 %% 23. Prediction scores
 
@@ -379,19 +379,19 @@ disp(head(errorRows,10))
 % but these values should NOT automatically be interpreted as
 % perfectly calibrated probabilities.
 
-scoreTable = array2table(
+scoreTable = array2table(                       % convert numeric data into a MATLAB table
     scores,
     "VariableNames", matlab.lang.makeValidName(cellstr(classNames))
 );
 
-disp(head(scoreTable))
+disp(head(scoreTable))                          % display a variable or table
 
 %% 24. Find low-margin / uncertain predictions
 
 % One simple uncertainty indicator is the gap between the largest
 % and second-largest class scores.
 
-sortedScores = sort(scores, 2, "descend");
+sortedScores = sort(scores, 2, "descend");      % sort class scores from highest to lowest
 
 scoreMargin = sortedScores(:,1) - sortedScores(:,2);
 
@@ -406,12 +406,12 @@ uncertaintyTable = table(
     ]
 );
 
-uncertaintyTable = sortrows(
+uncertaintyTable = sortrows(                    % sort rows by the selected column
     uncertaintyTable,
     "Top_Score_Margin",
     "ascend");
 
-disp(head(uncertaintyTable,10))
+disp(head(uncertaintyTable,10))                 % display a variable or table
 
 %% 25. Common student question:
 % What is a false negative in a multiclass problem?
