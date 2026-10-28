@@ -21,7 +21,7 @@
 - Motor-efficiency classification
 
 ## Learning outcomes
-Students should be able to translate engineering decision rules into correct Python conditional statements.
+Students should be able to translate engineering decision rules into correct conditional statements in Python and MATLAB.
 
 
 ## Class Notebook
@@ -38,8 +38,12 @@ The notebook includes explanations, worked examples, engineering applications, g
 The assignment includes Berkeley-aligned practice plus additional engineering coding problems.
 
 
-## MATLAB Materials
 
-[MATLAB Companion](MATLAB_Companion.md) — `if`, `elseif`, `else`, logical operators, and engineering decisions.
 
-MATLAB Online: https://matlab.mathworks.com/
+## Programming Code — Python and MATLAB
+
+Every coding concept in this chapter should be studied in **both Python and MATLAB**. The engineering equations, variables, and expected interpretation are equivalent; only the programming syntax changes.
+
+- [Python lecture/code](Week_04_Branching.ipynb)
+- [MATLAB equivalent examples](MATLAB_Companion.md)
+- MATLAB Online: https://matlab.mathworks.com/
