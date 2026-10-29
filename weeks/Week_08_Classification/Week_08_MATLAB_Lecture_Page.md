@@ -41,6 +41,72 @@ The focus is on the engineering workflow rather than memorizing commands.
 
 ---
 
+
+## Visual Map of the MATLAB Classification Workflow
+
+~~~mermaid
+flowchart LR
+    A[Steel fault measurements] --> B[27 input features]
+    B --> C[Class labels]
+    C --> D[Train / test split]
+    D --> E[Training-only scaling]
+    E --> F[fitcecoc classifier]
+    F --> G[predict on test set]
+    G --> H[Confusion matrix + metrics]
+    H --> I[Inspect errors]
+    I --> J[Engineering interpretation]
+~~~
+
+Use this diagram as the map for the code sections below. Each MATLAB section performs one part of this flow.
+
+---
+
+## Train/Test Split and Leakage Prevention
+
+~~~mermaid
+flowchart TD
+    A[Complete dataset] --> B[Training set]
+    A --> C[Test set]
+
+    B --> D[Compute mu and sigma]
+    D --> E[Scale training set]
+    D --> F[Use same mu and sigma on test set]
+
+    E --> G[Train model]
+    F --> H[Predict with trained model]
+    G --> H
+
+    C --> F
+~~~
+
+The test set does not contribute to the scaling parameters or model fitting.
+
+---
+
+## How Evaluation Connects to Engineering Decisions
+
+~~~mermaid
+flowchart LR
+    A[True labels] --> C[Confusion matrix]
+    B[Predicted labels] --> C
+
+    C --> D[Precision]
+    C --> E[Recall]
+    C --> F[F1 score]
+    C --> G[Accuracy]
+
+    D --> H[Which errors matter?]
+    E --> H
+    F --> H
+    G --> H
+
+    H --> I[Engineering decision / model limitation]
+~~~
+
+A model can have acceptable overall accuracy while still missing an important fault class. This is why the confusion matrix and per-class metrics are essential.
+
+---
+
 ## Engineering Problem
 
 The goal is to classify a detected steel-surface fault into one of seven classes:
