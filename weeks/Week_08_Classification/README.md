@@ -2,9 +2,7 @@
 
 ## Primary Environment
 
-**MATLAB Live Editor** is the primary environment for this chapter.
-
-Week 8 is the **only active chapter that also retains a Python/Colab notebook**. The Python notebook is provided for comparison after students understand the MATLAB workflow.
+**MATLAB Live Editor** is the primary and only active programming environment for this chapter.
 
 ## Engineering Case Study
 
@@ -34,22 +32,9 @@ Dataset: https://archive.ics.uci.edu/dataset/198/steel+plates+faults
 
 The MATLAB lecture uses small sequential sections: explanation → code → output → interpretation.
 
-## Python Comparison
+## MATLAB Classification Workflow
 
-- [Python/Colab Classification Notebook](Week_08_Classification.ipynb)
-
-Python is included only to compare the equivalent classification workflow.
-
-## Equivalent Workflow
-
-| Step | MATLAB | Python comparison |
-|---|---|---|
-| Train/test split | `cvpartition` | `train_test_split` |
-| Standardization | training mean/std | `StandardScaler` |
-| Multiclass classifier | `templateLinear` + `fitcecoc` | `LogisticRegression` |
-| Prediction | `predict` | `.predict()` |
-| Confusion matrix | `confusionmat`, `confusionchart` | sklearn confusion matrix |
-| Precision/recall/F1 | from confusion matrix | `classification_report` |
+The chapter uses MATLAB for data loading, class preparation, stratified splitting, training-data standardization, multiclass classification, prediction, confusion-matrix analysis, precision, recall, F1, and error analysis.
 
 ## Main Topics
 
