@@ -310,6 +310,16 @@ is incomplete in engineering communication unless its meaning and unit are known
 
 ---
 
+
+## Complete 3-Hour MATLAB Code Study
+
+For extended self-paced practice, open:
+
+[Week_01_3Hour_MATLAB_Code_Study.m](Week_01_3Hour_MATLAB_Code_Study.m)
+
+The runnable study file contains detailed comments, visible outputs, engineering examples, guided practice, and review material. Run one `%%` section at a time in MATLAB Live Editor.
+
+---
 ## Key Idea
 
 Programming is being used to evaluate and organize engineering calculations. MATLAB syntax is a tool; the engineering equation and interpretation remain the central part of the problem.
