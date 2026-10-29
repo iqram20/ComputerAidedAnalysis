@@ -11,6 +11,12 @@ Students use MATLAB to solve engineering problems involving calculations, vector
 
 The emphasis is on understanding the engineering problem and computational method rather than memorizing syntax. Students should be able to read a governing equation, translate it into MATLAB, run the calculation, inspect the result, and decide whether the output is physically and numerically reasonable.
 
+## MATLAB Live Editor Course Guide
+
+- [Open the MATLAB Live Editor Course Guide](MATLAB_Live_Editor_Course_Guide.md)
+
+This guide defines the standard lecture workflow, section structure, output/interpretation pattern, plotting standard, machine-learning workflow, numerical-method workflow, simulation workflow, and submission format used throughout ESC 113.
+
 ## Primary Course Environment
 
 ### MATLAB Live Editor
