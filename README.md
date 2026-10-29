@@ -45,15 +45,13 @@ Each lecture follows this pattern:
 
 In Live Editor, students should run one section at a time and inspect the result before continuing.
 
-## Python Policy
+## Archived Python Materials
 
-Python is **not the primary course language**.
-
-The previous Python materials are preserved under:
+Python materials from earlier versions of the course are preserved under:
 
 `archive/python_materials/`
 
-**Week 8 — Classification** is the only active chapter that keeps both Python and MATLAB materials. Python is retained there only for side-by-side comparison of the same machine-learning workflow.
+They are not part of the active course sequence.
 
 ## Primary Textbook and Learning Resources
 
@@ -108,5 +106,5 @@ https://www.mathworks.com/learn/tutorials/matlab-onramp.html
 
 - `weeks/` — active MATLAB-based weekly course materials
 - `syllabus/` — course syllabus
-- `archive/python_materials/` — archived Python material; Week 8 Python remains active separately
+- `archive/python_materials/` — archived Python material from earlier course versions
 - `resources/` — supplemental material
