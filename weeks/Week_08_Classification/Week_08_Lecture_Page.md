@@ -6,10 +6,23 @@
 
 **MATLAB Live Editor**
 
-This chapter is taught entirely in MATLAB. The lecture should be worked through as a sequence of small Live Editor sections:
+MATLAB Live Editor is the primary environment for this chapter. Python is also available as an optional free and open-source alternative for students who want to compare the same classification workflow. The main lecture should be worked through as a sequence of small Live Editor sections:
 
 **concept → small MATLAB code section → output/figure → interpretation → next step**
 
+
+## Optional Python Reference
+
+MATLAB is the primary course language, but Python provides a **free, open-source alternative** for implementing the same machine-learning ideas.
+
+Optional comparison materials:
+
+- [Python/Colab Classification Notebook](../../archive/python_materials/Week_08_Classification/Week_08_Classification.ipynb)
+- [Original Python Lecture Page](../../archive/python_materials/Week_08_Classification/Week_08_Lecture_Page_Python_Original.md)
+
+Use these as supplementary references. The main Week 8 activities and examples remain MATLAB-based.
+
+---
 
 ## Machine Learning as a Flow
 
