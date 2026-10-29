@@ -4,42 +4,50 @@
 % In MATLAB Live Editor, each %% section can be run independently.
 % ESC 113: Computer Aided Analysis for Engineering
 % MATLAB implementation of the Week 11 engineering programming examples.
+% The comments are written for self-paced study: read the comment first,
+% run the section, inspect the output, and then continue.
 %
 % Run one section at a time using "Run Section".
 
 %% 1. MATLAB as an engineering calculator
 
+% MATLAB follows normal order of operations: multiplication before addition.
 2 + 3*4
+
+% Parentheses force MATLAB to evaluate the addition first.
 (2 + 3)*4
-2^5
-sqrt(81)
-sin(pi/6)
-log(10)
-exp(2)
+
+2^5                    % raise 2 to the 5th power
+sqrt(81)               % square root
+sin(pi/6)              % sine; MATLAB uses radians here
+log(10)                % natural logarithm
+exp(2)                 % e^2
 
 %% 2. Variables and formatted output
 
 mass = 25;              % kg
 acceleration = 3.2;     % m/s^2
-force = mass * acceleration;
+force = mass * acceleration;   % F = ma
 
 fprintf('Force = %.2f N\n', force);
 
 voltage = 24;           % V
 current = 3.5;          % A
-power = voltage * current;
+power = voltage * current;     % P = VI
 
 fprintf('Electrical power = %.2f W\n', power);
 
 %% 3. Vectors
 
-temperature = [20 22 24 26 28];
-pressure = [101.2 101.8 102.1 101.5 100.9];
+% Square brackets with spaces create a row vector.
+temperature = [20 22 24 26 28];          % temperature measurements
+pressure = [101.2 101.8 102.1 101.5 100.9]; % pressure measurements
 
 disp(temperature)
 disp(pressure)
 
 % Column vector
+% Semicolons inside brackets create new rows, so this is a column vector.
 time = [0; 1; 2; 3; 4; 5];
 
 %% 4. Creating vectors with colon and linspace
@@ -54,10 +62,11 @@ disp(x2)
 
 v = [10 20 30 40 50];
 
-first_value = v(1);
-third_value = v(3);
-last_value = v(end);
-middle_values = v(2:4);
+% MATLAB indexing starts at 1.
+first_value = v(1);       % first element
+third_value = v(3);       % third element
+last_value = v(end);      % "end" means the final element
+middle_values = v(2:4);   % elements 2, 3, and 4
 
 disp(first_value)
 disp(third_value)
@@ -72,9 +81,10 @@ A = [1 2 3;
 
 disp(A)
 
-row2 = A(2,:);
-col3 = A(:,3);
-value_23 = A(2,3);
+% ":" means keep all entries in that dimension.
+row2 = A(2,:);            % row 2, all columns
+col3 = A(:,3);            % all rows, column 3
+value_23 = A(2,3);        % single value: row 2, column 3
 
 disp(row2)
 disp(col3)
@@ -118,6 +128,7 @@ disp(x_divided_2)
 mass = 5;                         % kg
 velocity = [2 4 6 8 10];          % m/s
 
+% .^ squares EACH velocity value. The result is one KE value per speed.
 KE = 0.5 * mass .* velocity.^2;
 
 disp(KE)
@@ -140,7 +151,10 @@ fprintf('Standard deviation = %.2f\n', std_value);
 
 pressures = [220 310 450 510 490 540 300];
 
+% The comparison creates a logical vector of TRUE/FALSE values.
 unsafe = pressures > 500;
+
+% Logical indexing keeps only the measurements where unsafe is TRUE.
 unsafe_pressures = pressures(unsafe);
 
 disp(unsafe)
@@ -150,6 +164,7 @@ disp(unsafe_pressures)
 
 temperature = 85;
 
+% MATLAB checks the conditions from top to bottom and stops at the first true branch.
 if temperature < 70
     status = 'Normal';
 elseif temperature <= 90
@@ -178,8 +193,9 @@ fprintf('Battery status: %s\n', battery_status);
 
 acceleration = 3;   % m/s^2
 
+% The loop repeats once for each integer time from 0 through 10 s.
 for t = 0:10
-    velocity = acceleration * t;
+    velocity = acceleration * t;   % v = at, assuming initial velocity is zero
     fprintf('t = %2d s, v = %5.1f m/s\n', t, velocity);
 end
 
@@ -198,9 +214,10 @@ volume = 0;         % L
 flow_rate = 12;     % L/min
 minutes = 0;
 
+% A while loop is useful when the number of repetitions is not known in advance.
 while volume < 500
-    volume = volume + flow_rate;
-    minutes = minutes + 1;
+    volume = volume + flow_rate;   % add one minute of incoming volume
+    minutes = minutes + 1;         % advance the simulated clock by one minute
 end
 
 fprintf('Tank reaches at least 500 L after %d min.\n', minutes);
@@ -223,6 +240,7 @@ v0 = 30;                 % m/s
 theta_deg = 40;          % degrees
 g = 9.81;                % m/s^2
 
+% Trigonometric functions such as sin() and cos() expect radians.
 theta = deg2rad(theta_deg);
 
 t_flight = 2 * v0 * sin(theta) / g;
@@ -243,7 +261,10 @@ grid on
 load_N = [5000 10000 15000 20000 25000];
 area_m2 = 0.004;
 
+% Normal stress: sigma = F/A. "./" performs element-wise division.
 stress_Pa = load_N ./ area_m2;
+
+% Convert Pa to MPa so the plotted values are easier to read.
 stress_MPa = stress_Pa / 1e6;
 
 figure
@@ -261,6 +282,7 @@ D = 0.05;        % m
 
 velocity = 0.2:0.2:3.0;
 
+% Reynolds number: Re = rho*v*D/mu, calculated for every velocity value.
 Re = rho .* velocity .* D ./ mu;
 
 figure
@@ -365,10 +387,12 @@ fprintf('Temperature status = %s\n', status);
 %% Local functions
 
 function F = calculate_force(mass, acceleration)
+    % Return force from Newton's second law, F = ma.
     F = mass * acceleration;
 end
 
 function V = cylinder_volume(radius, height)
+    % Return cylinder volume from V = pi*r^2*h.
     V = pi * radius^2 * height;
 end
 
