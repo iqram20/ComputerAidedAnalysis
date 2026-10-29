@@ -4,7 +4,7 @@ ESC 113 is taught primarily with **MATLAB Live Editor**. Each active lecture is 
 
 **explanation → small MATLAB code section → output/figure → interpretation → next step**
 
-Python materials from earlier versions of the course have been moved to `../archive/python_materials/`. Week 8 is the only active chapter that retains a Python notebook for comparison with MATLAB.
+Python materials from earlier versions of the course have been moved to `../archive/python_materials/`. No Python notebook is part of the active weekly course sequence.
 
 Course-wide format: [MATLAB Live Editor Course Guide](../MATLAB_Live_Editor_Course_Guide.md)
 
