@@ -5,6 +5,8 @@
 % ESC 113: Computer Aided Analysis for Engineering
 %
 % MATLAB Live Editor classification workflow for Week 8.
+% Comments explain both WHAT each command does and WHY it is used.
+% Work section-by-section; do not run ahead if an output is unclear.
 %
 % Dataset:
 % UCI Steel Plates Faults, Dataset ID 198
@@ -109,7 +111,10 @@ classNames = [
 
 %% 5. Separate features and target indicators
 
+% Columns 1:27 are the measured input features used by the model.
 X = M(:,1:27);
+
+% Columns 28:34 are seven class-indicator columns. One value is active per row.
 Yindicator = M(:,28:34);
 
 % Convert one-hot indicator rows into one categorical class label.
@@ -122,6 +127,7 @@ fprintf("Number of classes: %d\n", numel(categories(y)));
 %% 6. Create a table with self-descriptive feature names
 
 T = array2table(X, "VariableNames", cellstr(featureNames));  % convert numeric data into a MATLAB table
+% Add the target class as a named table column so rows are easier to inspect.
 T.Fault_Class = y;
 
 disp(head(T))                                   % display a variable or table
@@ -166,15 +172,18 @@ grid on                                         % show grid lines
 % cvpartition uses the class labels to preserve class proportions
 % approximately across the training and test partitions.
 
+% Hold out 20% of the labeled observations for final testing.
+% Passing categorical y helps MATLAB preserve class proportions approximately.
 cv = cvpartition(y, "HoldOut", 0.20);           % create a stratified train/test partition
 
 trainIdx = training(cv);                        % identify training rows
 testIdx = test(cv);                             % identify test rows
 
-Xtrain = X(trainIdx,:);
-Xtest = X(testIdx,:);
-ytrain = y(trainIdx);
-ytest = y(testIdx);
+% ":" means keep all 27 feature columns for the selected rows.
+Xtrain = X(trainIdx,:);                       % features used to fit the model
+Xtest = X(testIdx,:);                         % features kept unseen during fitting
+ytrain = y(trainIdx);                         % known classes for training rows
+ytest = y(testIdx);                           % known classes used only for evaluation
 
 fprintf("Training observations: %d\n", numel(ytrain));
 fprintf("Test observations: %d\n", numel(ytest));
@@ -229,10 +238,12 @@ XtestScaled = (Xtest - mu) ./ sigma;            % standardize test data using tr
 % fitcecoc handles multiclass classification using binary learners.
 % Here each binary learner is a linear logistic classifier.
 
+% Define the type of binary learner that will be used inside the multiclass ECOC model.
 learner = templateLinear( ...
     "Learner", "logistic", ...
     "Solver", "lbfgs");
 
+% Fit the multiclass classifier using ONLY the scaled training data.
 model = fitcecoc( ...
     XtrainScaled, ...
     ytrain, ...
@@ -242,7 +253,9 @@ model = fitcecoc( ...
 
 %% 14. Make predictions
 
-[ypred, scores] = predict(model, XtestScaled);  % standardize test data using training statistics
+% Apply the trained model to observations that were not used for fitting.
+% ypred = predicted class; scores = relative support for each possible class.
+[ypred, scores] = predict(model, XtestScaled);
 
 comparison = table(
     ytest,
@@ -282,11 +295,12 @@ recall = zeros(nClasses,1);
 f1 = zeros(nClasses,1);
 support = zeros(nClasses,1);
 
+% Repeat the calculation once for each fault class.
 for k = 1:nClasses
 
-    TP = C(k,k);
-    FN = sum(C(k,:)) - TP;
-    FP = sum(C(:,k)) - TP;
+    TP = C(k,k);                              % correctly predicted samples for class k
+    FN = sum(C(k,:)) - TP;                   % true class k, predicted as another class
+    FP = sum(C(:,k)) - TP;                   % predicted class k, true class was different
 
     support(k) = sum(C(k,:));
 
@@ -361,6 +375,7 @@ fprintf( ...
 
 %% 22. Inspect misclassified samples
 
+% TRUE means the predicted class does not match the known class.
 errorMask = ypred ~= ytest;
 
 errorRows = T(testIdx,:);
