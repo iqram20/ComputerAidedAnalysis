@@ -10,8 +10,8 @@ Course-wide format: [MATLAB Live Editor Course Guide](../MATLAB_Live_Editor_Cour
 
 ## Part I — MATLAB Programming Foundations
 
-- [Week 1 — Programming Basics and Engineering Calculations](Week_01_Python_Basics/README.md)
-- [Week 2 — Variables, Arrays, and Matrices](Week_02_Data_Structures_NumPy/README.md)
+- [Week 1 — Programming Basics and Engineering Calculations](Week_01_Programming_Basics/README.md)
+- [Week 2 — Variables, Arrays, and Matrices](Week_02_Arrays_Matrices/README.md)
 - [Week 3 — Functions for Engineering Computation](Week_03_Functions/README.md)
 - [Week 4 — Branching and Engineering Decision Logic](Week_04_Branching/README.md)
 - [Week 5 — Iteration and Engineering Simulations](Week_05_Iteration/README.md)
