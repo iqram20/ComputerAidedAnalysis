@@ -1,7 +1,7 @@
 # Week 6 — Machine Learning Fundamentals and Data Preparation
 ## How to Use This Lecture Page
 
-Work through the material the same way you would use a Colab notebook:
+Work through the material as a MATLAB Live Editor notebook:
 
 1. Read the short explanation.
 2. Run the small MATLAB code block.
@@ -143,13 +143,7 @@ rng(42)
 
 sets the random-number generator to a known state.
 
-This serves the same purpose as:
-
-```python
-random_state=42
-```
-
-in many Python/scikit-learn functions.
+Using a fixed random seed makes repeated analyses reproducible.
 
 ---
 
@@ -238,17 +232,9 @@ Machine condition = Fault
 
 ---
 
-## Python and MATLAB Comparison
+## MATLAB Workflow Summary
 
-| Task | Python | MATLAB |
-|---|---|---|
-| Table | pandas DataFrame | table |
-| First rows | `df.head()` | `head(T)` |
-| Summary | `df.describe()` | `summary(T)` |
-| Missing check | `df.isna().sum()` | `sum(ismissing(T))` |
-| Split | `train_test_split` | `cvpartition` |
-| Linear regression | `LinearRegression` | `fitlm` |
-| Predict | `model.predict(X)` | `predict(model,X)` |
+The examples in this chapter use MATLAB syntax throughout.
 
 ---
 
@@ -276,3 +262,14 @@ Machine condition = Fault
 ## Required Toolbox
 
 The machine-learning examples use the **Statistics and Machine Learning Toolbox**.
+
+
+## Complete 3-Hour MATLAB Code Study
+
+For extended self-paced practice, open:
+
+[Week_06_3Hour_MATLAB_Code_Study.m](Week_06_3Hour_MATLAB_Code_Study.m)
+
+The runnable study file contains detailed comments, visible outputs, engineering examples, guided practice, and review material. Run one `%%` section at a time in MATLAB Live Editor.
+
+---
