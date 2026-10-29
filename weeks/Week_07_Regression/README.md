@@ -1,82 +1,45 @@
 # Week 7 — Regression for Engineering Prediction
 
-## Main Engineering Case Study
+## Primary Environment
 
-This week uses the **UCI Combined Cycle Power Plant dataset** to predict **net electrical power output (MW)** from measured plant and environmental conditions.
+**MATLAB Live Editor** with Statistics and Machine Learning Toolbox.
 
-The dataset contains **9,568 full-load operating observations** collected over 2006–2011.
+## Engineering Case Study
+
+Use the **UCI Combined Cycle Power Plant dataset** to predict net electrical power output from plant and environmental conditions.
+
+**Observations:** 9,568  
+**Target:** Net electrical output (MW)
 
 ### Features
 
-| Feature used in notebook | Meaning | Unit |
+| Feature | Meaning | Unit |
 |---|---|---|
-| `Ambient_Temperature_C` | Ambient temperature | °C |
-| `Exhaust_Vacuum_cmHg` | Steam-turbine exhaust vacuum | cm Hg |
-| `Ambient_Pressure_mbar` | Ambient pressure | mbar |
-| `Relative_Humidity_percent` | Relative humidity | % |
+| Ambient_Temperature_C | Ambient temperature | °C |
+| Exhaust_Vacuum_cmHg | Steam-turbine exhaust vacuum | cm Hg |
+| Ambient_Pressure_mbar | Ambient pressure | mbar |
+| Relative_Humidity_percent | Relative humidity | % |
 
-### Target
-
-`Net_Electrical_Output_MW` — net electrical output of the plant in MW.
-
-Dataset source: UCI Machine Learning Repository, dataset 294  
-https://archive.ics.uci.edu/dataset/294/combined+cycle+power+plant
-
-DOI: 10.24432/C5002N
+Dataset: https://archive.ics.uci.edu/dataset/294/combined+cycle+power+plant
 
 ## Topics
 
-- regression vs classification
-- engineering meaning of continuous targets
-- dataset/cohort interpretation
-- self-descriptive feature names and units
-- exploratory feature–target plots
+- continuous targets
+- exploratory plots
 - train/test split
-- reproducibility with `random_state`
-- multiple linear regression
-- `fit()` and `predict()`
-- MAE
-- RMSE
-- R²
+- `fitlm`
+- `predict`
+- MAE, RMSE, and R²
 - actual vs predicted plots
-- residual analysis
-- largest prediction errors
+- residuals
+- largest errors
 - model coefficients
-- coefficient interpretation and limitations
-- single-feature vs multiple-feature regression
-- common mistakes and student questions
 - engineering interpretation
 
-## Learning Outcomes
+## Primary Lecture Material
 
-Students should be able to:
+- [MATLAB Live Editor–Style Regression Lecture](MATLAB_Companion.md)
 
-1. identify features and a regression target in an engineering dataset;
-2. explain what one dataset observation represents;
-3. construct reproducible training and test sets;
-4. train and evaluate a linear regression model;
-5. explain MAE and RMSE in engineering units;
-6. explain R² without calling it “percent accuracy”;
-7. interpret residuals;
-8. inspect large prediction errors;
-9. interpret regression coefficients cautiously;
-10. distinguish statistical association from causation;
-11. compare single-feature and multiple-feature models;
-12. explain model limitations in engineering terms.
+Students should run each short MATLAB step, inspect its output, and read the interpretation before moving on.
 
-## Class Notebook
-
-- [Week 7 — Detailed Regression Lecture Notebook](Week_07_Regression.ipynb)
-
-The notebook is intentionally detailed and includes **concept explanations, student-question sections, code, engineering interpretations, common mistakes, guided exercises, independent exercises, and a review quiz**.
-
-
-
-
-## Programming Code — Python and MATLAB
-
-Every coding concept in this chapter should be studied in **both Python and MATLAB**. The engineering equations, variables, and expected interpretation are equivalent; only the programming syntax changes.
-
-- [Python lecture/code](Week_07_Regression.ipynb)
-- [MATLAB equivalent examples](MATLAB_Companion.md)
-- MATLAB Online: https://matlab.mathworks.com/
+MATLAB Online: https://matlab.mathworks.com/
