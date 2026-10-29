@@ -4,7 +4,7 @@
 
 ## How to Use This Lecture Page
 
-Work through this page like a Colab notebook:
+Work through this page as a MATLAB Live Editor notebook:
 
 1. Read the explanation.
 2. Run the small MATLAB code block.
@@ -18,7 +18,7 @@ The complete runnable script is linked at the end.
 
 ## MATLAB in This Chapter
 
-Week 8 is taught entirely in **MATLAB Live Editor**.
+Week 8 uses **MATLAB Live Editor** as the primary course environment. Python is also available as an optional free and open-source alternative for students who want to compare the same workflow.
 
 The main functions used in the classification workflow include:
 
@@ -41,6 +41,17 @@ The focus is on the engineering workflow rather than memorizing commands.
 
 ---
 
+
+## Optional Python Alternative
+
+The course uses MATLAB for the primary Week 8 workflow. Python is included only as an optional comparison because it is free and open source and is widely used for machine learning.
+
+- [Python/Colab Classification Notebook](../../archive/python_materials/Week_08_Classification/Week_08_Classification.ipynb)
+- [Original Python Lecture Page](../../archive/python_materials/Week_08_Classification/Week_08_Lecture_Page_Python_Original.md)
+
+Students do not need Python to complete the MATLAB lecture. The optional Python materials show the same engineering sequence using a different programming environment.
+
+---
 
 ## Visual Map of the MATLAB Classification Workflow
 
