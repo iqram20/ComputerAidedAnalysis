@@ -1,78 +1,35 @@
 # Week 11 — Programming Review and Matrix-Based Engineering Computation
 
-## Table of Contents
+## Primary Environment
 
-1. Programming Environments and Script Files
-2. Variables and Basic Arithmetic
-3. Vectors and Matrices
-4. Indexing and Slicing
-5. Built-in Mathematical Functions
-6. Element-by-Element Operations
-7. Matrix Operations
-8. Logical Expressions and Branching
-9. for and while Loops
-10. User-Defined Functions
-11. 2D Plotting
-12. Engineering Example: Electrical Circuit
-13. Engineering Example: Projectile Motion
-14. Engineering Example: Beam Stress
-15. Engineering Example: Fluid Flow
-16. Engineering Example: Temperature Data
-17. Guided Practice
-18. Assignment Exercises
-19. Review Questions
+**MATLAB Live Editor**
 
-## Learning Objectives
+This week consolidates programming fundamentals in a matrix-oriented MATLAB workflow.
 
-By the end of this week, students should be able to:
+## Primary Lecture Material
 
-- use MATLAB as an engineering calculator;
-- create and manipulate vectors and matrices;
-- distinguish matrix operations from element-by-element operations;
-- use indexing and logical indexing;
-- write `if`, `for`, and `while` statements;
-- create simple functions in Python and MATLAB;
-- generate labeled engineering plots;
-- solve basic engineering problems using Python and MATLAB programs.
+- [Detailed MATLAB Live Editor–Style Lecture](Week_11_Lecture_Page.md)
+- [Complete MATLAB Script](MATLAB_Basics_Engineering_Examples.m)
+- [MATLAB Usage Guide](MATLAB_Usage_Guide.md)
 
-## MATLAB Usage Guide
+## Topics
 
-- [How to Run and Use MATLAB for This Course](MATLAB_Usage_Guide.md)
+- MATLAB interface and Live Editor
+- variables and arithmetic
+- vectors and matrices
+- indexing
+- element-wise vs matrix operations
+- logical indexing
+- branching
+- loops
+- functions
+- plotting
+- engineering applications
 
-## MATLAB Files
+## Assignment
 
-- [MATLAB Basics and Engineering Examples](MATLAB_Basics_Engineering_Examples.m)
 - [Week 11 Assignment](Assignment_Week_11.md)
 
-## Recommended Environment
-
-Students may use:
-
-- MATLAB Desktop
-- MATLAB Online
-- MATLAB Live Scripts
-
-MATLAB Online is useful when MATLAB is not installed locally.
-
-
-## MATLAB Materials
-
-[MATLAB Basics Engineering Examples](MATLAB_Basics_Engineering_Examples.m) — the main Week 11 MATLAB script.
-
-[MATLAB Usage Guide](MATLAB_Usage_Guide.md) — MATLAB interface, scripts, sections, plotting, debugging, and file organization.
+Students should use the lecture page first and the complete script as the runnable reference version.
 
 MATLAB Online: https://matlab.mathworks.com/
-
-
-## Programming Code — Python and MATLAB
-
-- [Python equivalent examples](Programming_Examples_Python.py)
-- [MATLAB equivalent examples](MATLAB_Basics_Engineering_Examples.m)
-
-The engineering problems and calculations are equivalent in both languages; the syntax differs.
-
-
-## Lecture Page
-
-[Detailed Week 11 Lecture Page](Week_11_Lecture_Page.md) — explanations, MATLAB examples, Python comparison, common errors, and guided practice.
-
