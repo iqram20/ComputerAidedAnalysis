@@ -6,6 +6,15 @@
 
 Python is also shown as an **optional free and open-source alternative** for students who want to practice the same machine-learning workflow outside MATLAB. The graded/primary course workflow remains MATLAB-based.
 
+## Start Here — MATLAB Lecture
+
+- [Detailed MATLAB Live Editor Lecture](Week_08_MATLAB_Lecture_Page.md)
+- [Week 8 Lecture Overview](Week_08_Lecture_Page.md)
+- [Complete MATLAB Classification Script](Week_08_Classification_MATLAB.m)
+- [MATLAB Usage Instructions](MATLAB_Usage_Instructions_BMCC.md)
+
+Students should begin with the **Detailed MATLAB Live Editor Lecture** and run the code section-by-section in MATLAB Live Editor.
+
 ## Engineering Case Study
 
 **UCI Steel Plates Faults**  
