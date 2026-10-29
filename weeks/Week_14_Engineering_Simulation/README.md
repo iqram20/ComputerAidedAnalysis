@@ -1,56 +1,32 @@
 # Week 14 — Engineering Simulation and Computational Modeling
 
-## Table of Contents
+## Primary Environment
 
-1. What Is Engineering Simulation?
-2. Modeling Assumptions and System Boundaries
-3. From Physical Laws to Computational Models
-4. Time-Stepping and Discrete Simulation
-5. Parameter Studies
-6. Sensitivity Analysis
-7. Validation and Verification
-8. Mechanical System Simulation
-9. Thermal System Simulation
-10. Electrical RC Circuit Simulation
-11. Fluid Tank Simulation
-12. Population / Reliability Style Dynamic Model
-13. Numerical Stability and Time-Step Selection
-14. Python Simulation Example
-15. MATLAB Simulation Example
-16. Comparing Analytical and Numerical Results
-17. Engineering Interpretation
-18. Guided Exercises
-19. Assignment
-20. Review Questions
+**MATLAB Live Editor**
 
-## Learning Objectives
+## Primary Lecture Material
 
-By the end of this week, students should be able to:
+- [MATLAB Live Editor–Style Simulation Lecture](Week_14_MATLAB_Lecture_Page.md)
+- [Complete MATLAB Simulation Script](Engineering_Simulation_MATLAB.m)
 
-- explain the purpose of engineering simulation;
-- translate a physical model into a computational algorithm;
-- identify inputs, states, parameters, and outputs;
-- implement simple time-stepping simulations;
-- perform parameter studies;
-- interpret sensitivity to model parameters;
-- compare numerical and analytical solutions;
-- recognize the importance of verification and validation;
-- discuss numerical stability and time-step size;
-- document model assumptions and limitations.
+## Topics
 
-## Files
+- physical models and assumptions
+- state variables
+- Euler time stepping
+- falling-object simulation
+- cooling simulation
+- RC circuit simulation
+- tank simulation
+- parameter studies
+- time-step sensitivity
+- verification
+- validation
 
-- [Engineering Simulation — Python Notebook](Engineering_Simulation_Python.ipynb)
-- [Engineering Simulation — MATLAB Script](Engineering_Simulation_MATLAB.m)
+## Assignment
+
 - [Week 14 Assignment](Assignment_Week_14.md)
 
-
-## MATLAB Notebook-Style Lecture
-
-- [Week 14 MATLAB Lecture Page](Week_14_MATLAB_Lecture_Page.md) — simulation concepts taught as small sequential MATLAB cells with text and interpretation between them.
-
-## MATLAB Materials
-
-[MATLAB Engineering Simulation](Engineering_Simulation_MATLAB.m) — time stepping, physical models, parameter studies, verification, and simulation.
+The lecture page is organized as small sequential MATLAB sections with interpretation between steps. The complete script is the runnable reference.
 
 MATLAB Online: https://matlab.mathworks.com/
