@@ -50,6 +50,123 @@ Examples:
 | Manufacturing quality | Accept / Reject |
 | Surface inspection | Scratch / Stain / Bump / Other |
 
+
+
+## Detailed Feature Guide
+
+The input features should be understood before the model is trained.
+
+### Location
+
+X_Minimum, X_Maximum, Y_Minimum, and Y_Maximum describe the detected fault position.
+
+### Size and perimeter
+
+Pixels_Areas, X_Perimeter, and Y_Perimeter describe fault area and boundary extent.
+
+### Luminosity
+
+Sum_of_Luminosity, Minimum_of_Luminosity, Maximum_of_Luminosity, and Luminosity_Index describe image brightness characteristics.
+
+### Steel and production information
+
+Length_of_Conveyer, TypeOfSteel_A300, TypeOfSteel_A400, and Steel_Plate_Thickness describe production or plate context.
+
+### Shape
+
+Edges_Index, Empty_Index, Square_Index, Outside_X_Index, and Outside_Global_Index summarize aspects of fault geometry.
+
+### Direction
+
+Edges_X_Index, Edges_Y_Index, and Orientation_Index describe directional characteristics.
+
+### Transformed size variables
+
+LogOfAreas, Log_X_Index, Log_Y_Index, and SigmoidOfAreas provide transformed size information.
+
+## Why Class Balance Matters
+
+If a class appears only a small number of times, the classifier has fewer examples from which to learn. This is why the class distribution should be inspected before training.
+
+## Why the Test Set Must Stay Independent
+
+The test set estimates performance on unseen observations.
+
+Training, scaling, or tuning with test-set information makes the evaluation overly optimistic.
+
+## Standardization
+
+Training statistics are calculated first:
+
+    mu = mean(Xtrain,1);
+    sigma = std(Xtrain,0,1);
+
+Then both sets use the same training statistics:
+
+    XtrainScaled = (Xtrain-mu)./sigma;
+    XtestScaled = (Xtest-mu)./sigma;
+
+## Logistic Learner and ECOC
+
+The binary learner is defined with templateLinear using logistic loss. fitcecoc then combines binary learners into a multiclass model.
+
+This lets MATLAB solve a seven-class problem even though the underlying learner is binary.
+
+## Accuracy Is Not Enough
+
+Imagine a model performs well on common faults but misses most examples of a rare but important fault.
+
+Overall accuracy could still look good.
+
+Therefore students must also inspect:
+
+- confusion matrix;
+- per-class precision;
+- per-class recall;
+- per-class F1;
+- support;
+- macro average;
+- weighted average.
+
+## Engineering Meaning of False Negatives
+
+For one selected class, a false negative means:
+
+the true fault belongs to that class, but the classifier predicts another class.
+
+In a real inspection system, the consequence depends on the severity of the missed fault.
+
+## Engineering Meaning of False Positives
+
+A false positive means:
+
+the classifier predicts a selected fault class when the true fault belongs to another class.
+
+This may cause unnecessary inspection or rework.
+
+## Score Margin and Uncertainty
+
+The difference between the largest and second-largest class score can be used as a simple uncertainty indicator.
+
+Small margin:
+the model had two similar class choices.
+
+Large margin:
+one class had substantially stronger support.
+
+The score margin is useful for comparison, but the scores are not automatically calibrated probabilities.
+
+## Engineering Interpretation Questions
+
+After training, students should answer:
+
+1. Which class has the highest recall?
+2. Which class has the lowest recall?
+3. Which pair of classes is confused most often?
+4. Does class imbalance appear related to performance?
+5. Which errors would be most concerning in an actual quality-control system?
+6. Would the model be suitable for automatic rejection, or only for inspection support?
+
 ## Classification Workflow in MATLAB
 
 ```text
