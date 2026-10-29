@@ -36,6 +36,16 @@ Dataset: https://archive.ics.uci.edu/dataset/294/combined+cycle+power+plant
 - model coefficients
 - engineering interpretation
 
+## 3-Hour Self-Paced MATLAB Code Study
+
+- [Open the complete runnable MATLAB study](Week_07_3Hour_MATLAB_Code_Study.m)
+
+This is the main hands-on study file for the week. Open it in **MATLAB Live Editor** and run one `%%` section at a time.
+
+The file is designed for approximately three hours of independent study and includes detailed comments beside important commands, visible numerical output and plots, engineering examples, common mistakes, guided practice, and a final review or challenge.
+
+Students should read the comments, run the section, inspect the result, and modify selected inputs before continuing.
+
 ## Primary Lecture Material
 
 - [MATLAB Live Editor–Style Regression Lecture](MATLAB_Companion.md)
