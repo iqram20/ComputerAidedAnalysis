@@ -1,0 +1,8 @@
+# GitHub Linguist configuration
+#
+# ESC 113 is now an active MATLAB-based course.
+# Keep archived/legacy Python notebooks in the repository for reference,
+# but do not include them in the repository language statistics.
+
+archive/python_materials/** linguist-vendored
+resources/**/*.ipynb linguist-vendored
