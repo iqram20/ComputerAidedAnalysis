@@ -4,7 +4,7 @@
 % In MATLAB Live Editor, each %% section can be run independently.
 % ESC 113: Computer Aided Analysis for Engineering
 %
-% MATLAB equivalent of the Week 8 Python classification lecture.
+% MATLAB Live Editor classification workflow for Week 8.
 %
 % Dataset:
 % UCI Steel Plates Faults, Dataset ID 198
