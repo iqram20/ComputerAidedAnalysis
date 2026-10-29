@@ -18,7 +18,7 @@ Course lectures are organized as:
 
 Students are expected to run one Live Editor section at a time, inspect the result, and determine whether the output is mathematically and physically reasonable before continuing.
 
-Python is not the primary course language. Previous Python materials are archived for reference. **Week 8 Classification** is the only active chapter that retains a Python notebook for comparison with the equivalent MATLAB workflow.
+Python materials from earlier versions of the course are archived for reference and are not part of the active weekly course sequence.
 
 ---
 
