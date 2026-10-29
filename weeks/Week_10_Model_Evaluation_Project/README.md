@@ -1,49 +1,46 @@
 # Week 10 — Model Evaluation, Tuning, and Engineering ML Project
 
+## Primary Environment
+
+**MATLAB Live Editor** with Statistics and Machine Learning Toolbox.
+
 ## Topics
-- Training, validation, and test data
-- Cross-validation
-- Hyperparameters
-- Grid search
-- Model comparison
-- Bias vs. variance
-- Overfitting and underfitting
-- Reproducibility
-- Engineering interpretation and limitations
 
-## Final workflow
+- training, validation, and test data
+- cross-validation
+- hyperparameters
+- model selection
+- overfitting and underfitting
+- reproducibility
+- final test evaluation
+- engineering reporting
+
+## Primary Lecture Material
+
+- [MATLAB Live Editor–Style Lecture](MATLAB_Companion.md)
+
+## Project Workflow
+
 1. Define the engineering problem.
-2. Load and inspect the data.
+2. Load and inspect data in MATLAB.
 3. Clean and preprocess.
-4. Perform exploratory analysis.
-5. Split the data.
-6. Train multiple models.
-7. Evaluate with appropriate metrics.
-8. Tune selected models.
-9. Visualize predictions/errors.
-10. Interpret results and limitations.
+4. Reserve the final test set.
+5. Compare models using training/cross-validation data.
+6. Tune the selected model.
+7. Evaluate once on the test set.
+8. Visualize errors.
+9. Interpret engineering meaning and limitations.
 
-## Project expectation
-Students should build a complete machine-learning analysis using a real engineering dataset and submit:
-- `.py` or `.ipynb` code
-- project report
-- `README.md`
-- data or data-access instructions
-- GitHub repository URL
+## Project Submission
 
-## Suggested Project 2
-**Machine Learning Prediction of Concrete Compressive Strength** using the UCI Concrete Compressive Strength dataset.
+Students should submit:
 
+- MATLAB Live Script (`.mlx`) or MATLAB script (`.m`);
+- project report;
+- README;
+- data or data-access instructions;
+- GitHub repository URL.
 
-## Class Notebook
-
-- [Open the 3-hour teaching notebook](Week_10_Model_Evaluation_Project.ipynb)
-
-The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
-
-
-## MATLAB Materials
-
-[MATLAB Companion](MATLAB_Companion.md) — cross-validation, test-set evaluation, hyperparameter tuning, and engineering reporting.
+Suggested project: **Concrete Compressive Strength Prediction**.
 
 MATLAB Online: https://matlab.mathworks.com/
