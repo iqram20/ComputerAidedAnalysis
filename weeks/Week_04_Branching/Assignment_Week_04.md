@@ -1,19 +1,22 @@
-# Week 4 Assignment — Branching and Engineering Decisions
+# Week 4 Assignment — MATLAB Branching and Engineering Decisions
 
 ## Submission
-Submit one `.ipynb` or `.py` file containing tested functions and outputs.
 
-## Part A — Berkeley-aligned practice
-1. Implement a multi-level percentage rule with `if/elif/else`.
-2. Write an operation-selector function for +, −, ×, ÷, and exponentiation.
-3. Classify a point as inside, border, or outside a right triangle.
-4. Return exactly ten values by trimming or zero-padding an input sequence.
-5. Implement a detailed letter-grade classifier.
-6. Build a three-sensor disagreement alarm.
-7. Write a quadratic solver that identifies two real, one repeated, or two complex roots.
-8. Rewrite three simple decisions with ternary expressions.
+Submit one MATLAB Live Script (`.mlx`) or MATLAB script (`.m`) containing tested code and visible outputs.
 
-## Part B — Engineering decision problems
+## Part A — Branching Practice
+
+1. Implement a multi-level percentage rule using `if/elseif/else`.
+2. Create an operation selector for +, −, ×, ÷, and exponentiation.
+3. Classify a point as inside, border, or outside a specified operating region.
+4. Create a detailed letter-grade classifier.
+5. Build a three-sensor disagreement alarm.
+6. Write a quadratic-root classifier that identifies two real, one repeated, or complex roots.
+7. Demonstrate use of `&&`.
+8. Demonstrate use of `||`.
+
+## Part B — Engineering Decisions
+
 9. Classify machine temperature as Normal, Warning, Critical, or Shutdown.
 10. Classify pressure-vessel status and return a recommended action.
 11. Create a battery-state classifier using voltage and temperature.
@@ -27,5 +30,6 @@ Submit one `.ipynb` or `.py` file containing tested functions and outputs.
 19. Create a redundant-sensor voting rule using three measurements.
 20. Design one original engineering decision system with at least three inputs and four output states.
 
-## Written question
-Explain in 5–7 sentences why conditional logic in safety-related engineering software must be tested at boundary values.
+## Written Question
+
+Explain in 5–7 sentences why boundary values must be tested carefully in safety-related engineering software.
