@@ -6,6 +6,7 @@
 %
 % Run one section at a time.
 % MATLAB implementation of the Week 12 engineering data-analysis and numerical-method examples.
+% Comments are written for self-paced study and explain the purpose of each step.
 
 clear
 clc
@@ -13,12 +14,14 @@ close all
 
 %% 1. Creating example engineering data
 
+% The apostrophe converts the row vector into a column vector for use in a table.
 Time_s = (0:5:30)';
 Temperature_C = [22 25 30 37 45 54 60]';
 Pressure_kPa = [101 110 125 150 185 220 260]';
 FlowRate_L_min = [10 11 12 13 14 15 16]';
 Vibration_mm_s = [1.2 1.5 1.7 2.1 2.8 3.6 4.5]';
 
+% table() combines equal-length variables into named columns.
 data = table(Time_s, Temperature_C, Pressure_kPa, ...
     FlowRate_L_min, Vibration_mm_s);
 
@@ -26,8 +29,10 @@ disp(data)
 
 %% 2. Save and read engineering data
 
+% Save the table so the same workflow can be used with a real CSV file later.
 writetable(data, 'engineering_sensor_data.csv');
 
+% readtable keeps column names, which makes engineering data easier to understand.
 sensorData = readtable('engineering_sensor_data.csv');
 
 disp(sensorData)
@@ -65,8 +70,10 @@ fprintf('Maximum = %.2f C\n', max_temp);
 
 %% 6. Logical filtering
 
+% Create a TRUE/FALSE mask identifying rows above the pressure threshold.
 highPressureRows = sensorData.Pressure_kPa > 180;
 
+% Keep only rows where the logical mask is TRUE; ":" keeps every column.
 highPressureData = sensorData(highPressureRows, :);
 
 disp(highPressureData)
@@ -108,6 +115,7 @@ grid on
 voltage = [0.5 1.0 1.5 2.0 2.5];
 temperature_cal = [10 21 31 42 52];
 
+% Degree 1 means fit a straight line: temperature ≈ slope*voltage + intercept.
 p = polyfit(voltage, temperature_cal, 1);
 
 slope = p(1);
@@ -116,6 +124,7 @@ intercept = p(2);
 fprintf('Slope = %.4f\n', slope);
 fprintf('Intercept = %.4f\n', intercept);
 
+% polyval evaluates the fitted line at each voltage value.
 predicted_temperature = polyval(p, voltage);
 
 figure
@@ -143,6 +152,7 @@ fprintf('Estimated temperature at %.2f V = %.2f C\n', ...
 x = [0 1 2 3 4 5];
 y = [2.0 2.8 4.5 7.2 10.8 15.5];
 
+% Degree 2 fits a quadratic curve instead of a straight line.
 p2 = polyfit(x, y, 2);
 
 x_fit = linspace(min(x), max(x), 100);
@@ -166,8 +176,9 @@ t = 0:0.5:5;
 position = [0 0.6 2.4 5.4 9.6 15.0 ...
             21.6 29.4 38.4 48.6 60.0];
 
-velocity = gradient(position, t);
-acceleration = gradient(velocity, t);
+% gradient estimates the derivative from discrete data points.
+velocity = gradient(position, t);       % dx/dt
+acceleration = gradient(velocity, t);   % dv/dt
 
 disp(table(t', position', velocity', acceleration', ...
     'VariableNames', {'Time_s','Position_m','Velocity_m_s','Acceleration_m_s2'}))
@@ -199,6 +210,8 @@ t2 = 0:1:10;
 
 v = [0 2 4 6 8 10 11 12 12 11 10];
 
+% trapz estimates the area under the velocity-time curve.
+% Because integral(v dt) = displacement, the result is distance in meters here.
 distance = trapz(t2, v);
 
 fprintf('Estimated distance traveled = %.2f m\n', distance);
@@ -222,14 +235,17 @@ grid on
 time_min = [0 1 2 3 4 5 6];
 flow_L_min = [10 11 13 15 14 12 10];
 
+% Integrating L/min over minutes gives total volume in liters.
 total_volume_L = trapz(time_min, flow_L_min);
 
 fprintf('Total volume = %.2f L\n', total_volume_L);
 
 %% 19. Solving a nonlinear equation with fzero
 
+% Anonymous function representing the equation f(x)=0 to be solved.
 f = @(x) x.^3 - 4*x - 9;
 
+% Start the numerical root search near x = 3.
 root = fzero(f, 3);
 
 fprintf('Root = %.6f\n', root);
@@ -260,12 +276,14 @@ A = [2 1;
 b = [8;
      9];
 
+% A\b solves A*x=b directly; this is preferred to inv(A)*b.
 solution = A\b;
 
 disp(solution)
 
 %% 22. Verify the linear-system solution
 
+% Verify the numerical answer by reconstructing the right-hand side.
 check = A * solution;
 
 disp(check)
@@ -293,6 +311,7 @@ fprintf('F2 = %.2f N\n', F(2));
 strain = [0 0.0005 0.0010 0.0015 0.0020 0.0025];
 stress_MPa = [0 100 200 295 385 465];
 
+% In the approximately linear elastic region, slope of stress vs strain estimates E.
 pE = polyfit(strain, stress_MPa, 1);
 
 E_MPa = pE(1);
