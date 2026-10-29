@@ -80,8 +80,8 @@ https://www.mathworks.com/learn/tutorials/matlab-onramp.html
 
 | Week | Topic |
 |---|---|
-| 1 | [Programming Basics and Engineering Calculations](weeks/Week_01_Python_Basics/README.md) |
-| 2 | [Variables, Arrays, and Matrices](weeks/Week_02_Data_Structures_NumPy/README.md) |
+| 1 | [Programming Basics and Engineering Calculations](weeks/Week_01_Programming_Basics/README.md) |
+| 2 | [Variables, Arrays, and Matrices](weeks/Week_02_Arrays_Matrices/README.md) |
 | 3 | [Functions for Engineering Computation](weeks/Week_03_Functions/README.md) |
 | 4 | [Branching and Engineering Decision Logic](weeks/Week_04_Branching/README.md) |
 | 5 | [Iteration and Engineering Simulations](weeks/Week_05_Iteration/README.md) |
