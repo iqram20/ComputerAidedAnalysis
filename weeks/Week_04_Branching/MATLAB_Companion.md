@@ -1,7 +1,7 @@
 # Week 4 — Branching and Engineering Decision Logic
 ## How to Use This Lecture Page
 
-Work through the material the same way you would use a Colab notebook:
+Work through the material as a MATLAB Live Editor notebook:
 
 1. Read the short explanation.
 2. Run the small MATLAB code block.
@@ -169,17 +169,9 @@ Nested branching is useful, but very complicated nested logic can become difficu
 
 ---
 
-## Python and MATLAB Comparison
+## MATLAB Syntax Summary
 
-| Python | MATLAB |
-|---|---|
-| `if x > 5:` | `if x > 5` |
-| `elif` | `elseif` |
-| `else:` | `else` |
-| `and` | `&&` |
-| `or` | `||` |
-| `not` | `~` |
-| indentation | `end` |
+The examples in this chapter use MATLAB syntax throughout.
 
 ---
 
@@ -219,6 +211,16 @@ end
 
 ---
 
+
+## Complete 3-Hour MATLAB Code Study
+
+For extended self-paced practice, open:
+
+[Week_04_3Hour_MATLAB_Code_Study.m](Week_04_3Hour_MATLAB_Code_Study.m)
+
+The runnable study file contains detailed comments, visible outputs, engineering examples, guided practice, and review material. Run one `%%` section at a time in MATLAB Live Editor.
+
+---
 ## Key Idea
 
 Branching translates engineering decision rules into executable logic.
