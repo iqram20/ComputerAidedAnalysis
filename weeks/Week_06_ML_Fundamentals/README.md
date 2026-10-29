@@ -1,49 +1,31 @@
 # Week 6 — Machine Learning Fundamentals and Data Preparation
 
+## Primary Environment
+
+**MATLAB Live Editor** with Statistics and Machine Learning Toolbox.
+
 ## Topics
-- What is machine learning?
-- Features and target variables
-- Supervised learning
-- Regression vs. classification
-- pandas DataFrames
-- Loading CSV data
-- Missing values and basic cleaning
-- Train/test split
-- Data leakage
-- Reproducibility with `random_state`
 
-## Python setup
-```python
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-```
+- machine learning and supervised learning
+- features and target variables
+- regression vs classification
+- MATLAB tables
+- loading and inspecting data
+- missing values
+- train/test split with `cvpartition`
+- reproducibility with `rng`
+- data leakage
+- training-only preprocessing
+- baseline models
 
-## Engineering focus
-Use a real engineering dataset and identify:
-- input variables (`X`)
-- output/target (`y`)
-- units
-- possible missing or invalid measurements
+## Primary Lecture Material
 
-## Learning outcomes
-Students should understand the complete supervised-learning workflow before fitting a model.
+- [MATLAB Live Editor–Style Lecture](MATLAB_Companion.md)
 
+The lecture is organized as short explanatory text followed by small MATLAB sections that students run one at a time.
 
-## Class Notebook
+## Engineering Focus
 
-- [Open the 3-hour teaching notebook](Week_06_ML_Fundamentals.ipynb)
+Students identify the input variables, target, units, missing/invalid measurements, and correct train/test workflow before fitting a model.
 
-The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
-
-
-
-
-## Programming Code — Python and MATLAB
-
-Every coding concept in this chapter should be studied in **both Python and MATLAB**. The engineering equations, variables, and expected interpretation are equivalent; only the programming syntax changes.
-
-- [Python lecture/code](Week_06_ML_Fundamentals.ipynb)
-- [MATLAB equivalent examples](MATLAB_Companion.md)
-- MATLAB Online: https://matlab.mathworks.com/
+MATLAB Online: https://matlab.mathworks.com/
