@@ -277,6 +277,16 @@ Another common mistake is forgetting that MATLAB indexing starts at **1**.
 
 ---
 
+
+## Complete 3-Hour MATLAB Code Study
+
+For extended self-paced practice, open:
+
+[Week_02_3Hour_MATLAB_Code_Study.m](Week_02_3Hour_MATLAB_Code_Study.m)
+
+The runnable study file contains detailed comments, visible outputs, engineering examples, guided practice, and review material. Run one `%%` section at a time in MATLAB Live Editor.
+
+---
 ## Key Idea
 
 Vectors and matrices allow one engineering equation to be applied to many measurements efficiently.
