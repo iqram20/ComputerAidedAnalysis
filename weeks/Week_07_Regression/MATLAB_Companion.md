@@ -1,7 +1,7 @@
 # Week 7 — Regression for Engineering Prediction
 ## How to Use This Lecture Page
 
-Work through the material the same way you would use a Colab notebook:
+Work through the material as a MATLAB Live Editor notebook:
 
 1. Read the short explanation.
 2. Run the small MATLAB code block.
@@ -265,16 +265,9 @@ This demonstrates whether additional operating variables improve prediction.
 
 ---
 
-## Python and MATLAB Comparison
+## MATLAB Workflow Summary
 
-| Task | Python/scikit-learn | MATLAB |
-|---|---|---|
-| Linear model | `LinearRegression()` | `fitlm` |
-| Fit | `model.fit(X,y)` | included in `fitlm(X,y)` |
-| Predict | `model.predict(X)` | `predict(model,X)` |
-| Coefficients | `model.coef_` | `model.Coefficients` |
-| Scatter | `plt.scatter` | `scatter` |
-| Histogram | `plt.hist` | `histogram` |
+The examples in this chapter use MATLAB syntax throughout.
 
 ---
 
@@ -304,3 +297,14 @@ This demonstrates whether additional operating variables improve prediction.
 ## Required Toolbox
 
 Statistics and Machine Learning Toolbox.
+
+
+## Complete 3-Hour MATLAB Code Study
+
+For extended self-paced practice, open:
+
+[Week_07_3Hour_MATLAB_Code_Study.m](Week_07_3Hour_MATLAB_Code_Study.m)
+
+The runnable study file contains detailed comments, visible outputs, engineering examples, guided practice, and review material. Run one `%%` section at a time in MATLAB Live Editor.
+
+---
