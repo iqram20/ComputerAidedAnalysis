@@ -385,13 +385,9 @@ A submission should be readable from top to bottom and should include section ti
 
 ---
 
-## 16. Week 8 Exception
+## 16. Course Language
 
-Week 8 Classification retains an active Python/Colab notebook for comparison.
-
-MATLAB remains the primary implementation.
-
-Students should learn the MATLAB workflow first, then use the Python notebook to see how the same classification concepts are implemented in another environment.
+The active course is MATLAB-based. Archived Python files may be retained for historical reference, but students should follow the MATLAB Live Editor materials for all active chapters.
 
 ---
 
