@@ -1,7 +1,7 @@
 # Week 3 — Functions for Engineering Computation
 ## How to Use This Lecture Page
 
-Work through the material the same way you would use a Colab notebook:
+Work through the material as a MATLAB Live Editor notebook:
 
 1. Read the short explanation.
 2. Run the small MATLAB code block.
@@ -169,15 +169,9 @@ fahrenheit = @(C) (9/5).*C + 32;
 
 ---
 
-## Python and MATLAB Comparison
+## MATLAB Syntax Summary
 
-| Concept | Python | MATLAB |
-|---|---|---|
-| Define function | `def f(x):` | `function y = f(x)` |
-| Return result | `return y` | output variable `y` |
-| End block | indentation | `end` |
-| Multiple outputs | `return a,b` | `function [a,b] = f(x)` |
-| Short function | `lambda x: ...` | `@(x) ...` |
+The examples in this chapter use MATLAB syntax throughout.
 
 ---
 
@@ -232,6 +226,16 @@ Create MATLAB functions for:
 
 ---
 
+
+## Complete 3-Hour MATLAB Code Study
+
+For extended self-paced practice, open:
+
+[Week_03_3Hour_MATLAB_Code_Study.m](Week_03_3Hour_MATLAB_Code_Study.m)
+
+The runnable study file contains detailed comments, visible outputs, engineering examples, guided practice, and review material. Run one `%%` section at a time in MATLAB Live Editor.
+
+---
 ## Key Idea
 
 Functions make engineering calculations reusable, testable, and easier to organize.
