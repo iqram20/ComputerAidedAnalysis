@@ -2,7 +2,9 @@
 
 ## Primary Environment
 
-**MATLAB Live Editor** is the primary and only active programming environment for this chapter.
+**MATLAB Live Editor** is the primary course environment for this chapter.
+
+Python is also shown as an **optional free and open-source alternative** for students who want to practice the same machine-learning workflow outside MATLAB. The graded/primary course workflow remains MATLAB-based.
 
 ## Engineering Case Study
 
@@ -274,6 +276,30 @@ flowchart LR
 ~~~
 
 The final goal is not only to calculate metrics, but to understand which faults are being missed or confused and what those errors mean in an engineering setting.
+
+## Optional Python Alternative
+
+MATLAB is the primary language used in ESC 113. However, Python is a useful **free and open-source alternative** for machine learning and engineering data analysis.
+
+Students who want to compare implementations may use the archived Week 8 Python materials:
+
+- [Python/Colab Classification Notebook](../../archive/python_materials/Week_08_Classification/Week_08_Classification.ipynb)
+- [Original Python Lecture Page](../../archive/python_materials/Week_08_Classification/Week_08_Lecture_Page_Python_Original.md)
+
+The engineering workflow is the same:
+
+~~~mermaid
+flowchart LR
+    A[Engineering problem] --> B[Features and target]
+    B --> C[Train / test split]
+    C --> D[Preprocessing]
+    D --> E[Train classifier]
+    E --> F[Predict]
+    F --> G[Evaluate]
+    G --> H[Engineering interpretation]
+~~~
+
+The syntax and software libraries differ, but concepts such as train/test separation, scaling, classification, confusion matrices, precision, recall, and F1 remain the same.
 
 ## MATLAB Live Editor Lecture
 
