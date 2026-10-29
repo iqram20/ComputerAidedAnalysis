@@ -1,32 +1,35 @@
-# Week 3 Assignment — Functions for Engineering
+# Week 3 Assignment — MATLAB Functions for Engineering
 
 ## Submission
-Submit one `.ipynb` or `.py` file. Every function should be tested with meaningful inputs.
 
-## Part A — Berkeley-aligned practice
+Submit one MATLAB Live Script (`.mlx`) or MATLAB script (`.m`). Every function must be tested with meaningful inputs.
+
+## Part A — Function Practice
+
 1. Write `my_sinh(x)` using exponentials.
-2. Write a function that returns an n×n checkerboard array of 0s and 1s.
-3. Write a triangle-area function.
-4. Write a function that splits a matrix into left and right portions.
-5. Write a cylinder function returning both surface area and volume.
-6. Write a function that counts odd numbers in a one-dimensional array.
-7. Return an m×n array filled with 2s.
-8. Write a lambda function for subtraction.
-9. Write a function that concatenates two strings.
-10. Demonstrate and explain a missing-argument TypeError.
-11. Write a formatted greeting function.
-12. Write a vectorized annulus-area function.
-13. Write a function returning indices of values within a specified tolerance.
+2. Write a triangle-area function.
+3. Write a cylinder function returning both surface area and volume.
+4. Write a function that returns the mean and standard deviation of a measurement vector.
+5. Write a function that returns the minimum and maximum values.
+6. Write an anonymous function for Celsius-to-Fahrenheit conversion.
+7. Write an anonymous function for circle area.
+8. Create a function with two inputs and one output.
+9. Create a function with one input and two outputs.
+10. Demonstrate a function-call error caused by a missing input and explain the message.
 
-## Part B — Engineering functions
-14. `stress(force, area)`
-15. `strain(delta_L, L0)`
-16. `reynolds_number(rho, velocity, diameter, viscosity)`
-17. `pump_power(rho, g, Q, H, efficiency)`
-18. `beam_deflection(P, L, E, I)`
-19. `resultant_force(Fx, Fy)`
-20. `sensor_error(measured, reference)` returning absolute and percent error.
-21. Write a vectorized function that calculates stress for arrays of loads and areas.
-22. Write a function that returns mean, standard deviation, minimum, and maximum of a measurement array.
-23. Pass one function as an argument to another function in an engineering example.
-24. Design one original reusable engineering function with a docstring and three test cases.
+## Part B — Engineering Functions
+
+11. `stress(force,area)`
+12. `strain(deltaL,L0)`
+13. `reynoldsNumber(rho,velocity,diameter,viscosity)`
+14. `pumpPower(rho,g,Q,H,efficiency)`
+15. `beamDeflection(P,L,E,I)`
+16. `resultantForce(Fx,Fy)`
+17. `sensorError(measured,reference)` returning absolute and percent error.
+18. Write a vectorized function that calculates stress for vectors of loads.
+19. Write a function that returns mean, standard deviation, minimum, and maximum.
+20. Design one original reusable engineering function and test it with three cases.
+
+## Function Organization
+
+At least two functions should be local functions placed at the end of your Live Script or script file.
