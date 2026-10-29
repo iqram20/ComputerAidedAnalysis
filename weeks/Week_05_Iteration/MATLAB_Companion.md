@@ -1,7 +1,7 @@
 # Week 5 — Iteration and Engineering Simulations
 ## How to Use This Lecture Page
 
-Work through the material the same way you would use a Colab notebook:
+Work through the material as a MATLAB Live Editor notebook:
 
 1. Read the short explanation.
 2. Run the small MATLAB code block.
@@ -164,16 +164,9 @@ MATLAB often allows concise vectorized calculations, but loops remain important 
 
 ---
 
-## Python and MATLAB Comparison
+## MATLAB Workflow Summary
 
-| Python | MATLAB |
-|---|---|
-| `for i in range(5):` | `for i = 1:5` |
-| `while condition:` | `while condition` |
-| `break` | `break` |
-| `continue` | `continue` |
-| `range(1,11)` | `1:10` |
-| indentation | `end` |
+The examples in this chapter use MATLAB syntax throughout.
 
 ---
 
@@ -209,6 +202,16 @@ MATLAB indexing begins at 1.
 
 ---
 
+
+## Complete 3-Hour MATLAB Code Study
+
+For extended self-paced practice, open:
+
+[Week_05_3Hour_MATLAB_Code_Study.m](Week_05_3Hour_MATLAB_Code_Study.m)
+
+The runnable study file contains detailed comments, visible outputs, engineering examples, guided practice, and review material. Run one `%%` section at a time in MATLAB Live Editor.
+
+---
 ## Key Idea
 
 Loops automate repeated calculations. Vectorization is useful for simple array calculations, while loops are especially useful for state-based engineering simulations.
