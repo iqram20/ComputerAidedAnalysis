@@ -201,6 +201,80 @@ Students should ask:
 6. Ignoring which classes are being confused.
 7. Assuming statistical association proves physical causation.
 
+
+
+## Visual Machine Learning Workflow
+
+~~~mermaid
+flowchart LR
+    A[Engineering problem] --> B[Load labeled data]
+    B --> C[Define features and target]
+    C --> D[Inspect class balance]
+    D --> E[Train / test split]
+    E --> F[Training-only preprocessing]
+    F --> G[Train classifier]
+    G --> H[Predict unseen test data]
+    H --> I[Evaluate performance]
+    I --> J[Engineering interpretation]
+~~~
+
+This diagram shows the complete Week 8 workflow. Each MATLAB section in the lecture corresponds to one of these blocks.
+
+## Regression or Classification?
+
+~~~mermaid
+flowchart TD
+    A[Engineering prediction problem] --> B{Target type}
+    B -->|Continuous numerical value| C[Regression]
+    B -->|Category or class label| D[Classification]
+    C --> E[Example: Power = 452.8 MW]
+    D --> F[Example: Fault = Z_Scratch]
+~~~
+
+Week 8 is a classification problem because the output is a fault category.
+
+## Train/Test Split and Preprocessing Flow
+
+~~~mermaid
+flowchart LR
+    A[Complete labeled dataset] --> B[Training set]
+    A --> C[Test set]
+
+    B --> D[Calculate training mean / std]
+    D --> E[Scale training data]
+    E --> F[Train classifier]
+
+    C --> G[Scale using training mean / std]
+
+    F --> H[Trained model]
+    G --> I[Test features]
+    H --> J[Predict test labels]
+    I --> J
+    J --> K[Compare with true test labels]
+~~~
+
+The test set is kept independent from model fitting. Scaling parameters must come from the training set only.
+
+## Classification Evaluation Flow
+
+~~~mermaid
+flowchart LR
+    A[True test labels] --> C[Confusion matrix]
+    B[Predicted labels] --> C
+
+    C --> D[Accuracy]
+    C --> E[Precision]
+    C --> F[Recall]
+    C --> G[F1 score]
+
+    D --> H[Engineering interpretation]
+    E --> H
+    F --> H
+    G --> H
+~~~
+
+The final goal is not only to calculate metrics, but to understand which faults are being missed or confused and what those errors mean in an engineering setting.
+
 ## MATLAB Live Editor Lecture
 
 - [Primary MATLAB Lecture Page](Week_08_MATLAB_Lecture_Page.md)
