@@ -1,61 +1,33 @@
 # Week 3 — Functions for Engineering Computation
 
+## Primary Environment
+
+**MATLAB Live Editor**
+
 ## Topics
-- Defining functions with `def`
-- Parameters and arguments
-- Returning values
-- Local and global variables
-- Default arguments
-- Lambda functions
-- Reusable engineering calculations
 
-## Berkeley reference
-- Chapter 3: Functions
-- https://pythonnumericalmethods.studentorg.berkeley.edu/notebooks/chapter03.00-Functions.html
+- function inputs and outputs
+- local functions
+- multiple outputs
+- anonymous functions
+- reusable engineering calculations
+- function files and naming
 
-## Engineering examples
-Create reusable functions for:
-- Force
-- Stress
-- Density
-- Electrical power
-- Cylinder volume
-- Temperature conversion
-- Cantilever beam deflection
+## Engineering Examples
 
-## Example
-```python
-def stress(force, area):
-    return force / area
+- weight
+- stress
+- Ohm's law
+- cylinder volume
+- density
+- Reynolds number
 
-sigma = stress(12000, 0.004)
-print(sigma)
-```
+## Primary Lecture Material
 
-## Learning outcomes
-Students should be able to break an engineering program into reusable functions and distinguish between inputs, returned results, and printed output.
-
-
-## Class Notebook
-
-- [Open the 3-hour teaching notebook](Week_03_Functions.ipynb)
-
-The notebook includes explanations, worked examples, engineering applications, guided exercises, independent practice, real open-data activities, and an end-of-class quiz.
-
+- [MATLAB Live Editor–Style Lecture](MATLAB_Companion.md)
 
 ## Assignment
 
-- [Open the weekly assignment](Assignment_Week_03.md)
+- [Week 3 Assignment](Assignment_Week_03.md)
 
-The assignment includes Berkeley-aligned practice plus additional engineering coding problems.
-
-
-
-
-## Programming Code — Python and MATLAB
-
-Every coding concept in this chapter should be studied in **both Python and MATLAB**. The engineering equations, variables, and expected interpretation are equivalent; only the programming syntax changes.
-
-- [Python lecture/code](Week_03_Functions.ipynb)
-- [MATLAB equivalent examples](MATLAB_Companion.md)
-- MATLAB Online: https://matlab.mathworks.com/
+MATLAB Online: https://matlab.mathworks.com/
