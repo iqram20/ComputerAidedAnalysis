@@ -61,6 +61,55 @@ The output is one class label.
 
 ---
 
+
+
+---
+
+## Before Running the Model — Understand the Dataset
+
+One row represents one detected steel-plate surface fault.
+
+The 27 input features describe location, size, brightness, geometry, orientation, steel type, plate thickness, and transformed size measurements.
+
+The model output is one of seven categorical fault labels.
+
+### Feature groups
+
+Location:
+X_Minimum, X_Maximum, Y_Minimum, Y_Maximum
+
+Size/perimeter:
+Pixels_Areas, X_Perimeter, Y_Perimeter
+
+Luminosity:
+Sum_of_Luminosity, Minimum_of_Luminosity, Maximum_of_Luminosity, Luminosity_Index
+
+Production/steel:
+Length_of_Conveyer, TypeOfSteel_A300, TypeOfSteel_A400, Steel_Plate_Thickness
+
+Shape:
+Edges_Index, Empty_Index, Square_Index, Outside_X_Index, Outside_Global_Index
+
+Direction:
+Edges_X_Index, Edges_Y_Index, Orientation_Index
+
+Transformed size:
+LogOfAreas, Log_X_Index, Log_Y_Index, SigmoidOfAreas
+
+### Class meanings
+
+| Class | Course description |
+|---|---|
+| Pastry | Named category in the UCI dataset |
+| Z_Scratch | Scratch-type fault |
+| K_Scatch | Second scratch-type category |
+| Stains | Stain/discoloration-type fault |
+| Dirtiness | Dirty/contamination-like fault |
+| Bumps | Bump-like irregularity |
+| Other_Faults | Other fault types |
+
+The dataset does not provide a detailed metallurgical explanation for every label, so the course does not invent one.
+
 ## Step 1 — Download the Dataset
 
 ```matlab
@@ -486,6 +535,56 @@ A small score margin means the model's top two class choices were close.
 These scores should not automatically be interpreted as calibrated probabilities.
 
 ---
+
+
+
+---
+
+## Interpreting the Final Model
+
+A classification result should not be reported only as one accuracy number.
+
+A useful engineering interpretation should include:
+
+- overall accuracy;
+- class distribution;
+- confusion matrix;
+- class with lowest recall;
+- class with lowest F1;
+- major confusion pairs;
+- number of misclassified samples;
+- uncertainty or score-margin behavior;
+- possible engineering consequence of important errors.
+
+### Metric summary
+
+Accuracy:
+correct predictions divided by all predictions.
+
+Precision:
+TP divided by TP + FP.
+
+Recall:
+TP divided by TP + FN.
+
+F1:
+harmonic mean of precision and recall.
+
+Macro average:
+all classes contribute equally.
+
+Weighted average:
+classes contribute according to support.
+
+### Example interpretation style
+
+Instead of writing:
+
+    Accuracy = 0.82
+
+write something like:
+
+The classifier correctly identified approximately 82% of the held-out observations. However, performance differed across fault classes. The confusion matrix and per-class recall should therefore be examined before deciding whether the model is suitable for engineering inspection support.
 
 ## MATLAB Workflow Summary
 
