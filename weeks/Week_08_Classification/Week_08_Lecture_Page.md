@@ -10,6 +10,96 @@ This chapter is taught entirely in MATLAB. The lecture should be worked through 
 
 **concept → small MATLAB code section → output/figure → interpretation → next step**
 
+
+## Machine Learning as a Flow
+
+~~~mermaid
+flowchart LR
+    A[Engineering data] --> B[Machine-learning algorithm]
+    B --> C[Learned model]
+    C --> D[Prediction on new data]
+~~~
+
+The model does not receive the answer for a new observation. It uses patterns learned from labeled training data to make a prediction.
+
+---
+
+## Regression or Classification?
+
+~~~mermaid
+flowchart TD
+    A[Engineering prediction problem] --> B{What type of target?}
+    B -->|Continuous numerical value| C[Regression]
+    B -->|Category or class label| D[Classification]
+    C --> E[Power = 452.8 MW]
+    C --> F[Strength = 42.1 MPa]
+    D --> G[Machine = Faulty]
+    D --> H[Defect = Z_Scratch]
+~~~
+
+Week 7 used regression. Week 8 uses classification because the target is a fault category.
+
+---
+
+## Overall Week 8 Classification Workflow
+
+~~~mermaid
+flowchart LR
+    A[Engineering problem] --> B[Collect / load labeled data]
+    B --> C[Define features and target]
+    C --> D[Inspect class balance]
+    D --> E[Train / test split]
+    E --> F[Training-only preprocessing]
+    F --> G[Train classifier]
+    G --> H[Predict unseen test data]
+    H --> I[Evaluate errors]
+    I --> J[Engineering interpretation]
+~~~
+
+This is the complete workflow students should keep in mind while working through the MATLAB code.
+
+---
+
+## Why Several Measurements May Be Needed
+
+~~~mermaid
+flowchart LR
+    A1[Fault location] --> M[Fault class]
+    A2[Fault size] --> M
+    A3[Brightness] --> M
+    A4[Shape] --> M
+    A5[Orientation] --> M
+    A6[Steel type] --> M
+    A7[Plate thickness] --> M
+
+    M --> C1[Pastry]
+    M --> C2[Z_Scratch]
+    M --> C3[K_Scatch]
+    M --> C4[Stains]
+    M --> C5[Dirtiness]
+    M --> C6[Bumps]
+    M --> C7[Other_Faults]
+~~~
+
+The classifier combines many measurements because one feature alone may not distinguish all fault types.
+
+---
+
+## From Physical Fault to Model Prediction
+
+~~~mermaid
+flowchart LR
+    A[Physical steel defect] --> B[Image / sensing system]
+    B --> C[Measure geometry and appearance]
+    C --> D[27 numerical features]
+    D --> E[MATLAB classifier]
+    E --> F[Predicted fault class]
+~~~
+
+The machine-learning model does not directly “see” the physical defect. It receives numerical features extracted from the detection process.
+
+---
+
 ## Main Engineering Question
 
 Can measured geometric and image-derived features be used to classify the type of surface fault on a steel plate?
@@ -192,6 +282,53 @@ Inspect errors
         ↓
 Engineering interpretation
 ```
+
+
+## Train/Test Split Flow
+
+~~~mermaid
+flowchart LR
+    A[Complete labeled dataset] --> B[Training set]
+    A --> C[Test set]
+
+    B --> D[Calculate training mean / std]
+    D --> E[Scale training data]
+    E --> F[Train classifier]
+
+    C --> G[Scale using training mean / std]
+
+    F --> H[Trained model]
+    G --> I[Test features]
+    H --> J[Predict test labels]
+    I --> J
+    J --> K[Evaluate against true test labels]
+~~~
+
+The test set remains separate from model fitting. Its purpose is to estimate performance on unseen data.
+
+---
+
+## Classification Evaluation Flow
+
+~~~mermaid
+flowchart LR
+    A[True test labels] --> C[Confusion matrix]
+    B[Predicted labels] --> C
+
+    C --> D[Accuracy]
+    C --> E[Precision]
+    C --> F[Recall]
+    C --> G[F1 score]
+
+    D --> H[Engineering interpretation]
+    E --> H
+    F --> H
+    G --> H
+~~~
+
+Metrics are tools for understanding the error pattern. The final goal is engineering interpretation, not just reporting numbers.
+
+---
 
 ## Main MATLAB Functions
 
