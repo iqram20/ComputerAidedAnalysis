@@ -1,7 +1,7 @@
 # Week 9 — Engineering Data Analysis and Numerical Methods
 ## How to Use This Lecture Page
 
-Work through the material the same way you would use a Colab notebook:
+Work through the material as a MATLAB Live Editor notebook:
 
 1. Read the short explanation.
 2. Run the small MATLAB code block.
@@ -371,19 +371,9 @@ The fitted value should still be checked for physical plausibility.
 
 ---
 
-# Python and MATLAB Comparison
+# MATLAB Workflow Summary
 
-| Task | Python | MATLAB |
-|---|---|---|
-| Read CSV | `pd.read_csv` | `readtable` |
-| Mean | `.mean()` / `np.mean` | `mean` |
-| Filter rows | Boolean indexing | Logical indexing |
-| Linear fit | `np.polyfit` | `polyfit` |
-| Evaluate fit | `np.polyval` | `polyval` |
-| Derivative | `np.gradient` | `gradient` |
-| Integral | `np.trapz` | `trapz` |
-| Root | `brentq` / `root` | `fzero` |
-| Linear system | `np.linalg.solve` | `A\b` |
+The active Week 9 examples use MATLAB throughout. Focus on understanding the numerical method, units, verification, and engineering meaning rather than comparing programming languages.
 
 ---
 
@@ -438,4 +428,3 @@ x = inv(A)*b;
 
 [MATLAB data analysis and numerical methods](Week_09_MATLAB_Data_Analysis_Numerical_Methods.m)
 
-[Python equivalent examples](Engineering_Data_Analysis_Numerical_Methods_Python.py)
