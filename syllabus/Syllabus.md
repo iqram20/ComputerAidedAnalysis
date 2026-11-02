@@ -47,11 +47,11 @@ By the end of the course, students will be able to:
 | 5 | Iteration and Engineering Simulations |
 | 6 | Machine Learning Fundamentals and Data Preparation |
 | 7 | Regression for Engineering Prediction |
-| 8 | Classification for Engineering Decisions |
-| 9 | Decision Trees, Random Forests, and Feature Importance |
-| 10 | Model Evaluation, Tuning, and Engineering ML Project |
-| 11 | Programming Review and Matrix-Based Engineering Computation |
-| 12 | Engineering Data Analysis and Numerical Methods |
+| 8 | Programming Review and Matrix-Based Engineering Computation |
+| 9 | Engineering Data Analysis and Numerical Methods |
+| 10 | Classification for Engineering Decisions |
+| 11 | Decision Trees, Random Forests, and Feature Importance |
+| 12 | Model Evaluation, Tuning, and Engineering ML Project |
 | 13 | Deep Learning, NLP, Transformers, and LLMs for Engineering |
 | 14 | Engineering Simulation and Computational Modeling |
 
