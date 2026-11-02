@@ -72,8 +72,9 @@ https://www.mathworks.com/learn/tutorials/matlab-onramp.html
 
 - **Weeks 1–5:** MATLAB programming foundations for engineering
 - **Weeks 6–7:** machine-learning foundations and regression in MATLAB
-- **Weeks 8–9:** programming review, matrix computation, data analysis, and numerical methods
-- **Weeks 10–12:** classification, tree/ensemble models, model evaluation, tuning, and the engineering ML project
+- **Week 8:** classification for engineering decisions
+- **Weeks 9–10:** programming review, matrix computation, data analysis, and numerical methods
+- **Weeks 11–12:** tree/ensemble models, model evaluation, tuning, and the engineering ML project
 - **Week 13:** deep learning, NLP, and AI concepts with MATLAB context
 - **Week 14:** engineering simulation and computational modeling in MATLAB
 
@@ -88,9 +89,9 @@ https://www.mathworks.com/learn/tutorials/matlab-onramp.html
 | 5 | [Iteration and Engineering Simulations](weeks/Week_05_Iteration/README.md) |
 | 6 | [Machine Learning Fundamentals and Data Preparation](weeks/Week_06_ML_Fundamentals/README.md) |
 | 7 | [Regression for Engineering Prediction](weeks/Week_07_Regression/README.md) |
-| 8 | [Programming Review and Matrix-Based Engineering Computation](weeks/Week_08_Programming_Matrix_Computation/README.md) |
-| 9 | [Engineering Data Analysis and Numerical Methods](weeks/Week_09_Data_Analysis_Numerical_Methods/README.md) |
-| 10 | [Classification for Engineering Decisions](weeks/Week_10_Classification/README.md) |
+| 8 | [Classification for Engineering Decisions](weeks/Week_08_Classification/README.md) |
+| 9 | [Programming Review and Matrix-Based Engineering Computation](weeks/Week_09_Programming_Matrix_Computation/README.md) |
+| 10 | [Engineering Data Analysis and Numerical Methods](weeks/Week_10_Data_Analysis_Numerical_Methods/README.md) |
 | 11 | [Decision Trees, Ensembles, and Feature Importance](weeks/Week_11_Trees_Ensembles/README.md) |
 | 12 | [Model Evaluation, Tuning, and Engineering ML Project](weeks/Week_12_Model_Evaluation_Project/README.md) |
 | 13 | [Deep Learning, NLP, and LLMs for Engineering](weeks/Week_13_Deep_Learning_NLP_LLM/README.md) |
