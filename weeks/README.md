@@ -21,18 +21,21 @@ Course-wide format: [MATLAB Live Editor Course Guide](../MATLAB_Live_Editor_Cour
 - [Week 6 — Machine Learning Fundamentals and Data Preparation](Week_06_ML_Fundamentals/README.md)
 - [Week 7 — Regression for Engineering Prediction](Week_07_Regression/README.md)
 
-## Part III — Programming Review, Data Analysis, and Numerical Methods
+## Part III — Classification
 
-- [Week 8 — Programming Review and Matrix-Based Engineering Computation](Week_08_Programming_Matrix_Computation/README.md)
-- [Week 9 — Engineering Data Analysis and Numerical Methods](Week_09_Data_Analysis_Numerical_Methods/README.md)
+- [Week 8 — Classification for Engineering Decisions](Week_08_Classification/README.md)
 
-## Part IV — Advanced Machine Learning in MATLAB
+## Part IV — Programming Review, Data Analysis, and Numerical Methods
 
-- [Week 10 — Classification for Engineering Decisions](Week_10_Classification/README.md)
+- [Week 9 — Programming Review and Matrix-Based Engineering Computation](Week_09_Programming_Matrix_Computation/README.md)
+- [Week 10 — Engineering Data Analysis and Numerical Methods](Week_10_Data_Analysis_Numerical_Methods/README.md)
+
+## Part V — Advanced Machine Learning in MATLAB
+
 - [Week 11 — Decision Trees, Ensembles, and Feature Importance](Week_11_Trees_Ensembles/README.md)
 - [Week 12 — Model Evaluation, Tuning, and Engineering ML Project](Week_12_Model_Evaluation_Project/README.md)
 
-## Part V — Advanced Topics
+## Part VI — Advanced Topics
 
 - [Week 13 — Deep Learning, NLP, and LLMs for Engineering](Week_13_Deep_Learning_NLP_LLM/README.md)
 - [Week 14 — Engineering Simulation and Computational Modeling](Week_14_Engineering_Simulation/README.md)
