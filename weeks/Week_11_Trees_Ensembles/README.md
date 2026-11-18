@@ -26,6 +26,7 @@ predictorImportance(...)
 ## Primary Lecture Material
 
 - [MATLAB Live Editor–Style Lecture](MATLAB_Companion.md)
+- [Complete Week 11 MATLAB Code Study](Week_11_Trees_Ensembles_Feature_Importance.m)
 
 Students compare training and test performance, inspect feature importance, and discuss whether model behavior is physically reasonable.
 
